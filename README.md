@@ -17,7 +17,7 @@ it locally using [Jekyll](https://jekyllrb.com/). Jekyll is a
 below assume you have installed:
 
 * [Ruby](https://www.ruby-lang.org/) (note that installing Ruby also installs
-  RubyGems for managing gems too)
+  RubyGems for managing gems too).
 
 * [Bundler](https://bundler.io/) to manage your Ruby gems. Bundler is itself a
   gem and can be installed by running `gem install bundler` (note: installing
@@ -27,7 +27,7 @@ With these installed, run the following from the root folder of this
 repository to install Jekyll:
 
 ```bash
-# Ensure gems are stored within the vendor/bundle subdirectory of the repo
+# Ensure gems are installed within the vendor/bundle subdirectory of the repo
 bundle config set --local path 'vendor/bundle'
 
 # Install the required gems
