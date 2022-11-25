@@ -56,7 +56,7 @@ On completion of this series of workshops, participants will be able to:
 
 ## Workshop format
 
-This a hybrid workshop run over 3 sessions. The
+This is a hybrid workshop that runs over 3 sessions. The
 [schedule can be found here](./schedule.html).
 
 
@@ -80,7 +80,7 @@ at [additional resources and supplementary material](./resources.html) for the
 course.
 
 
-## Start course
+## Course notes
 
 If you are unable to attend any of the dates above, the
 [notes for this course are available here](./contents.html)
