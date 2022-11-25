@@ -3,6 +3,9 @@ layout: info_page
 title: Installation instructions
 ---
 
+This workshop is under development. More detailed installation instructions
+will be added closer to the time of the workshops.
+
 The following software should be installed on participants' machines before
 the start of the course:
 * Git (download from <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
@@ -16,5 +19,3 @@ the start of the course:
 
 Participants should have a GitHub account set up before the start of the
 second session (go to <a href="https://github.com/" target="_blank">https://github.com/</a>).
-
-More detailed instructions will be added soon!

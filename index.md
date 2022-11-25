@@ -75,7 +75,7 @@ Registration for this course is handled by
 ## Set-up instructions for attendees
 
 If you have registered for this course you can find the
-[instructions for setting up your computer here.](./setup.html) Also take a look
+[instructions for setting up your computer here](./setup.html). Also take a look
 at [additional resources and supplementary material](./resources.html) for the
 course.
 
