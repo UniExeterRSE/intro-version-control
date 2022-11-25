@@ -62,11 +62,16 @@ This is a hybrid workshop that runs over 3 sessions. The
 
 ## Upcoming course dates
 
+The sessions will be delivered in the Spring term in 2023. The specific dates
+are being finalised.
+
+<!-- 
 | Session name | Dates | Time  | Venue | Sign up link |
 | --- |--- |--- |--- | --- |
 | Session 1 | TBC | TBC | TBC | TBC |
 | Session 2 | TBC | TBC | TBC | TBC |
-| Session 3 | TBC | TBC | TBC | TBC |
+| Session 3 | TBC | TBC | TBC | TBC | 
+-->
 
 Registration for this course is handled by
 [University of Exeter Researcher Development](https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/).
