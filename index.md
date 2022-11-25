@@ -47,7 +47,7 @@ On completion of this series of workshops, participants will be able to:
 - Basic familiarity of working at the command line (e.g. Bash, Command Prompt,
   Apple Terminal) is helpful but not essential. A good introduction to this for
   Unix-like systems (Linux, MacOS) can be found at the sister course
-  [Introduction to Unix Shell](https://uniexeterrse.github.io/intro-unix-shell/).
+  <a href="https://uniexeterrse.github.io/intro-unix-shell/" target="_blank" rel="external noreferrer">Introduction to Unix Shell</a>.
 
 - Version control systems are primarily used for source code  development, so
   experience writing some code (e.g. R, Python, LaTeX, bash scripts, C,...) is
@@ -74,7 +74,7 @@ are being finalised.
 -->
 
 Registration for this course is handled by
-[University of Exeter Researcher Development](https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/).
+<a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">University of Exeter Researcher Development</a>.
 
 
 ## Set-up instructions for attendees
@@ -131,7 +131,7 @@ team.
 
 This workshop is brought to you by:
 
-- The University of Exeter [Research Software Engineering Group](https://www.exeter.ac.uk/research/idsai/team/researchsoftwareengineers/)
-- The [Institute of Data Science and Artificial Intelligence](https://www.exeter.ac.uk/research/idsai/)
-- The University of Exeter [Researcher Development Programme](https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/)
-- The University of Exeter [Doctoral College](https://www.exeter.ac.uk/research/doctoralcollege/)
+- The University of Exeter <a href="https://www.exeter.ac.uk/research/idsai/team/researchsoftwareengineers/" target="_blank" rel="external noreferrer">Research Software Engineering Group</a>
+- The <a href="https://www.exeter.ac.uk/research/idsai/" target="_blank" rel="external noreferrer">Institute of Data Science and Artificial Intelligence</a>
+- The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">Researcher Development Programme</a>
+- The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/" target="_blank" rel="external noreferrer">Doctoral College</a>

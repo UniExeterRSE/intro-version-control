@@ -44,7 +44,7 @@ This course is under continual review to ensure that it is fit for purpose.
 Our ethos is to provide a welcoming and supportive environment for all people,
 regardless of background or identity. By registering to attend this workshop,
 participants are agreeing to abide by the Researcher Development
-<a href="http://www.exeter.ac.uk/media/universityofexeter/doctoralcollege/researcherdevelopment/images/Code_of_conduct.pdf" download="">Code of Conduct</a>.
+<a href="https://www.exeter.ac.uk/media/universityofexeter/doctoralcollege/researcherdevelopment/images/Code_of_conduct.pdf" target="_blank" rel="external noreferrer" download="">Code of Conduct</a>.
 
 Our goal is to support you to develop your programming skill sets to enable you
 to do cutting edge research. We want to create a positive and professional
