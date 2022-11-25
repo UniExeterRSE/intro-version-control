@@ -111,12 +111,13 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 
 ## Acknowledgements
 
-This course was adapted from XXXXX and has been developed by the University of
-Exeter's Research Software Engineering Group and
-[a team of generous volunteers](./acknowledgements.html)
+This course is currently under construction. It is being developed by
+[members](./acknowledgements.html) of the
+University of Exeter's Research Software Engineering Group
 who are enthusiastic about sharing their skills with the wider research
-community. Its provision is dependent on the time of these volunteers. If you
-have benefitted in any way from this course and want to support its long term
+community.
+
+If you have benefitted in any way from this course and want to support its long term
 sustainability then please take the time to complete our feedback survey,
 recommend it to your colleagues, and enthuse about it to your senior leadership
 team.
