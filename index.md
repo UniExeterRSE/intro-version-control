@@ -41,13 +41,17 @@ On completion of this series of workshops, participants will be able to:
 
 ## Pre-requisite knowledge
 
+- A willingness to work with Git and GitHub in a hands-on way throughout the
+  sessions.
+
 - Basic familiarity of working at the command line (e.g. Bash, Command Prompt,
   Apple Terminal) is helpful but not essential. A good introduction to this for
   Unix-like systems (Linux, MacOS) can be found at the sister course
   [Introduction to Unix Shell](https://uniexeterrse.github.io/intro-unix-shell/).
 
-- A willingness to work with Git and GitHub in a hands-on way throughout the
-  sessions.
+- Version control systems are primarily used for source code  development, so
+  experience writing some code (e.g. R, Python, LaTeX, bash scripts, C,...) is
+  helpful though not essential.
 
 
 ## Workshop format
