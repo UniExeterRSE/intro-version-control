@@ -1,0 +1,8 @@
+# Locally installed Ruby gems
+vendor/
+
+# RubyGems lock file (only track Gemfile)
+Gemfile.lock
+
+# Built artifacts
+_site/

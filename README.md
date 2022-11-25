@@ -1,30 +1,60 @@
 <a rel="license" href=""><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
 
-# Coding for Reproducible Research Workshop Template
+# Introduction to Version Control with Git and GitHub
 
-This repository is the template for creating websites for workshops that are part of the Coding for Reproducible Research initiative at the University of Exeter.  
+This repository contains source code for the [Introduction to Version Control
+with Git and GitHub](https://uniexeterrse.github.io/intro-version-control/)
+workshop website. This workshop is part of the Coding for Reproducible Research
+initiative at the University of Exeter. 
 
-## How to create a workshop page
+## Local deployment
 
-To create a new website for a new workshop, please use GitHub's "template" function to copy this `UoE-workshop-template` repository.
-**Please _do not fork this repository directly on GitHub._**
+### Install dependencies
 
-## Structure and required components
+This repo is designed to be deployed with GitHub Pages, but you can also deploy
+it locally using [Jekyll](https://jekyllrb.com/). Jekyll is a
+[gem](https://guides.rubygems.org/) for the Ruby language. The instructions
+below assume you have installed:
 
-Each workshop has a landing or home page which provides the details of the workshop to individuals who might be interested in attending it. This home page will also direct participants who have signed up to set-up instructions and the course notes. It will also enable individuals who can't attend the workshop to all the resources and enable them to run through the material in their own time.
+* [Ruby](https://www.ruby-lang.org/) (note that installing Ruby also installs
+  RubyGems for managing gems too).
 
-Workshops are organised into 2-3 hour sessions of learning activity, where a workshop consists of 1-4 sessions. Beginners courses should have a minimum of 2 sessions.  Each session will be split into episodes, where episodes should last between 20-90 mins. Workshops and sessions will follow a pre-specified format. We recommend that there is an opportunity for a break approximately every 60-90 mins.
+* [Bundler](https://bundler.io/) to manage your Ruby gems. Bundler is itself a
+  gem and can be installed by running `gem install bundler` (note: installing
+  may require administrative privileges).
+
+With these installed, run the following from the root folder of this
+repository to install Jekyll:
+
+```bash
+# Ensure gems are installed within the vendor/bundle subdirectory of the repo
+bundle config set --local path 'vendor/bundle'
+
+# Install the required gems
+bundle install
+```
+
+
+### Run a local server for the site
+
+To start a local server with Jekyll, run
+
+```bash
+bundle exec jekyll serve
+```
+
+This will serve the site on <http://localhost:4000>.
+
 
 ## Acknowledgements
 
-This template was developed with help from this [tutorial](https://github.com/evanwill/go-go-ghpages). It was inspired and influenced by  [The Carpentries' template](https://github.com/carpentries/workshop-template) for creating websites for workshops.
+This repository is based off the University of Exeter `UoE-workshop-template`
+template repository. This template was developed with help from this
+[tutorial](https://github.com/evanwill/go-go-ghpages). It was inspired and
+influenced by [The Carpentries' template](https://github.com/carpentries/workshop-template)
+for creating websites for workshops.
 
-## NEWS
-
-### 25/08/2022
-
-* Update to _config.yml file and includes/navbar.html to make links more robust.
-
-### 27/10/2022
-
-* Spell checking reviewed, and markdown formatting improved.
+The Gemfile and instructions for installing locally have been taken from
+a sister repo for the [Introduction to Python](https://github.com/UniExeterRSE/intro-to-python)
+course. (Installation instructions have been expanded upon from the version at
+commit [c12af04](https://github.com/UniExeterRSE/intro-to-python/commit/c12af040fa4b9114172e3ae67f8132984de1e6d6)). 
