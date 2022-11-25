@@ -80,10 +80,10 @@ If you have registered for this course you can find the
 
 ## Start course
 
-If you are unable to attend any of the dates above the
+If you are unable to attend any of the dates above, the
 [notes for this course are available here](./contents.html)
-and are freely available to work through in your own time. Please note that you
-will need to have completed the set up instructions above.
+and are freely available for you to work through in your own time. Please note
+that you will need to have completed the set up instructions above.
 
 
 ## Follow up courses
