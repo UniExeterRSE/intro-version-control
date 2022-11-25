@@ -5,7 +5,8 @@ title: Workshop contents
 
 ## Workshop contents
 
-The material for this workshop is structured in the following lessons which may be covered across multiple sessions. Use the links below to navigate to the correct episode.
+This workshop is currently under development. This page will contain links to
+the episodes that make up the workshop's content.
 
 <ol>
 {% include toc.html %}
