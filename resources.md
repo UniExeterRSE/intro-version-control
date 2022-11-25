@@ -3,6 +3,5 @@ layout: info_page
 title: Resources
 ---
 
-## Datasets required for workshop
-
-## Links to additional material
+This workshop is under development. Links to additional resources or
+supplementary material will appear here nearer to the time of the workshops.

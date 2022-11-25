@@ -75,7 +75,9 @@ Registration for this course is handled by
 ## Set-up instructions for attendees
 
 If you have registered for this course you can find the
-[instructions for setting up your computer here.](./setup.html)
+[instructions for setting up your computer here.](./setup.html) Also take a look
+at [additional resources and supplementary material](./resources.html) for the
+course.
 
 
 ## Start course
@@ -86,7 +88,7 @@ and are freely available for you to work through in your own time. Please note
 that you will need to have completed the set up instructions above.
 
 
-## Follow up courses
+## Follow-up courses
 
 On completion of this course you will be invited to join a network of other
 participants. This is a supportive forum for you to ask follow-up questions and
@@ -111,7 +113,7 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 
 ## Acknowledgements
 
-This course is currently under construction. It is being developed by
+This course is currently under development. It is being developed by
 [members](./acknowledgements.html) of the
 University of Exeter's Research Software Engineering Group
 who are enthusiastic about sharing their skills with the wider research
