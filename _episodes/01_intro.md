@@ -9,14 +9,12 @@ toc: true
 
 ## Welcome
 
-This workshop was put together by the Research Software Engineering Group
-supported by a team of volunteers. It has been adapted/influenced by
-[!!! include sources]. This is as part of an ongoing
-initiative to provide training for staff and students to expand their skill sets
-and position themselves to confidently perform the informatics elements of their
-research projects in an efficient and reproducible way. The programme and
-workshops are under constant evolution, and we are grateful for your feedback
-which is a core component of this process.
+This workshop was put together by the Research Software Engineering Group.
+This is as part of an ongoing initiative to provide training for staff and
+students to expand their skill sets and position themselves to confidently
+perform the informatics elements of their research projects in an efficient and
+reproducible way. The programme and workshops are under constant evolution, and
+we are grateful for your feedback which is a core component of this process.
 
 We will start by introducing the workshop leaders and helpers. We are all here
 because we are passionate about sharing our knowledge and supporting the
@@ -49,3 +47,23 @@ Please conduct yourselves in line with the
 [code of conduct]({{ site.url }}/code.html) —
 essentially, be respectful and aware that we all have different backgrounds,
 experiences and viewpoints.
+
+## Acknowledgement
+
+This course has been adapted from Software Carpentry's
+<a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
+course <a href="#footnote1">[1]</a>, which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
+under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">Creative Commons BY 4.0</a>.
+Changes have been made from the original content.
+
+### References
+
+<ol>
+  <li id="footnote1">
+    Ivan Gonzalez; Daisie Huang;  Nima Hejazi;  Katherine Koziar; 
+    Madicken Munk (eds): "Software Carpentry: Version Control with Git."  
+    Version 2019.06.1, July 2019,
+    <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
+    10.5281/zenodo.3264950</li>
+</ol>
+
