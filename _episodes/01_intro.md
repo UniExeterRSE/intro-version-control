@@ -26,7 +26,7 @@ development of our colleagues.
 ## Housekeeping
 
 The workshop in organised into episodes of content, which can be seen in the
-[workshop schedule](../schedule.html). Our aim is to have an official break
+[workshop schedule]({{ site.url }}/schedule.html). Our aim is to have an official break
 every 60-90 minutes, but there will also be periods in-between demonstrations
 where you are free to take additional comfort breaks if required.
 
@@ -45,6 +45,7 @@ person participants we request that the Teams/Zoom chat is used minimally and
 all questions/comments etc. are posted in our collaborative notes document.
 This will be saved and distributed at the end of the workshop.  
 
-Please conduct yourselves in line with the [code of conduct](../code.html) —
+Please conduct yourselves in line with the
+[code of conduct]({{ site.url }}/code.html) —
 essentially, be respectful and aware that we all have different backgrounds,
 experiences and viewpoints.
