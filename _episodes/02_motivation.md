@@ -130,10 +130,10 @@ the chaotic example above, it's worth considering the following:
   part of your rhythm of work.
 
 
-> ## Note
->
-> In this episode we have talked about version control systems being used to
-> keep track of the evolution of files in general. Going forward, we will
-> discuss the use of version control in the context of developing code for
-> software, particularly in a research setting. Software development is the
-> common context in which version control systems are used.
+## Note for the course
+
+In this episode we have talked about version control systems being used to
+keep track of the evolution of files in general. Going forward, we will
+discuss the use of version control in the context of developing code for
+software, particularly in a research setting. Software development is the
+common context in which version control systems are used.
