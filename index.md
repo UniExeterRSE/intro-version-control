@@ -135,3 +135,10 @@ This workshop is brought to you by:
 - The <a href="https://www.exeter.ac.uk/research/idsai/" target="_blank" rel="external noreferrer">Institute of Data Science and Artificial Intelligence</a>
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">Researcher Development Programme</a>
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/" target="_blank" rel="external noreferrer">Doctoral College</a>
+
+
+## Licence
+
+The licence for the instructional material on this website and the underlying
+software source code used to create this website can be found at the
+[website's repository](https://github.com/UniExeterRSE/intro-version-control).
