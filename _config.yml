@@ -6,6 +6,7 @@ description: Learn to use version control to manage your software development an
 n_sessions: 3
 prereq: NA
 url: https://uniexeterrse.github.io/intro-version-control
+notes_on: true
 
 # Specify that things in the episodes collection should be output.
 collections:
