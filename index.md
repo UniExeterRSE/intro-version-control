@@ -118,11 +118,11 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 
 ## Acknowledgements
 
-This course has been adapted from Software Carpentry's
+<!-- This course has been adapted from Software Carpentry's
 <a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
 course <a href="#footnote1">[1]</a>, which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
 under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">Creative Commons BY 4.0</a>.
-Changes have been made from the original content.
+Changes have been made from the original content. -->
 
 This course is currently under development. It is being developed by
 [members](./acknowledgements.html) of the
@@ -142,7 +142,7 @@ This workshop is brought to you by:
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">Researcher Development Programme</a>
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/" target="_blank" rel="external noreferrer">Doctoral College</a>
 
-### References
+<!-- ### References
 
 <ol>
   <li id="footnote1">
@@ -151,4 +151,4 @@ This workshop is brought to you by:
     Version 2019.06.1, July 2019,
     <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
     10.5281/zenodo.3264950</li>
-</ol>
+</ol> -->

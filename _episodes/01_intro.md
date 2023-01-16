@@ -49,7 +49,7 @@ Please conduct yourselves in line with the
 essentially, be respectful and aware that we all have different backgrounds,
 experiences and viewpoints.
 
-## Acknowledgement
+<!-- ## Acknowledgement
 
 This course has been adapted from Software Carpentry's
 <a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
@@ -66,5 +66,5 @@ Changes have been made from the original content.
     Version 2019.06.1, July 2019,
     <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
     10.5281/zenodo.3264950</li>
-</ol>
+</ol> -->
 
