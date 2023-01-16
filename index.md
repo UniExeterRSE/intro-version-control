@@ -152,3 +152,9 @@ This workshop is brought to you by:
     <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
     10.5281/zenodo.3264950</li>
 </ol> -->
+
+## Licence
+
+The licence for the instructional material on this website and the underlying
+software source code used to create this website can be found at the
+[website's repository](https://github.com/UniExeterRSE/intro-version-control).
