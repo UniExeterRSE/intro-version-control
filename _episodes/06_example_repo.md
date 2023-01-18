@@ -38,7 +38,7 @@ variations on the syntax. The [basic syntax](https://www.markdownguide.org/basic
 flavours, but different flavours provide different ways to extend the basic
 syntax to handle more complicated features (such as tables). We'll use the
 GitHub Flavoured Markdown, since (surprise!) this is what is used on GitHub. You
-can find a pretty omprehensive introduction to the syntax of GitHub Flavoured
+can find a pretty comprehensive introduction to the syntax of GitHub Flavoured
 Markdown at
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>.
 
