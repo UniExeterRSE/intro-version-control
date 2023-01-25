@@ -1,6 +1,6 @@
 ---
 layout: info_page
-title: Installation instructions
+title: Installation Guide
 ---
 
 In order to fully participate in this course, you should make sure you
