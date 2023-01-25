@@ -18,9 +18,7 @@ have the following **before** the first workshop.
 More details on these points are provided below.
 
 _Please note that installing software, such as Git or a text editor, may require
-administrative privileges, so you may need to get someone from your
-University / organisational IT department to help you. **Be sure to allow enough
-time to do this before the start of the course.**_
+administrative privileges._
 
 
 ## Installing Git
