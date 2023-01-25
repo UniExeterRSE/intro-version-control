@@ -55,6 +55,19 @@ systems.
 
 Download and install the latest version of *Git for Windows* from
 <a href="https://git-scm.com/download/win" target="_blank" rel="external noreferrer">https://git-scm.com/download/win</a>.
+Accept the default settings while running the installer, with the following
+optional exceptions:
+
+- On the *Select Components* pane, you may wish to select the option to
+  *Check daily for Git for Windows updates*. Selecting this will mean Git for
+  Windows will tell you when a new update for it is available.
+- On the *Choosing the default editor used by Git* pane, you can select
+  a different text editor that will be used to write
+  'commit messages' in Git. The default text editor, Vim, is difficult to
+  use if you're not used to it. Nano is a much simpler text editor that works
+  from the command line, so our recommendation would be to switch to that. The
+  choice of text editor can be changed later once Git is installed, so you're not
+  tied in by your choice here.
 
 
 ### Mac OS
