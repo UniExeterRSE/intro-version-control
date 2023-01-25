@@ -111,3 +111,9 @@ you feel comfortable with. Examples include:
 You may wish to see if your preferred text editor / IDE has integrations
 with Git, or if there are plugins or other extensions that add capabilities for
 working with Git from within your text editor / IDE.
+
+
+### Installing VS Code
+
+Head to <a href="https://code.visualstudio.com/" target="_blank" rel="external noreferrer">https://code.visualstudio.com</a> to download and install VS Code for your operating system.
+Windows users can also install it from the Microsoft Store.
