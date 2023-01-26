@@ -22,7 +22,7 @@ participants of requisite commands, so if you aren't familiar with these aspects
 then we encourage you to learn about this ahead of time.
 You can do this at the Software Carpentry's course on the Unix shell, which has
 a section on
-<a href="https://swcarpentry.github.io/shell-novice/02-filedir/index.html" target="_blank" rel="external noreferrer">Navigating Files and Directories</a>.
+<a href="https://swcarpentry.github.io/shell-novice/02-filedir/index.html" target="_blank" rel="external noreferrer">navigating files and directories</a>.
 
 
 > ### Unix command line navigation cheat sheet
