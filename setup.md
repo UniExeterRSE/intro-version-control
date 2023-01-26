@@ -8,11 +8,11 @@ have the following in place **before** the first workshop.
 
 - An [installation of Git](#installing-git) on your computer.
 - A [GitHub account](#get-a-github-account).
-- A [text editor or integrated development environment (IDE)](#have-a-text-editor)
+- A [text editor or integrated development environment (IDE)](#text-editors--ides)
   to use for working with source code / text files.
   <a href="https://code.visualstudio.com/" target="_blank" rel="external noreferrer">Visual Studio Code</a>
   is recommended as it will be used during the workshop sessions, but you
-  can use another program if you prefer; [see the discussion below](#have-a-text-editor) for
+  can use another program if you prefer; [see the discussion below](#text-editors--ides) for
   more information.
 
 This page gives more details on these requirements.
