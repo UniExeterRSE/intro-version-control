@@ -50,10 +50,13 @@ a section on
 > - `foo/bar/file.txt` is the same file as a relative path
 > 
 > **List the contents of a directory:** `ls path/to/directory` (or just `ls` to list
-> the contents of the current working directory). Use the `-a` option to show
-> files that are 'hidden' (i.e. begin with `.`) and use `-l` to give more details
-> about the items e.g. to list all contents of home directory with details about
-> modification time, access permissions etc:
+> the contents of the current working directory).
+> - Use the `-a` option to show files and directories that are 'hidden' (i.e.
+>   begin with `.`).
+> - Use `-l` to give more details about the items (permissions, modification time, etc).
+> 
+> For example, first list (non-hidden) items in the home directory, then list all 
+> contents with details:
 > 
 > ```
 > $ ls ~
