@@ -3,8 +3,8 @@ layout: info_page
 title: Resources
 ---
 
-*Please note, this workshop is under development. Links to additional resources or
-supplementary material will appear here nearer to the time of the workshops.*
+*Please note, this workshop is under development, so the material on this page
+is subject to change.*
 
 
 ## Command line navigation
