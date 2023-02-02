@@ -62,19 +62,17 @@ This is a hybrid workshop that runs over 3 sessions. The
 
 ## Upcoming course dates
 
-The sessions will be delivered in the Spring term in 2023. The specific dates
-are being finalised.
+The sessions will be delivered according to the following timetable.
 
-<!-- 
-| Session name | Dates | Time  | Venue | Sign up link |
+| Session | Dates | Time  | Venue |
 | --- |--- |--- |--- | --- |
-| Session 1 | TBC | TBC | TBC | TBC |
-| Session 2 | TBC | TBC | TBC | TBC |
-| Session 3 | TBC | TBC | TBC | TBC | 
--->
+| Session 1 | 15 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 2 | 22 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 3 | 1 March 2023 | 1pm – 4pm | Old Library Training Room 4 |
+
 
 Registration for this course is handled by
-<a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">University of Exeter Researcher Development</a>.
+<a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">University of Exeter Researcher Development</a> (see the Software Training section).
 
 
 ## Set-up instructions for attendees
