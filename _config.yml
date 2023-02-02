@@ -35,3 +35,13 @@ defaults:
 
 # Build settings
 theme: jekyll-theme-slate
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENCE
