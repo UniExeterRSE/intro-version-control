@@ -59,7 +59,8 @@ On completion of this series of workshops, participants will be able to:
 ## Workshop format
 
 This is a hybrid workshop that runs over 3 sessions. The
-[schedule can be found here](./schedule.html).
+[schedule can be found here](./schedule.html). _Please note that you will be
+expected to attend all three sessions._
 
 
 ## Upcoming course dates
