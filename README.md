@@ -51,8 +51,3 @@ template repository. This template was developed with help from this
 [tutorial](https://github.com/evanwill/go-go-ghpages). It was inspired and
 influenced by [The Carpentries' template](https://github.com/carpentries/workshop-template)
 for creating websites for workshops.
-
-The Gemfile and instructions for installing locally have been taken from
-a sister repo for the [Introduction to Python](https://github.com/UniExeterRSE/intro-to-python)
-course. (Installation instructions have been expanded upon from the version at
-commit [c12af04](https://github.com/UniExeterRSE/intro-to-python/commit/c12af040fa4b9114172e3ae67f8132984de1e6d6)). 

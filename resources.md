@@ -3,8 +3,8 @@ layout: info_page
 title: Resources
 ---
 
-*Please note, this workshop is under development, so the material on this page
-is subject to change.*
+*Please note, this workshop is under development and the material on this page
+may change.*
 
 
 ## Command line navigation
@@ -87,3 +87,15 @@ a section on
 > $ pwd
 > /home/jbloggs/repositories/baz
 > ```
+>
+> #### Licence
+>
+> <p class="copyright">
+> This cheat sheet is © University of Exeter. The material in it other than code snippets and example
+> programs is licensed under <a href ="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0</a>. It has been adapted from
+> <a href="https://swcarpentry.github.io/shell-novice/02-filedir/index.html" target="_blank" rel="external noreferrer">The Unix Shell - Navigating Files and Directories</a>
+> which is © Software Carpentry and licensed under <a href ="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">CC-BY 4.0</a>.
+> The code snippets and example programs on this page are MIT licensed, according
+> to the 'Software' section of the <a href="{{ site.url }}/LICENCE">licence notice</a>
+> for this website's code repository.
+> </p>
