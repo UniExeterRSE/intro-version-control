@@ -44,9 +44,11 @@ On completion of this series of workshops, participants will be able to:
 - A willingness to work with Git and GitHub in a hands-on way throughout the
   sessions.
 
-- Basic familiarity of working at the command line (e.g. Bash, Command Prompt,
-  Apple Terminal) is helpful but not essential. A good introduction to this for
-  Unix-like systems (Linux, MacOS) can be found at the sister course
+- Basic familiarity of working at a Unix command line (e.g. Apple Terminal, a terminal running Bash)
+  is helpful but not essential. We have included a cheat sheet
+  on basic commands that will be useful for this course on the
+  [resources page](./resources.html).
+  A good introduction to this topic more generally can be found at the sister course
   <a href="https://uniexeterrse.github.io/intro-unix-shell/" target="_blank" rel="external noreferrer">Introduction to Unix Shell</a>.
 
 - Version control systems are primarily used for source code  development, so
@@ -57,24 +59,23 @@ On completion of this series of workshops, participants will be able to:
 ## Workshop format
 
 This is a hybrid workshop that runs over 3 sessions. The
-[schedule can be found here](./schedule.html).
+[schedule can be found here](./schedule.html). _Please note that you will be
+expected to attend all three sessions._
 
 
 ## Upcoming course dates
 
-The sessions will be delivered in the Spring term in 2023. The specific dates
-are being finalised.
+The sessions will be delivered according to the following timetable.
 
-<!-- 
-| Session name | Dates | Time  | Venue | Sign up link |
+| Session | Dates | Time  | Venue |
 | --- |--- |--- |--- | --- |
-| Session 1 | TBC | TBC | TBC | TBC |
-| Session 2 | TBC | TBC | TBC | TBC |
-| Session 3 | TBC | TBC | TBC | TBC | 
--->
+| Session 1 | 15 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 2 | 22 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 3 | 1 March 2023 | 1pm – 4pm | Old Library Training Room 4 |
+
 
 Registration for this course is handled by
-<a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">University of Exeter Researcher Development</a>.
+<a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">University of Exeter Researcher Development</a> (see the Software Training section).
 
 
 ## Set-up instructions for attendees
@@ -87,10 +88,17 @@ course.
 
 ## Course notes
 
+{% if site.notes_on %}
 If you are unable to attend any of the dates above, the
-[notes for this course are available here](./contents.html)
-and are freely available for you to work through in your own time. Please note
-that you will need to have completed the set up instructions above.
+<a href="{{ site.url }}/contents.html">course notes</a> are freely available
+for you to work through. Please note that you will need to have completed the
+set up instructions linked above.
+{% else %}
+If you are unable to attend any of the dates above, the
+<a href="{{ site.url }}/contents_off.html">course notes</a> are freely available
+for you to work through. Please note that you will need to have completed the
+set up instructions linked above.
+{% endif %}
 
 
 ## Follow-up courses

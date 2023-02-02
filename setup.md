@@ -18,7 +18,14 @@ have the following in place **before** the first workshop.
 This page gives more details on these requirements.
 
 _Please note that installing software, such as Git or a text editor, may require
-administrative privileges._
+administrative privileges. If you need support due to not having these
+privileges on your computer then please contact the University's IT department._
+
+For those struggling to install the required software or sign up to GitHub,
+there will be an opportunity to get support from the course organisers in drop-in
+sessions shortly before the start of the course. The time available in these
+sessions is limited, so please only attend if you have already tried following the
+instructions below.
 
 
 ## Installing Git
@@ -27,7 +34,7 @@ You should first check whether you have Git installed on your computer, accordin
 to your operating system:
 
 - **Windows:** Search for the application _Git Bash_ on your computer. (You can
-  open up a new search by pressing the Windows and `S` keys together.) If you
+  open up a new search by pressing the Windows and <kbd>S</kbd> keys together.) If you
   find _Git Bash_ as an application, then you already have Git installed.
 
 - **MacOS & Linux:** Open a terminal and run the command `git --version`. If
