@@ -44,9 +44,11 @@ On completion of this series of workshops, participants will be able to:
 - A willingness to work with Git and GitHub in a hands-on way throughout the
   sessions.
 
-- Basic familiarity of working at the command line (e.g. Bash, Command Prompt,
-  Apple Terminal) is helpful but not essential. A good introduction to this for
-  Unix-like systems (Linux, MacOS) can be found at the sister course
+- Basic familiarity of working at a Unix command line (e.g. Apple Terminal, a terminal running Bash)
+  is helpful but not essential. We have included a cheat sheet
+  on basic commands that will be useful for this course on the
+  [resources page](./resources.html).
+  A good introduction to this topic more generally can be found at the sister course
   <a href="https://uniexeterrse.github.io/intro-unix-shell/" target="_blank" rel="external noreferrer">Introduction to Unix Shell</a>.
 
 - Version control systems are primarily used for source code  development, so
