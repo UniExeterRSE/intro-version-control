@@ -88,10 +88,17 @@ course.
 
 ## Course notes
 
+{% if site.notes_on %}
 If you are unable to attend any of the dates above, the
-[notes for this course are available here](./contents.html)
-and are freely available for you to work through in your own time. Please note
-that you will need to have completed the set up instructions above.
+<a href="{{ site.url }}/contents.html">course notes</a> are freely available
+for you to work through. Please note that you will need to have completed the
+set up instructions linked above.
+{% else %}
+If you are unable to attend any of the dates above, the
+<a href="{{ site.url }}/contents_off.html">course notes</a> are freely available
+for you to work through. Please note that you will need to have completed the
+set up instructions linked above.
+{% endif %}
 
 
 ## Follow-up courses
