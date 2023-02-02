@@ -3,8 +3,8 @@ layout: info_page
 title: Resources
 ---
 
-*Please note, this workshop is under development, so the material on this page
-is subject to change.*
+*Please note, this workshop is under development and the material on this page
+may change.*
 
 
 ## Command line navigation
