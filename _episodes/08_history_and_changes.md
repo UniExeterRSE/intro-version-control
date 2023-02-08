@@ -442,6 +442,9 @@ to see if this is the case for your preferred text editor / IDE.
 >
 > For VS Code users, the following links may be of help:
 > 
+> * View the diffs for files that have not been staged, or have been staged but
+>   not committed <https://code.visualstudio.com/docs/sourcecontrol/overview#_working-in-a-git-repository>.
+>
 > * View the commit history of a file: 
 >   <https://code.visualstudio.com/docs/sourcecontrol/overview#_timeline-view>.
 >   This also suggests some extensions for VS Code to make working with Git more
