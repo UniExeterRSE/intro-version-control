@@ -427,7 +427,9 @@ index 135822a..86e679f 100644
 > * Run `git status`
 >
 > Can you explain what the output from these commands is saying, and why we get
-> it?
+> it? Once you're happy you understand what's going on, complete
+> the task of adding the material about `git log` to the cheatsheet by making
+> an appropriate commit, making sure to include the entry about `git log -n`.
 
 
 ## Viewing diffs with GUIs
