@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Viewing history and changes"
+title: "Viewing History and Changes"
 order: 8
 session: 1
 length: 20
