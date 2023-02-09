@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Recording Changes Revisited"
-order: 7
+title: "Recording Changes – Revisited"
+order: 9
 session: 1
 length: 15
 toc: true
