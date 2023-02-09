@@ -50,11 +50,13 @@ to be recorded in the remote repository. The log shows the short identifier and
 commit message of each of these commits, along with the initial commit generated
 when the repository was created (`3917168`).
 
-TODO:
-* Introduce `git push` command, what it does and how to use it. Note that it will
-  only push _commits_, not changes that are only in the working tree or staging
-  area.
+The status also includes a handy comment, suggesting "use "git push" to publish
+your local commits" - this is exactly what we should do next! Ultimately, `git push`
+transfers the commits we've made in our local repository to the remote repository.
+It should be noted that it will only push _commits_, not changes only in the
+working tree or staging area.
 
+TODO:
 * Explain that we may be prompted to enter our Git username and a password.
   Because we set up the repository to work with HTTPS, we use the Personal
   Access Token (PAT) that we generated in the episode
