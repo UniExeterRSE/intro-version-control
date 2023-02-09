@@ -54,7 +54,9 @@ The status also includes a handy comment, suggesting "use "git push" to publish
 your local commits" - this is exactly what we should do next! Ultimately, `git push`
 transfers the commits we've made in our local repository to the remote repository.
 It should be noted that it will only push _commits_, not changes residing in the
-working tree or staging area.
+working tree or staging area. We can alternatively use `git push origin`, if we'd
+like to be more explicit about which remote repository we are pushing to (`origin`
+by default).
 
 TODO:
 * Explain that we may be prompted to enter our Git username and a password.
