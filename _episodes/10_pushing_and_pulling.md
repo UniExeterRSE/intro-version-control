@@ -110,10 +110,9 @@ ad56194 Add entry about staging files with 'git add'
 3917168 Initial commit
 ```
 
-TODO:
-* Point out that we have no outstanding commits to push and that `main` and
-  `origin/main` are now located at the same commit. Explain that this means
-  the remote repository is up to date with the local repository.
+Once again, the status shows we have no outstanding commits to push, meaning
+`main` and `origin/main` are now pointing at the same commit (i.e. the remote
+repository is now up to date with the local repository).
 
 
 ## Viewing the repository on GitHub
