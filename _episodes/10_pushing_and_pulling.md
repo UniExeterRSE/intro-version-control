@@ -53,7 +53,7 @@ when the repository was created (`3917168`).
 The status also includes a handy comment, suggesting "use "git push" to publish
 your local commits" - this is exactly what we should do next! Ultimately, `git push`
 transfers the commits we've made in our local repository to the remote repository.
-It should be noted that it will only push _commits_, not changes only in the
+It should be noted that it will only push _commits_, not changes residing in the
 working tree or staging area.
 
 TODO:
