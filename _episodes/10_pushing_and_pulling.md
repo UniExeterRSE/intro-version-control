@@ -16,7 +16,7 @@ TODO (summarise main learning points in a few sentences)
 ## Pushing to the remote
 
 By now we've done quite a bit of work on our cheatsheet and good practice
-material in our local `git-good-practice` repository. It seems a good point to
+material in our local `git-good-practice` repository. It seems like a good point to
 put this work on the remote repository residing on GitHub.
 
 Let's review the status of the repository and view the log:
