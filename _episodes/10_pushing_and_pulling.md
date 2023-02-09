@@ -58,13 +58,15 @@ working tree or staging area. We can alternatively use `git push origin`, if we
 would like to be more explicit about which remote repository we are pushing to
 (`origin` by default).
 
-TODO:
-* Explain that we may be prompted to enter our Git username and a password.
-  Because we set up the repository to work with HTTPS, we use the Personal
-  Access Token (PAT) that we generated in the episode
-  [Setting up Git and GitHub]({{ site.url }}/04_configuring_git/index.html)
-  - Add a tip that you can paste the PAT in most terminals by right-clicking
-    at the prompt
+When using the `git push` command, we may be prompted to enter our Git username
+and a password. Since we set up the repository to work with HTTPs, we use the
+Personal Access Token (PAT) we generated in the
+[Setting up Git and GitHub]({{ site.url }}/04_configuring_git/index.html)
+episode as said password.
+
+> ### Pasting the PAT
+>
+> You can paste the PAT in most terminals by right-clicking at the prompt.
 
 We now push the commits to our remote `git-good-practice` repository (note
 that our terminal program doesn't display the PAT when we paste it in):
