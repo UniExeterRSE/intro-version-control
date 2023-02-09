@@ -144,7 +144,7 @@ there is to know about pathspecs, but here are some examples:
 
 Amongst other thing, this can be useful for selecting files to stage. For example,
 if our current working directory was the root folder of a Git repository, the
-following would add all files anywhere in the root folder or descended from it:
+following would add all files anywhere in this folder or descended from it:
 
 ```
 $ git add .
@@ -261,10 +261,10 @@ exist. Here are some examples:
 * `git mv file.txt newfile.txt` will rename `file.txt` to `newfile.txt`.
 
 
-### Exercise
-
-We will want to create more 'good practice' files as we go through this course,
-so let's prepare by moving `Commit-good-practice.md` to a directory called
-`Good-practice-guides` in the root folder of the repository. Make this directory
-and then create a commit that moves `Commit-good-practice.md` to this
-directory.
+> ### Exercise
+> 
+> We will want to create more 'good practice' files as we go through this course,
+> so let's prepare by moving `Commit-good-practice.md` to a directory called
+> `Good-practice-guides` in the root folder of the repository. Make this directory
+> and then create a commit that moves `Commit-good-practice.md` to this
+> directory.
