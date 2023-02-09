@@ -117,9 +117,17 @@ repository is now up to date with the local repository).
 
 ## Viewing the repository on GitHub
 
-TODO:
-* Create written instructions for viewing the commits in the remote repository.
-  Assume that the repository is under a user's personal account.
+Below we outline the steps you will need to take to view these newly pushed commits
+in the remote repository on your personal GitHub account.
+
+- **Step 1:** Log into your GitHub account.
+
+- **Step 2:** Click on your profile picture in the top right-hand corner - this will
+  activate a drop-down menu. Select _Your repositories_ from this drop-down menu.
+
+- **Step 3:** Click on the name of the repository you have been working on.
+
+- **Step 4:** Click on _commits_, above the list of files on the right-hand side.
 
 
 ## Pulling changes from a remote repository
