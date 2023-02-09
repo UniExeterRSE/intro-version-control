@@ -44,14 +44,13 @@ ad56194 Add entry about staging files with 'git add'
 3917168 (origin/main, origin/HEAD) Initial commit
 ```
 
-TODO:
-* Explain the significance of `main` being ahead of `origin/main` in terms of content
-  on the remote repository vs local version, making reference to both the
-  status and the log output. Note:
-  branches have only been introduced very informally in passing
-  [here](../_episodes/07_recording_changes.md#viewing-the-status-of-a-repository).
-  Suggest not defining branches formally here, this will be done in workshop 2.
+The status indicates `main`, our local *branch*, is ahead of `origin/main`, the
+remote *branch*, by 11 commits. These commits are our new snapshots that are yet
+to be recorded in the remote repository. The log shows the short identifier and
+commit message of each of these commits, along with the initial commit generated
+when the repository was created (`3917168`).
 
+TODO:
 * Introduce `git push` command, what it does and how to use it. Note that it will
   only push _commits_, not changes that are only in the working tree or staging
   area.
