@@ -124,38 +124,53 @@ $ git log -2 --oneline
 ```
 
 
-## Pathspecs
+## Staging multiple files
 
-So far, we have been specifying files individually whenever we want to act on
-them with Git. Git has its own mini-language for referring to files, which
-provides convenient shorthands for referring to multiple files at once. This is
-done through what are called **pathspecs**. We aren't going to cover everything
-there is to know about pathspecs, but here are some examples:
-
-* `.` refers to files in the current working directory and all directories
-  descended from it (e.g. would include `./foo/bar/baz/file.txt`)
-
-* Specifying a directory `foo` will limit to files that descend from `foo`
-  (e.g. `./foo/bar/baz/file.txt` but not `./qux/bar/file.txt`)
-
-* `*.py` refers to all `.py` files in the current working directory.
-
-* `foo/*.py` matches all `.py` files in the directory `foo`
-
-Amongst other thing, this can be useful for selecting files to stage. For example,
-if our current working directory was the root folder of a Git repository, the
-following would add all files anywhere in this folder or descended from it:
+It can be a bit tedious to list out each file whose changes need to be staged,
+or who's diffs we want to examine. Git provides convenient shorthands to refer
+to multiple files at once. For example, if `path/to/directory` defines a
+directory within the root folder of our repository, the command
 
 ```
-$ git add .
+git add path/to/directory
 ```
 
-Alternatively, if we only wanted to stage files descended from the directory
-`foo`:
+would stage all changes to files that are contained in `path/to/directory` _or in
+directories descended from it_. (So, for example, both the files
+`path/to/directory/file1.txt` and `path/to/directory/foo/bar/file2.txt` would
+be included by the above command.) A particular example is the case where
+`path/to/directory` is just the current working directory, i.e. `.`. If our
+current working directory is the root directory of the repository, then the
+command 
 
 ```
-$ git add foo/
+git add .
 ```
+
+would stage changes to all files contained in the repository root directory or
+any directory descended from it.
+This can be a useful to way to grab all changes to all files in a repository.
+
+> ### Caution with `git add .`
+> 
+> Exercise caution when running `git add .`, because you may end up staging
+> changes to files you didn't intend to! 
+
+The above examples work analogously with `git diff` as well.
+
+
+> ### Pathspecs
+> 
+> The shorthands introduced here are examples of what are called **pathspecs**.
+> This is Git's terminology for referring to files, in a way that provides more
+> flexibility than just listing out all file paths individually. If you look at
+> the Git help pages for commands like `git add` and `git diff`, you may well
+> find that the command signature includes mention of `<pathspec>` rather than
+> 'files'. You can think of this `<pathspec>` entry as meaning 'file paths, or
+> shortcut syntax for specifying multiple files in one go'. We'll see a bit
+> more about this later in the course. If you want to read more, check out the
+> Git Glossary manual by running `man gitglossary` and paging down to the
+> `pathspec` entry.
 
 
 ## Deleting and moving files
