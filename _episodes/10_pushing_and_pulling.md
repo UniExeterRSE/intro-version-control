@@ -139,10 +139,9 @@ of it, then you could clone their repository as explained in the
 later date, the owner of said repository may make updates. You can add these
 updates to your local repository using the `git pull` command.
 
-TODO:
-  * Explain that what we've covered in this episode is suitable in cases where
-    we're working alone on our repository. If we are collaborating, we need to
-    be more careful in how we use `git push` and `git pull` to avoid conflicts
-    with other peoples' work. This will be explored much more in later
-    episodes.
+In this episode, we have explored using `git push` in a way which is only really
+suitable when we are working alone on a respository. When collaborating with
+others, we need to be more careful when using `git push` and `git pull` to avoid
+conflicts between our work and others'. We will explore this in more detail
+later in this series of workshops.
 
