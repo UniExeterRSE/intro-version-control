@@ -132,12 +132,12 @@ in the remote repository on your personal GitHub account.
 
 ## Pulling changes from a remote repository
 
-TODO:
-* Explain how platforms like GitHub can be used to share our code with the world.
-* Explain what `git pull` does, in the context of an example where we're using
-  code from somebody else's repository and want to update our local version with
-  the latest release. Perhaps use a 'proper' code repository as the example e.g. for
-  some Python package (tensorflow? numpy?...)
+Platforms like GitHub can be used to share our code with the world. If you're
+interested in taking a closer look at someone else's code, or even making use
+of it, then you could clone their repository as explained in the
+[Making Repositories]({{ site.url }}/05_making_repos/index.html) episode. At a
+later date, the owner of said repository may make updates. You can add these
+updates to your local repository using the `git pull` command.
 
 TODO:
   * Explain that what we've covered in this episode is suitable in cases where
