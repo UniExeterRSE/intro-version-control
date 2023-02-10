@@ -8,9 +8,12 @@ toc: true
 adapted: false
 ---
 
-## Lesson objectives
+## Learning objectives
 
-TODO (summarise main learning points in a few sentences)
+By the end of this episode you will be able to add changes from your local
+repository to your remote repository using the `git push` command and view these
+changes on GitHub. You will also have a high-level understanding of how to use
+the `git pull` command.
 
 
 ## Pushing to the remote
