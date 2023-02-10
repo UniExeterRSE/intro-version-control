@@ -297,7 +297,20 @@ usual Unix command `rm` to get a nice, clean working tree again.
 $ rm foo.txt
 ```
 
-After all that, we can move that TODO list back into the repository.
+After all that, we can move that TODO list back into the repository. We'll
+finish by removing the tasks we've completed and add some new tasks, leaving our
+list like so:
+
+```
+TODO:
+
+Add cheatsheet entries for `git rm` and `git mv`
+
+Add cheatsheet entries for pushing and pulling
+
+Add cheatsheet entries about undoing changes
+
+```
 
 
 > ### Important note: sensitive data
