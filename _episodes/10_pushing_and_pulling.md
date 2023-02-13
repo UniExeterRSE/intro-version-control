@@ -8,15 +8,18 @@ toc: true
 adapted: false
 ---
 
-## Lesson objectives
+## Learning objectives
 
-TODO (summarise main learning points in a few sentences)
+By the end of this episode you will be able to add changes from your local
+repository to your remote repository using the `git push` command and view these
+changes on GitHub. You will also have a high-level understanding of how to use
+the `git pull` command.
 
 
 ## Pushing to the remote
 
 By now we've done quite a bit of work on our cheatsheet and good practice
-material in our local `git-good-practice` repository. It seems a good point to
+material in our local `git-good-practice` repository. It seems like a good point to
 put this work on the remote repository residing on GitHub.
 
 Let's review the status of the repository and view the log:
@@ -44,24 +47,31 @@ ad56194 Add entry about staging files with 'git add'
 3917168 (origin/main, origin/HEAD) Initial commit
 ```
 
-TODO:
-* Explain the significance of `main` being ahead of `origin/main` in terms of content
-  on the remote repository vs local version, making reference to both the
-  status and the log output. Note:
-  branches have only been introduced very informally in passing
-  [here](../_episodes/07_recording_changes.md#viewing-the-status-of-a-repository).
-  Suggest not defining branches formally here, this will be done in workshop 2.
+The status indicates `main`, our local *branch*, is ahead of `origin/main`, the
+remote *branch*, by 11 commits. (We will look at branches more formally later
+in the course; for now, just think of these as different commit histories: one
+local, the other remote.) These commits are our new snapshots that are yet
+to be recorded in the remote repository. As a recap, note that the log shows the
+short identifier and commit message of each of these commits, along with the
+initial commit generated when the repository was created (`3917168`).
 
-* Introduce `git push` command, what it does and how to use it. Note that it will
-  only push _commits_, not changes that are only in the working tree or staging
-  area.
+The status also includes a handy comment, suggesting "use "git push" to publish
+your local commits" - this is exactly what we should do next! Ultimately, `git push`
+transfers the commits we have made in our local repository to the remote repository.
+It should be noted that it will only push _commits_, not changes residing in the
+working tree or staging area. We can alternatively use `git push origin`, if we
+would like to be more explicit about which remote repository we are pushing to
+(`origin` by default).
 
-* Explain that we may be prompted to enter our Git username and a password.
-  Because we set up the repository to work with HTTPS, we use the Personal
-  Access Token (PAT) that we generated in the episode
-  [Setting up Git and GitHub]({{ site.url }}/04_configuring_git/index.html)
-  - Add a tip that you can paste the PAT in most terminals by right-clicking
-    at the prompt
+When using the `git push` command, we may be prompted to enter our Git username
+and a password. Since we set up the repository to work with HTTPs, we use the
+Personal Access Token (PAT) we generated in the
+[Setting up Git and GitHub]({{ site.url }}/04_configuring_git/index.html)
+episode as said password.
+
+> ### Pasting the PAT
+>
+> You can paste the PAT in most terminals by right-clicking at the prompt.
 
 We now push the commits to our remote `git-good-practice` repository (note
 that our terminal program doesn't display the PAT when we paste it in):
@@ -105,32 +115,61 @@ ad56194 Add entry about staging files with 'git add'
 3917168 Initial commit
 ```
 
-TODO:
-* Point out that we have no outstanding commits to push and that `main` and
-  `origin/main` are now located at the same commit. Explain that this means
-  the remote repository is up to date with the local repository.
+Once again, the status shows we have no outstanding commits to push, meaning
+`main` and `origin/main` are now pointing at the same commit (i.e. the remote
+repository is now up to date with the local repository).
 
 
 ## Viewing the repository on GitHub
 
-TODO:
-* Create written instructions for viewing the commits in the remote repository.
-  Assume that the repository is under a user's personal account.
+GitHub provides some nice facilities to view the commit history on its website.
+Below we outline the steps you will need to take to view these newly pushed commits
+in the remote repository on your personal GitHub account.
+
+- **Step 1:** Log into your GitHub account.
+
+- **Step 2:** Click on your profile picture in the top right-hand corner - this will
+  activate a drop-down menu. Select _Your repositories_ from this drop-down menu.
+
+- **Step 3:** Click on the name of the repository you have been working on.
+
+- **Step 4:** Click on _commits_, above the list of files on the right-hand side.
+  It should look akin to the screenshot following (the number of commits you have
+  will be different):
+  
+  ![Link to viewing commits on GitHub](../images/github-commits-link.png)
 
 
 ## Pulling changes from a remote repository
 
-TODO:
-* Explain how platforms like GitHub can be used to share our code with the world.
-* Explain what `git pull` does, in the context of an example where we're using
-  code from somebody else's repository and want to update our local version with
-  the latest release. Perhaps use a 'proper' code repository as the example e.g. for
-  some Python package (tensorflow? numpy?...)
+Platforms like GitHub can be used to share our code with the world. If you're
+interested in taking a closer look at someone else's code, or even making use
+of it, then you could clone their repository as explained in the
+[Making Repositories]({{ site.url }}/05_making_repos/index.html) episode. But
+what do you do if the owner of said repository makes updates at a later date?
+You can retrieve these
+updates to your local repository by using the `git pull` command. We'll cover
+this command more later in the course, when we talk about collaborating with
+others on code. You use `git pull` in the analogous way to `git push`: from
+within the root folder of the repository, just run
 
-TODO:
-  * Explain that what we've covered in this episode is suitable in cases where
-    we're working alone on our repository. If we are collaborating, we need to
-    be more careful in how we use `git push` and `git pull` to avoid conflicts
-    with other peoples' work. This will be explored much more in later
-    episodes.
+```
+git pull
+```
 
+or, to be more explicit about the remote repository, you can equivalently run
+
+```
+git pull origin
+```
+
+
+## A final note
+
+In this episode, we have explored using `git push` in a way which is only really
+suitable when we are working alone on a repository. This is fine if you want
+to use a platform like GitHub for publishing your work, or if you just want
+to use it to keep a backup with a record of the development history. In contrast,
+when collaborating with others, we need to be more careful about using `git push`
+and `git pull` to avoid conflicts between our work and others'. We will explore
+this in more detail later in the course.
