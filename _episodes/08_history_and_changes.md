@@ -34,19 +34,19 @@ something like the following:
 
 ```
 commit 46b11e612128e68a9d558be1bcaa82bbdaac34ab (HEAD -> main)
-Author: Joe Bloggs <joe@bloggs.net>
+Author: Joe Bloggs <joe.bloggs@example.net>
 Date:   Tue Feb 7 16:47:21 2023 +0000
 
     Add advice on committing little and often
 
 commit ecbf67e161e805a3183ebc84eb7d39c229a78451
-Author: Joe Bloggs <joe@bloggs.net>
+Author: Joe Bloggs <joe.bloggs@example.net>
 Date:   Tue Feb 7 16:46:54 2023 +0000
 
     Add entry for 'git commit' with '-m' option
 
 commit 34c19f2dd01c42fa2981520ca436bde5378979cb
-Author: Joe Bloggs <joe@bloggs.net>
+Author: Joe Bloggs <joe.bloggs@example.net>
 Date:   Tue Feb 7 16:14:14 2023 +0000
 
     Add material on committing
@@ -56,7 +56,7 @@ Date:   Tue Feb 7 16:14:14 2023 +0000
     'good practice' document.
 
 commit ad56194133fcac4f65d236260f372665fbec605b
-Author: Joe Bloggs <joe@bloggs.net>
+Author: Joe Bloggs <joe.bloggs@example.net>
 :
 ```
 
@@ -101,7 +101,7 @@ the last commit you can use `git log -1`:
 ```
 $ git log -1
 commit 46b11e612128e68a9d558be1bcaa82bbdaac34ab (HEAD -> main)
-Author: Joe Bloggs <joe@bloggs.net>
+Author: Joe Bloggs <joe.bloggs@example.net>
 Date:   Tue Feb 7 16:47:21 2023 +0000
 
     Add advice on committing little and often

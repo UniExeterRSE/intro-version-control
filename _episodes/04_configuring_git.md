@@ -42,7 +42,7 @@ conventional sense. Think of it as short for 'configure'.)
 
 ``` bash
 $ git config --global user.name "Joe Bloggs"
-$ git config --global user.email "joe@bloggs.net"
+$ git config --global user.email "joe.bloggs@example.net"
 ```
 
 This user name and email will be associated with your subsequent Git activity,
