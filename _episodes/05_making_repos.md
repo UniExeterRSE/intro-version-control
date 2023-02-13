@@ -69,7 +69,7 @@ practice, but we cover it for completeness.
 
 Below we outline simplified steps for creating a new repository on your personal
 GitHub account, which will be adequate for this course. Full instructions for
-creating respositories on GitHub can be found at
+creating repositories on GitHub can be found at
 <https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository>.
 In what follows, accept the default options on GitHub unless we specify
 otherwise.
@@ -242,18 +242,18 @@ in the `ls` command:
 ``` output
 $ ls -al fossil-emissions/
 total 24
-drwxrwxr-x 6 vcworkshop vcworkshop 4096 Jan  5 10:37 .
-drwxrwxr-x 3 vcworkshop vcworkshop 4096 Jan  5 10:24 ..
-drwxrwxr-x 7 vcworkshop vcworkshop 4096 Jan  5 10:24 .git
--rw-rw-r-- 1 vcworkshop vcworkshop    0 Jan  5 10:37 .gitignore
--rw-rw-r-- 1 vcworkshop vcworkshop    0 Jan  5 10:24 README.md
--rw-rw-r-- 1 vcworkshop vcworkshop    0 Jan  5 10:26 clean_data.py
-drwxrwxr-x 2 vcworkshop vcworkshop 4096 Jan  5 10:25 data
--rw-rw-r-- 1 vcworkshop vcworkshop    0 Jan  5 10:26 fit_model.py
-drwxrwxr-x 2 vcworkshop vcworkshop 4096 Jan  5 10:26 models
-drwxrwxr-x 2 vcworkshop vcworkshop 4096 Jan  5 10:25 outputs
--rw-rw-r-- 1 vcworkshop vcworkshop    0 Jan  5 10:27 plot_results.py
--rw-rw-r-- 1 vcworkshop vcworkshop    0 Jan  5 10:26 predict.py
+drwxrwxr-x 6 jbloggs jbloggs 4096 Jan  5 10:37 .
+drwxrwxr-x 3 jbloggs jbloggs 4096 Jan  5 10:24 ..
+drwxrwxr-x 7 jbloggs jbloggs 4096 Jan  5 10:24 .git
+-rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:37 .gitignore
+-rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:24 README.md
+-rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:26 clean_data.py
+drwxrwxr-x 2 jbloggs jbloggs 4096 Jan  5 10:25 data
+-rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:26 fit_model.py
+drwxrwxr-x 2 jbloggs jbloggs 4096 Jan  5 10:26 models
+drwxrwxr-x 2 jbloggs jbloggs 4096 Jan  5 10:25 outputs
+-rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:27 plot_results.py
+-rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:26 predict.py
 ```
 
 It is common for people to refer to the top level folder of the repository as the 

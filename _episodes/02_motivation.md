@@ -38,8 +38,8 @@ tools that allow you to easily share your changes with others and, crucially,
 _combine other peoples' changes with your own_. The tooling enables you to do
 this in a structured way that makes combining changes transparent
 and less error-prone. Furthermore, the histories of each person's changes are
-recorded in one place, so that the record of changes to files is not siloed
-off amongst multiple person's computers.
+shared with each other, so that the record of changes to files is not split out
+amongst multiple person's computers.
 
 
 ## Why bother to use a version control system?
@@ -50,7 +50,7 @@ of versioning your files?
 
 Let's compare version control systems to a couple of other options.
 
-### Cloud-based syncronisation e.g. Google Drive, DropBox, OneDrive/SharePoint
+### Cloud-based synchronisation e.g. Google Drive, DropBox, OneDrive/SharePoint
 
 These days there are cloud-based services that allow you to sync your local
 files with copies kept in the cloud: e.g. Google Drive, DropBox, OneDrive etc.

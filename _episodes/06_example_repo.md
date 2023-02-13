@@ -10,7 +10,7 @@ adapted: false
 
 ## An example repository
 
-To help you get familar with working with Git and GitHub, we encourage you to
+To help you get familiar with working with Git and GitHub, we encourage you to
 work through an example repository, which you will populate through exercises
 that appear in episodes throughout this course. We'll use the repository to
 begin building up a cheat sheet of Git commands, some tips on good practice and
@@ -44,7 +44,7 @@ Markdown at
 
 > #### Note
 >
-> If you're using VS Code to view Markdown docments, note that not all aspects
+> If you're using VS Code to view Markdown documents, note that not all aspects
 > of GitHub Flavoured Markdown are supported. For example, task lists are not
 > rendered in the VS Code Markdown viewer.
 
