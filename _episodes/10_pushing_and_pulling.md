@@ -48,10 +48,12 @@ ad56194 Add entry about staging files with 'git add'
 ```
 
 The status indicates `main`, our local *branch*, is ahead of `origin/main`, the
-remote *branch*, by 11 commits. These commits are our new snapshots that are yet
-to be recorded in the remote repository. The log shows the short identifier and
-commit message of each of these commits, along with the initial commit generated
-when the repository was created (`3917168`).
+remote *branch*, by 11 commits. (We will look at branches more formally later
+in the course; for now, just think of these as different commit histories: one
+local, the other remote.) These commits are our new snapshots that are yet
+to be recorded in the remote repository. As a recap, note that the log shows the
+short identifier and commit message of each of these commits, along with the
+initial commit generated when the repository was created (`3917168`).
 
 The status also includes a handy comment, suggesting "use "git push" to publish
 your local commits" - this is exactly what we should do next! Ultimately, `git push`
@@ -120,6 +122,7 @@ repository is now up to date with the local repository).
 
 ## Viewing the repository on GitHub
 
+GitHub provides some nice facilities to view the commit history on its website.
 Below we outline the steps you will need to take to view these newly pushed commits
 in the remote repository on your personal GitHub account.
 
@@ -138,13 +141,31 @@ in the remote repository on your personal GitHub account.
 Platforms like GitHub can be used to share our code with the world. If you're
 interested in taking a closer look at someone else's code, or even making use
 of it, then you could clone their repository as explained in the
-[Making Repositories]({{ site.url }}/05_making_repos/index.html) episode. At a
-later date, the owner of said repository may make updates. You can add these
-updates to your local repository using the `git pull` command.
+[Making Repositories]({{ site.url }}/05_making_repos/index.html) episode. But
+what do you do if the owner of said repository makes updates at a later date?
+You can retrieve these
+updates to your local repository by using the `git pull` command. We'll cover
+this command more later in the course, when we talk about collaborating with
+others on code. You use `git pull` in the analogous way to `git push`: from
+within the root folder of the repository, just run
+
+```
+git pull
+```
+
+or, to be more explicit about the remote repository, you can equivalently run
+
+```
+git pull origin
+```
+
+
+## A final note
 
 In this episode, we have explored using `git push` in a way which is only really
-suitable when we are working alone on a respository. When collaborating with
-others, we need to be more careful when using `git push` and `git pull` to avoid
-conflicts between our work and others'. We will explore this in more detail
-later in this series of workshops.
-
+suitable when we are working alone on a repository. This is fine if you want
+to use a platform like GitHub for publishing your work, or if you just want
+to use it to keep a backup with a record of the development history. In contrast,
+when collaborating with others, we need to be more careful about using `git push`
+and `git pull` to avoid conflicts between our work and others'. We will explore
+this in more detail later in the course.
