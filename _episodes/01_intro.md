@@ -49,22 +49,20 @@ Please conduct yourselves in line with the
 essentially, be respectful and aware that we all have different backgrounds,
 experiences and viewpoints.
 
-<!-- ## Acknowledgement
+
+## Acknowledgement
 
 This course has been adapted from Software Carpentry's
 <a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
-course <a href="#footnote1">[1]</a>, which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
+course [[^1]], which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
 under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">Creative Commons BY 4.0</a>.
 Changes have been made from the original content.
 
+
 ### References
 
-<ol>
-  <li id="footnote1">
-    Ivan Gonzalez; Daisie Huang;  Nima Hejazi;  Katherine Koziar; 
-    Madicken Munk (eds): "Software Carpentry: Version Control with Git."  
-    Version 2019.06.1, July 2019,
-    <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
-    10.5281/zenodo.3264950</li>
-</ol> -->
-
+[^1]: Ivan Gonzalez; Daisie Huang;  Nima Hejazi;  Katherine Koziar; 
+      Madicken Munk (eds): "Software Carpentry: Version Control with Git."  
+      Version 2019.06.1, July 2019,
+      <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
+      10.5281/zenodo.3264950

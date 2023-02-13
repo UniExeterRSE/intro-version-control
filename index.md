@@ -126,19 +126,13 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 
 ## Acknowledgements
 
-<!-- This course has been adapted from Software Carpentry's
-<a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
-course <a href="#footnote1">[1]</a>, which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
-under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">Creative Commons BY 4.0</a>.
-Changes have been made from the original content. -->
-
 This course is currently under development. It is being developed by
 [members](./acknowledgements.html) of the
 University of Exeter's Research Software Engineering Group
 who are enthusiastic about sharing their skills with the wider research
 community.
 
-If you have benefitted in any way from this course and want to support its long term
+If you have benefited in any way from this course and want to support its long term
 sustainability then please take the time to complete our feedback survey,
 recommend it to your colleagues, and enthuse about it to your senior leadership
 team.
@@ -149,3 +143,17 @@ This workshop is brought to you by:
 - The <a href="https://www.exeter.ac.uk/research/idsai/" target="_blank" rel="external noreferrer">Institute of Data Science and Artificial Intelligence</a>
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">Researcher Development Programme</a>
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/" target="_blank" rel="external noreferrer">Doctoral College</a>
+
+This course has been adapted from Software Carpentry's
+<a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
+course [[^1]], which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
+under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">Creative Commons BY 4.0</a>.
+Changes have been made from the original content.
+
+### References
+
+[^1]: Ivan Gonzalez; Daisie Huang;  Nima Hejazi;  Katherine Koziar; 
+      Madicken Munk (eds): "Software Carpentry: Version Control with Git."  
+      Version 2019.06.1, July 2019,
+      <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
+      10.5281/zenodo.3264950
