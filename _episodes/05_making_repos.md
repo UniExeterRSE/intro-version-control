@@ -129,13 +129,13 @@ the repository.
 >   - A licence file. If you intend to make your work publicly available, then
 >     it's important to include a licence file which both allows others to use
 >     your work and specify the terms for their use. You can read more about this
->     important topic [on GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
->     and on the [Software Sustainability Institute](https://www.software.ac.uk/resources/guides/choosing-open-source-licence)'s website.
+>     important topic <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" target="_blank" rel="external noreferrer">on GitHub</a>
+>     and on the <a href="https://www.software.ac.uk/resources/guides/choosing-open-source-licence" target="_blank" rel="external noreferrer">Software Sustainability Institute</a>'s website.
 > 
 > * If you belong to an _Organisation_ on GitHub and have the correct
 >   permissions, then you will be able to create repositories under the
 >   organisation instead of your own user account. See GitHub's
->   [overview on organisations](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations)
+>   <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations" target="_blank" rel="external noreferrer">overview on organisations</a>
 >   for more information. 
 
 
@@ -257,7 +257,7 @@ Below is a screenshot of the repository on a Windows machine; note that we've
 enabled the display of 'hidden' files and folders, i.e. those whose names
 begin with a period.
 
-![A simple Git repository on Windows](../images/basic-repo.png)
+![A simple Git repository on Windows]({{ site.url }}/images/basic-repo.png)
 
 And here is the same repository displayed on a Linux operating system, using the
 command line; note we are displaying hidden files using the `-a` option

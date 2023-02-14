@@ -85,7 +85,7 @@ prefer to use something else.
 > #### Git for Windows
 >
 > If you followed the recommendations in the
-> [installation instructions for Git for Windows](../setup.html#windows) then
+> [installation instructions for Git for Windows]({{ site.url }}/setup.html#windows) then
 > Nano should already be the default editor used by Git.
 
 The following table shows how to set the default editor for Git for several popular 
