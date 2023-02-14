@@ -94,7 +94,7 @@ called `HEAD`. In the above output, `HEAD` refers to the commit with message
 ### Limiting log output
 
 To avoid having `git log` cover your entire terminal screen, you can limit the
-number of commits that Git lists by using `-N`, where `N` is the number of
+number of commits that Git lists by using `-n`, where `n` is the number of
 commits that you want to view. For example, if you only want information from
 the last commit you can use `git log -1`:
 
@@ -144,7 +144,7 @@ way:
   particular commits.
 
 * `git diff <files>` and `git diff --staged <files>` for viewing changes to
-  files that have yet to be staged or, in the second form, committed.
+  files that have yet to be staged or, in the second form, yet to be committed.
 
 
 ## Differences between commits
@@ -220,12 +220,11 @@ versions in the specified commits.
 >    `Commit-good-practice.md` until just before the line 
 >    `diff --git a/Git-cheatsheet.md b/Git-cheatsheet.md`, at which point it switches
 >    to the diff for `Git-cheatsheet.md`.
-> 2. The second line in each file's diff tells exactly which versions of the file
+> 2. The next few lines in each file's diff tell exactly which versions of the file
 >    Git is comparing. Confusingly, it looks like it contains commit identifiers,
 >    but these are in face different, computer-generated labels for the
 >    versions of the files.
-> 3. The third and fourth lines once again show the name of the file being changed.
-> 4. The remaining lines are the most interesting, they show us the actual differences
+> 3. The remaining lines, beginning `@@`, are the most interesting: they show us the actual differences
 >    and the lines on which they occur. In particular,
 >    the `+` marker in the first column shows where we added a line. If we had
 >    lines that were removed, these would be marked with `-`.
@@ -265,7 +264,8 @@ git diff <commit> <files>
 ```
 
 The rules for `<files>` are the same as before. For example, to view the changes
-to the file `Commit-good-practice.md` from commit `34c19f2` to the latest commit:
+to the file `Commit-good-practice.md` from commit `34c19f2`
+("Add material on committing") to the latest commit:
 
 ```
 $ git diff 34c19f2 Commit-good-practice.md
@@ -386,7 +386,9 @@ Suppose we now stage the changes above made in the previous section and run
 
 ```
 $ git add Git-cheatsheet.md
+
 $ git diff
+
 $
 ```
 

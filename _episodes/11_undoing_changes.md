@@ -18,7 +18,7 @@ mean to stage and how to undo accidental commits.
 
 We've got quite a bit of outstanding stuff we could add to our cheatsheet
 and good practice guide. Let's make a note of these things in a `TODO.txt`
-file:
+file, which we'll put in the root folder of our repository:
 
 ```
 TODO:
@@ -32,7 +32,7 @@ Add cheatsheet entries for `git rm` and `git mv`
 Add cheatsheet entries for pushing and pulling
 ```
 
-We might as well tick off the first two items. We add the following content
+We might as well tick off the first two items, so let's add the following content
 to `Git-cheatsheet.md`:
 
 ```
@@ -88,10 +88,9 @@ Changes to be committed:
 ```
 
 Ah, no! We don't want to commit our `TODO.txt` file. This was just to help us
-keep track of our work and it doesn't belong in the repository.
-
-Fortunately we can remove changes to a file from the staging area. In fact,
-`git status` tells us how to do this. The general command to use is
+keep track of our work and it doesn't belong in the repository. Fortunately
+we can remove changes to a file from the staging area. In fact,
+`git status` tells us how to do this. The general command to use is:
 
 ```
 git restore --staged <files>
@@ -265,16 +264,19 @@ cc01bda Add TODO.txt
 
 $ git reset 0984d2b
 
-$ git log --oneline -2
+$ git log --oneline -5
 0984d2b (HEAD -> main) Add material on basic pathspec usage (directories)
 92b2ac2 (origin/main, origin/HEAD) Create general good practice guides directory
+5cf8321 Remove rubbish.txt
+d26a698 Add some rubbish to try out 'git rm'
+910bb79 Add note about '--name-only' option to 'git diff'
 ```
 
 We can see that our new `HEAD`, i.e. our new 'current commit', is what we reset
 to, namely `0984d2b`. What state will our working tree be in? The answer is that it
 will contain the changes that would need to be made to recover the state of
-the repository as it was at `HEAD` just before the reset, i.e. at the
-now-removed commit `fcecec0`. In other words, we expect to see just the change
+the repository as it was at `HEAD` just before the reset (at the
+now-removed commit `fcecec0`). In other words, we expect to see just the change
 that adds `foo.txt`. We can verify this with `git status`:
 
 ```

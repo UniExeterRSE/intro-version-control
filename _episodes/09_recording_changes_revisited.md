@@ -11,8 +11,7 @@ adapted: false
 ## Learning objectives
 
 By the end of this episode, you will understand how to incrementally stage changes
-in a file. You will also learn how to more flexibly refer to files in Git commands
-with pathspecs. Finally, you will be able to delete and move files that are
+in a file.You will also be able to delete and move files that are
 under version control within a Git repository.
 
 
@@ -176,12 +175,12 @@ The above examples work analogously with `git diff` as well.
 ## Deleting and moving files
 
 Sometimes we may need to delete, move or rename files that are under version control
-in a repository. Git has specific commands to do this: `git rm` for deletion
+in a repository (i.e. that feature in commits in the repository). Git has
+specific commands to do this: `git rm` for deletion
 and `git mv` for moving and renaming. The key things to remember about these
-commands is:
+commands are:
 
-* they only work when applied to files under version control (i.e. that feature
-  in commits in the repository); and
+* they only work when applied to files under version control; and
 
 * they perform the deletion / move _and then stage the result_, ready for committing.
 
@@ -278,7 +277,7 @@ exist. Here are some examples:
 
 > ### Exercise
 > 
-> We will want to create more 'good practice' files as we go through this course,
+> We may want to create more 'good practice' files as we go through this course,
 > so let's prepare by moving `Commit-good-practice.md` to a directory called
 > `Good-practice-guides` in the root folder of the repository. Make this directory
 > and then create a commit that moves `Commit-good-practice.md` to this

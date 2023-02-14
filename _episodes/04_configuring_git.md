@@ -34,11 +34,10 @@ whenever we use Git within a given user account on a specific computer.
 
 ### Username and email address
 
-On a command line, Git commands are written as `git <verb> <options>`,
-where `<verb>` is what we actually want to do and `<options>` is additional
-optional information which may be needed for the `<verb>`. To configure Git,
-settings, we use the 'verb' `config`. (Yes, we know, it's not a verb in the
-conventional sense. Think of it as short for 'configure'.)
+On a command line, Git commands are written as `git <command> <options>`,
+where `<command>` is what we actually want to do and `<options>` is additional
+optional information which may be needed for the `<command>`. To configure Git,
+settings, we use the 'command' `config`.
 
 ``` bash
 $ git config --global user.name "Joe Bloggs"
@@ -142,7 +141,7 @@ $ git config --global init.defaultBranch main
 
 For versions of Git prior to 2.28, the change can only be made on an individual
 repository level and we will cover this in the episode on
-[making repositories](../05_making_repos/index.html) later.
+[making repositories]({{ site.url }}/05_making_repos/index.html) later.
 
 > #### Exercise
 >
@@ -251,8 +250,8 @@ To set up a PAT, follow the
   scopes can be found in the
   <a href="https://docs.github.com/en/developers/apps/building-oauth-apps/scopes-for-oauth-apps" target="_blank" rel="external noreferrer">GitHub documentation on OAuth scopes</a>.
 
-- If (when) a PAT expires, then you can
-  regenerate it by going to your _Personal access tokens (classic)_ as described
+- You can regenerate a PAT that has expired
+  by going to your _Personal access tokens (classic)_ as described
   in the link above, selecting the affected token and then clicking on _Regenerate token_.
 
 - To delete a token (e.g. if you suspect it's been compromised), go to your

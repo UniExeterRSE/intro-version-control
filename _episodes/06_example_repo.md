@@ -13,7 +13,7 @@ adapted: false
 To help you get familiar with working with Git and GitHub, we encourage you to
 work through an example repository, which you will populate through exercises
 that appear in episodes throughout this course. We'll use the repository to
-begin building up a cheat sheet of Git commands, some tips on good practice and
+begin building up a cheatsheet of Git commands, some tips on good practice and
 links to further resources.
 
 
@@ -25,7 +25,7 @@ language that is well suited to writing documentation for software, or
 communicating about code. Many applications, such as the
 [VS Code text editor](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview),
 can understand and render Markdown files in a visually appealing way.
-You write Markdown in files with a `.md` and the syntax is such that even
+You write Markdown in files with a `.md` extension and the syntax is such that even
 if you just view a Markdown file as a text file, it looks neat and tidy.
 Beyond this, GitHub has support for understanding Markdown throughout its
 website and automatically renders Markdown files. As a case in point, the
@@ -42,14 +42,20 @@ can find a pretty comprehensive introduction to the syntax of GitHub Flavoured
 Markdown at
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>.
 
-> #### Note
->
-> If you're using VS Code to view Markdown documents, note that not all aspects
-> of GitHub Flavoured Markdown are supported. For example, task lists are not
-> rendered in the VS Code Markdown viewer.
-
 It isn't necessary to know Markdown to follow the examples in this course — we'll
 point out bits of Markdown syntax as we go.
+
+> #### Previewing in VS Code
+> 
+> If you're using VS Code as your text editor, you can preview a rendered Markdown
+> document by opening the Command Palette (_View_ > _Command Palette..._),
+> searching for _Markdown: Open Preview_ and selecting this command. There's also
+> and option to open the preview side-by-side with the Markdown source document,
+> which is useful when editing.
+>
+> If you're using VS Code to view Markdown documents, note that not all aspects
+> of GitHub Flavoured Markdown will render correctly in VS Code. For example, task lists are not
+> rendered in the VS Code Markdown viewer.
 
 
 ## Creating the repository
@@ -57,15 +63,16 @@ point out bits of Markdown syntax as we go.
 Our first exercise is to create this repository on GitHub and clone a local
 version.
 
-> ### Exercise
->
-> Using the instructions in the [_Making Repositories_ episode](./05_making_repos.md):
->
-> 1. Create a new repository on GitHub called `git-good-practice`.
->    When doing this, have GitHub generate a readme file for you as part of the
->    repository creation, but otherwise accept the default options. We suggest
->    creating this as a _private_ repository in your personal GitHub account.
->
-> 2. Clone the repository just created on GitHub to your own computer, making
->    sure the repository is cloned into a folder called `git-good-practice`
->    (note that this is the default behaviour of `git clone`.)
+
+### Exercise
+
+Using the instructions in the [_Making Repositories_ episode](./05_making_repos.md):
+
+1. Create a new repository on GitHub called `git-good-practice`.
+   When doing this, have GitHub generate a readme file for you as part of the
+   repository creation, but otherwise accept the default options. We suggest
+   creating this as a _private_ repository in your personal GitHub account.
+
+2. Clone the repository just created on GitHub to your own computer, making
+   sure the repository is cloned into a folder called `git-good-practice`
+   (note that this is the default behaviour of `git clone`.)

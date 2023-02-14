@@ -5,7 +5,12 @@ order: 5
 session: 1
 length: 10
 toc: true
-adapted: false
+adapted: true
+attrib_name: Version Control with Git - Creating a Repository
+attrib_link: https://swcarpentry.github.io/git-novice/03-create/index.html
+attrib_copywrite: Software Carpentry
+attrib_license: CC-BY 4.0
+attrib_license_link: https://creativecommons.org/licenses/by/4.0/
 ---
 
 ## Learning Objectives
@@ -33,7 +38,7 @@ By contrast, the most common way that a person uses Git is to have a local repos
 that is linked to a remote repository. A typical example here is
 where there is a remote repository on GitHub and you have a local version of the
 repository on your own computer. You keep the remote repository up-to-date by
-'pushing' to it updates you make to your local repository (we will look more at
+'pushing' updates you make to your local repository to it (we will look more at
 this later in the course). Someone else can then obtain a copy of your work
 by getting it from the remote repository. 
 
@@ -47,7 +52,7 @@ their own local versions of the repository up-to-date with the remote one.
 
 ## Creating repositories
 
-So how do you create repositories? For this course, we'll focus on two different
+So how do you create repositories? We'll look at two different
 ways to do this:
 
 1. Creating a remote repository on GitHub.
@@ -166,7 +171,10 @@ git clone <remote-repo-url>
 This will create a new folder with the same name as the remote repository and
 download all the repository's contents into it.
 
-> **Note**: if the remote repository is private, you may be prompted to enter your
+
+> #### GitHub authentication
+>
+> If the remote repository is private, you may be prompted to enter your
 > GitHub username and a password. Use your Personal Access Token
 > for the password, not your GitHub account password.
 
@@ -221,14 +229,30 @@ then see the section on 'bare' repositories on
 [Atlassian's tutorial page for `git init`](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init).
 
 
+> #### Renaming the default branch
+> 
+> In the previous episode, we discussed changing the name of the default branch
+> from `master` to something else, e.g. `main`. For Git versions 2.28 and later,
+> the configuration can be set so that new repositories have this new name by
+> default, see the
+> [Setting up Git and GitHub]({{ site.url }}/04_configuring_git/index.html#default-git-branch-naming)
+> episode. If the version of Git you are
+> using is earlier than 2.28, then this needs to be done for each repository
+> individually. After creating the repository with `git init`, run the following
+> command:
+> 
+> ```
+> $ git checkout -b main
+> ```
+
+
 ## What does a local repository look like?
 
 We'll conclude this episode with taking a peek into an example repository that has been
 created locally, whether this be via cloning or using `git init`.
 
-Let's look at an example, imagining someone who has developed code to model and
-analyse fossil fuel emissions and who has used Git to version control this work.
-The repository is contained in a folder called `fossil-emissions`.
+Let's consider an example, looking at the more organised folder of work
+introduced in the episode [Git vs GitHub]({{ site.url }}/03_git_vs_github/index.html).
 Below is a screenshot of the repository on a Windows machine; note that we've
 enabled the display of 'hidden' files and folders, i.e. those whose names
 begin with a period.
@@ -236,29 +260,17 @@ begin with a period.
 ![A simple Git repository on Windows](../images/basic-repo.png)
 
 And here is the same repository displayed on a Linux operating system, using the
-command line; again, note how we are displaying hidden files, using the `-a` option
+command line; note we are displaying hidden files using the `-a` option
 in the `ls` command:
 
-``` output
-$ ls -al fossil-emissions/
-total 24
-drwxrwxr-x 6 jbloggs jbloggs 4096 Jan  5 10:37 .
-drwxrwxr-x 3 jbloggs jbloggs 4096 Jan  5 10:24 ..
-drwxrwxr-x 7 jbloggs jbloggs 4096 Jan  5 10:24 .git
--rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:37 .gitignore
--rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:24 README.md
--rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:26 clean_data.py
-drwxrwxr-x 2 jbloggs jbloggs 4096 Jan  5 10:25 data
--rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:26 fit_model.py
-drwxrwxr-x 2 jbloggs jbloggs 4096 Jan  5 10:26 models
-drwxrwxr-x 2 jbloggs jbloggs 4096 Jan  5 10:25 outputs
--rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:27 plot_results.py
--rw-rw-r-- 1 jbloggs jbloggs    0 Jan  5 10:26 predict.py
+```
+$ ls -a awesome-research-done-right/
+.  ..  .git  data  plot_results.py  process_geo_data.py  run-everything.py  simulate.py  simulation-engine
 ```
 
 It is common for people to refer to the top level folder of the repository as the 
 **root folder**; in the above example,
-`fossil-emissions` is the root folder. (Note: this is distinct from the
+`awesome-research-done-right` is the root folder. (Note: this is distinct from the
 'root' folder `/` on Unix systems that you might have heard of.) By
 default, Git will keep track of the version history of _all_ files located within the 
 root folder or subfolders thereof. Where exactly does Git keep all the

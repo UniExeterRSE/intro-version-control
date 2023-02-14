@@ -152,7 +152,8 @@ examples that cover quite a lot of cases in practice:
 Most commands in Git that work on files also work on pathspecs and you'll see
 this term in the help pages (try `git add --help` for an example).
 For the complete specification of pathspecs, check out the
-Git Glossary manual, by running `man gitglossary`.
+Git Glossary manual, by running `man gitglossary` and paging down to the entry
+for `pathspec`.
 
 Let's create a few dummy files for trying this out, imagining that we've got
 some research code that takes in data files, outputs some results and produces

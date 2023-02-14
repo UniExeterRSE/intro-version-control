@@ -19,14 +19,28 @@ what Git and GitHub are and describe how they are different.
 In the last episode we explained what version control systems are and why they
 are useful. This course teaches you the basics of using a particular version
 control system, called
-<a href="https://git-scm.com/" rel="external noreferrer">Git</a>.
+<a href="https://git-scm.com/" target="_blank" rel="external noreferrer">Git</a>.
 
 Git is one of the most popular and relied-upon version control systems used
 today, both in research and commercially. Git is simply a piece of software that
 you run on your computer. You can use it
-directly from the command line, using the command `git`. If you have Git installed
-on your machine, you can run it right now: open up a terminal (or
-Powershell / Command Prompt if you're on Windows) and try running the following
+directly from the command line, using the command `git`.
+
+> ### Terminals
+>
+> In this course we will work through examples with command line syntax that
+> you would find on most Unix-style systems (MacOS or Linux). If you are using
+> Windows and have followed the installation instructions, you will have
+> installed _Git for Windows_. This comes with the _Git Bash_ program, which
+> emulates a Unix Bash shell (e.g. it uses forward slashes `/` for path
+> separators and comes with common Unix programs like `ls` for listing the
+> contents of a directory). We recommend you use Git Bash to follow through the
+> course. You can launch Git Bash by opening the Start menu
+> and typing `Git Bash` to find the program.
+
+
+If you have Git installed
+on your machine, you can run it right now: open up a terminal and try running the following
 command:
 
 ``` bash
@@ -40,8 +54,8 @@ version number may differ):
 git version 2.25.1
 ```
 
-Because Git is so popular, there is a lot of other software that use it 'under
-the hood', which can lead to confusion about exactly what Git is. For example,
+Because Git is so popular, there is a lot of software that integrates with it,
+which can lead to confusion about exactly what Git is. For example,
 you may have used programs like Visual Studio Code, RStudio or PyCharm to write
 your code. These additionally provide graphical user interfaces to help
 developers interact with Git via 'point and click' while you work on code,
@@ -50,23 +64,23 @@ that these programs are just using Git under the hood and that it's perfectly
 possible to use Git without these. Indeed, it's best _not_ to rely on these
 integrated facilities for using Git, because you may well come up against
 situations in your work where you need to use Git in environments which force
-you to use it at the command line, such as remote servers, high performance
-computers, etc.
+you to use it at the command line, such as remote servers.
 
-It is possible to use Git completely 'locally'; that is,
-without interacting over the internet with some remote service. This is
-perfectly fine if you just want to version control your own software project
-that you have no intention of sharing with anyone. Chances are, though, that you
-will need to share your work, either with collaborators as the code is developed or
+Chances are that, at some
+point, you will want to share your work, either with collaborators as the code is developed or
 in order to publicise your work. On it's own, Git doesn't provide the means to
 do this — for that, you also need somewhere to host a 'remote' version
 of your code which others can access. Many web platforms have been created to
 provide this service. They use Git as the core version control technology, while
 providing additional layers of functionality to facilitate sharing and collaboration
 with other developers. Examples of these platforms include
-<a href="https://about.gitlab.com/" rel="external noreferrer">GitLab</a>,
-<a href="https://codeberg.org/" rel="external noreferrer">Codeberg</a> and
-<a href="https://github.com/" rel="external noreferrer">GitHub</a>.
+<a href="https://about.gitlab.com/" target="_blank" rel="external noreferrer">GitLab</a>,
+<a href="https://codeberg.org/" target="_blank" rel="external noreferrer">Codeberg</a> and
+<a href="https://github.com/" target="_blank" rel="external noreferrer">GitHub</a>.
+It is possible to use Git completely 'locally'; that is,
+without interacting over the internet with some remote service. This is
+perfectly fine if you just want to version control your own software project
+that you have no intention of sharing with anyone. 
 
 
 ## Managing collaboration with GitHub

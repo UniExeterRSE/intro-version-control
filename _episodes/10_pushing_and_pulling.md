@@ -134,8 +134,9 @@ in the remote repository on your personal GitHub account.
 - **Step 3:** Click on the name of the repository you have been working on.
 
 - **Step 4:** Click on _commits_, above the list of files on the right-hand side.
-  It should look akin to the screenshot following (the number of commits you have
-  will be different):
+  It should look akin to the following screenshot (the number of commits you have
+  may differ if you've diverged from our ongoing example, or if you've skipped
+  some exercises):
   
   ![Link to viewing commits on GitHub](../images/github-commits-link.png)
 

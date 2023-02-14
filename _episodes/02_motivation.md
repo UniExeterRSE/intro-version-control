@@ -10,8 +10,8 @@ adapted: false
 
 ## Learning Objectives
 
-At the end of this episode you will be able to describe what a version control
-system is and why they are useful.
+At the end of this episode you will be able to describe what version control
+systems are and why they are useful.
 
 
 ## What is a version control system?
@@ -19,7 +19,7 @@ system is and why they are useful.
 A **version control system** is software that enables you to
 record and manage the history of versions of files as they change. They are
 typically used for tracking the changes to software source code, such as Python
-files, R files, C/C++ source files, or other text-based documents like HTML, LaTeX, markdown, etc.
+files, R files, C/C++ source files, or other text-based documents like HTML, LaTeX, Markdown, etc.
 With a version control system, you
 make changes to a file (or files) as normal, but then use the version control
 system to capture the updated version. You can attach comments to each captured
@@ -61,10 +61,10 @@ previous versions, so why not just use these?
   of files as they are saved and are more geared to recovery from e.g.
   accidental deletion or modification. It is almost certain they won't give you an
   organised 'chunking up' of the evolution of a file. For example, perhaps you
-  are fixing a bug and end up saving ten times while
-  you modify your code and re-run it to see if you've fixed it. It's not very
-  helpful to have a history of all these tiny changes: it just makes finding a
-  'proper' previous version of the code more difficult. Besides this, the
+  are fixing a bug and end up taking a day to fix it, saving the file dozens of
+  times while you try to fix it. This will likely lead to lots of small revisions
+  to files that are ultimately unhelpful and make finding a
+  meaningful previous version of the code more difficult. Besides this, the
   log of versions of the file(s) probably won't have any helpful description to
   help you understand the content of each version — you'll likely only get
   a timestamp giving when the file was last modified. With a version control
@@ -72,8 +72,9 @@ previous versions, so why not just use these?
   descriptions, so that a more helpful 'story' of the file's evolution is
   recorded.
 
-- **Answer 2**: These services don't offer anything to help with collaboration
-  on files. If you want to combine edits to a file from multiple people, you
+- **Answer 2**: These services offer little to help with collaboration
+  on files (except perhaps files like word processing documents, spreadsheets
+  and the like). If you want to combine edits to a file from multiple people, you
   need to do things like agree that only one person can work on the file at
   once, which is cumbersome. They also don't give a way for you to quickly view the
   changes that were made to a file by someone else. Version control systems
@@ -93,12 +94,10 @@ month later?
 
 ... Or 6 months later?
 
-... Or three years from now, after the paper is _finally_ published and you've
-moved onto other things, when all
-those little bits of working knowledge of the code have evaporated into the
-mists of time (make no mistake, they _will_ evaporate), when an email pops into
-your inbox from someone who has 'just a
-small query' about the validity of your findings, and asks if you can send them
+... Or three years from now, when you've forgotten all
+those little bits of working knowledge of the code, and you receive a question
+from someone who, having 'just a
+small query' about the validity of your findings, asks you to send them
 the code used to generate the results?
 
 Which files would you send?
@@ -126,7 +125,7 @@ the chaotic example above, it's worth considering the following:
   biting. Using a version control system significantly reduces the effort
   required to keep a good, orderly record of development, and to combine your
   work with others'. Sure, it still requires discipline to use a version control system,
-  but like all good disciplines it helps to _make your life easier and lighter_.
+  but like all good disciplines it _helps to make your life easier_.
   In quite a short space of time, using a version control system just becomes
   part of your rhythm of work.
 
@@ -134,7 +133,7 @@ the chaotic example above, it's worth considering the following:
 ## Note for the course
 
 In this episode we have talked about version control systems being used to
-keep track of the evolution of files in general. Going forward, we will
+keep track of the evolution of files in general. Going forward, we will often
 discuss the use of version control in the context of developing code for
-software, particularly in a research setting. Software development is the
+software, which is arguably the most
 common context in which version control systems are used.

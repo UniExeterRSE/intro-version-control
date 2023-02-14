@@ -18,7 +18,7 @@ attrib_license_link: https://creativecommons.org/licenses/by/4.0/
 By the end of this episode you will be be able to record changes made to files
 using the `git add` and `git commit` commands. You will understand the difference
 between these commands and the general _modify-add-commit_ workflow for building
-up a revision history of files in Git.
+up a version history of files in Git.
 
 
 ## Viewing the status of a repository
@@ -60,8 +60,7 @@ Let's consider what the output means:
   you can regard these lines as saying that our local version of the repository
   is in sync with the remote version. (This is not the whole story and
   is, at best, a partial truth. We'll uncover more about what this really means later
-  in the course when we talk about 'pushing'/'pulling' changes to/from the remote
-  repository and when we learn about branches.)
+  in the course when we learn about branches more generally.)
 
 - The line `nothing to commit, working tree clean` is of more immediate interest.
   This is Git's way of saying that it hasn't identified any changes to the
@@ -75,17 +74,17 @@ Let's consider what the output means:
   the output of `git status` because there aren't any (new) changes to it.
 
 For our purposes, you can think of the **working tree** as the contents of the
-repository, just like you're used to thinking of files within a folder or its
-subfolders. Git is able to detect changes to files in the working tree (including
-if files have been added or removed, or that are in subfolders).
+repository, just like you're used to thinking of files within a folder or
+subfolders. Git is able to detect changes to files in the working tree, including
+those that are in subfolders of the repository root folder (or sub-subfolders, etc.)
 
 
 > ### Run `git status` often
 > 
 > We're going to flag here that you should get into the habit of running
 > `git status` often. It's the primary way of seeing at a glance what state
-> your working tree is in and how it differs (or not) with the state
-> of the repository.
+> your working tree is in and how it differs (or not) with what was last
+> recorded in the repository.
 
 
 ## Adding and committing files
@@ -180,14 +179,6 @@ about `git status`:
 >     </tr>
 >   </table>
 
-> ### Previewing in VS Code
-> 
-> If you're using VS Code as your text editor, you can preview a rendered Markdown
-> document by opening the Command Palette (_View_ > _Command Palette..._),
-> searching for _Markdown: Open Preview_ and selecting this command. There's also
-> and option to open the preview side-by-side with the Markdown source document,
-> which is useful when editing.
-
 After adding the above text to `Git-cheatsheet.md` file and saving our changes,
 we now tell Git to start tracking changes to this file by using the `add`
 command:
@@ -211,7 +202,7 @@ Changes to be committed:
 The difference between this status and the status before we did `git add` on our
 cheatsheet is the 'Changes to be committed:' bit. Git has now recognised that
 it has a new file, called `Git-cheatsheet.md`, to keep track of. It Git parlance,
-'Git-cheatsheet.md` has become a **tracked** file. But it hasn't
+`Git-cheatsheet.md` has become a **tracked** file. But it hasn't
 yet stored the new version of the file as part of its history. To do that, we
 need to run another Git command, called `commit`:
 
@@ -360,13 +351,13 @@ demonstrates the flexibility afforded by separating out the 'add' and 'commit'
 steps.
 
 We'll first modify `Git-cheatsheet` to include a note about how to use
-`git add` for adding changes to files.
+`git add` for staging changes to files.
 Note that, although we've only seen an example of adding changes to a single file, we
 can actually add changes to multiple files by listing them out when running
 `git add`, like this:
 
 ```
-git add file1.txt foo/bar/file2.txt file3.md
+git add path/to/file1 path/to/file2 path/to/file3 ...
 ```
 
 So we add the following lines to `Git-cheatsheet.md`:
@@ -572,10 +563,11 @@ in Git:
 
 * The working tree — modifications that have not been staged with `git add`
 
-* The staging area (a.k.a index) — contains changes that have been staged but not
-  yet committed.
+* The staging area (a.k.a index) — contains changes that have been staged
+  with `git add` but not yet committed with `git commit`.
 
-* The repository — a permanent record of changes (commits) that have been committed.
+* The repository — a permanent record of changes (commits) that have been
+  committed with `git commit`.
 
 `git add` moves changes from the working tree to the staging area, and `git commit`
 'seals the deal' by moving changes from the staging area to the repository. This
