@@ -46,7 +46,7 @@ a section on
 > **File paths can be _absolute_ or _relative_** e.g. from the current
 > working directory `/home/jbloggs/repositories` above:
 > 
-> - `/home/jbloggs/respositories/foo/bar/file.txt` is an absolute path to a file
+> - `/home/jbloggs/repositories/foo/bar/file.txt` is an absolute path to a file
 > - `foo/bar/file.txt` is the same file as a relative path
 > 
 > **List the contents of a directory:** `ls path/to/directory` (or just `ls` to list
