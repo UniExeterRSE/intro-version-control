@@ -40,4 +40,4 @@ $    git branch --show-current
 new_branch
 ```
 
-If we create a new text file containing some new information, we can commit this change back to the new branch.
+Lets create a new text file containing some new information. In order to add the new file we need to use ```git add``` (this was covered in episode 7) to stage the changes. Once the file has been staged, we can commit the file to the new branch.
