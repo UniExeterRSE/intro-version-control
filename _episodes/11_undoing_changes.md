@@ -314,22 +314,59 @@ Add cheatsheet entries about undoing changes
 
 ```
 
+> #### Hard reset
+>
+> If you're really sure you don't need to keep the changes from later commits when
+> resetting, then you can automatically discard them by using the `--hard` option:
+> `git reset --hard <commit>`. This will set your working tree to the exact same state as
+> the commit you're resetting to. It thus deletes the work you did after
+> `<commit>`; be sure that this is what you want before running a hard reset!
 
-> ### Important note: sensitive data
-> 
-> The methods for undoing commits discussed here are appropriate when the commit
-> you made in error contains changes you didn't want, but don't fundamentally matter
-> if they've been recorded in the repository. In fact, even with a reset, it is
-> possible to recover the commit, with some advanced Git use that involves
-> something called the
-> <a href="https://www.atlassian.com/git/tutorials/rewriting-history" target="_blank" rel="external noreferrer">reflog</a>.
-> 
-> This means that, if you accidentally commit _sensitive data_, such as passwords
-> or confidential information, you cannot work on the basis that `git reset` or
-> `git revert` has removed the data from the repository. Moreover, if you
-> pushed the commits to a remote repository, the information will be stored there.
-> 
-> In these cases, you need to use specialist tools to remove all traces of the
-> sensitive data from the repository. See
-> <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository" target="_blank" rel="external noreferrer">the GitHub documentation</a>
-> for information on this topic.
+
+### Warning: pushing after a reset
+
+Something to be aware of when using `git reset` is that you can't by default push to a
+remote repository if the tip of your local `main` branch is pointing to a commit
+that is behind where the remote repository (`origin/main`) is.
+
+For example, suppose we had reset our local repository to the commit _before_
+`origin/main`, i.e. commit `5cf8321`, "Remove rubbish.txt". If we then tried to push
+our local repository to the remote one, Git would not complete the request and
+complain to us with the following message:
+
+```
+$ git push origin
+To https://github.com/jbloggs9999/git-good-practice.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/jbloggs9999/git-good-practice.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+The main reason for this is to avoid a situation where commit history in the
+remote repository gets lost. This is especially important when collaborating
+with others, which we'll cover in later episodes in this course.
+
+You can read more on the topic of resetting on
+<a href="https://www.atlassian.com/git/tutorials/undoing-changes/git-reset" target="_blank" rel="external noreferrer">Atlassian's tutorial</a>.
+
+
+## Important note: sensitive data
+
+The methods for undoing commits discussed here are appropriate when the commit
+you made in error contains changes you didn't want, but don't fundamentally matter
+if they've been recorded in the repository. In fact, even with a reset, it is
+possible to recover the commit, with some advanced Git use that involves
+something called the
+<a href="https://www.atlassian.com/git/tutorials/rewriting-history" target="_blank" rel="external noreferrer">reflog</a>.
+
+This means that, if you accidentally commit _sensitive data_, such as passwords
+or confidential information, you cannot work on the basis that `git reset` or
+`git revert` has removed the data from the repository. Moreover, if you
+pushed the commits to a remote repository, the information will be stored there.
+
+In these cases, you need to use specialist tools to remove all traces of the
+sensitive data from the repository. See
+<a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository" target="_blank" rel="external noreferrer">the GitHub documentation</a> for information on this topic.
