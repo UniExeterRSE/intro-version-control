@@ -3,7 +3,7 @@ layout: page
 title: "An Example Repository"
 order: 6
 session: 1
-length: 5
+length: 15
 toc: true
 adapted: false
 ---

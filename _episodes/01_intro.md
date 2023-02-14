@@ -3,7 +3,7 @@ layout: page
 title: Introductions
 order: 1
 session: 1
-length: 10
+length: 5
 toc: true
 adapted: false
 ---

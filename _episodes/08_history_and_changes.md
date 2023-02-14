@@ -3,7 +3,7 @@ layout: page
 title: "Viewing History and Changes"
 order: 8
 session: 1
-length: 20
+length: 30
 toc: true
 adapted: true
 attrib_custom: >

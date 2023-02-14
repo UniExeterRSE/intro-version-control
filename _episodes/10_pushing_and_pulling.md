@@ -3,7 +3,7 @@ layout: page
 title: "Pushing to and Pulling From the Remote Repository"
 order: 10
 session: 1
-length: 15
+length: 10
 toc: true
 adapted: false
 ---

@@ -2,8 +2,8 @@
 layout: page
 title: "Ignoring Files"
 order: 12
-session: 1
-length: 15
+session: 2
+length: 20
 toc: true
 adapted: true
 attrib_name: Version Control with Git - Ignoring Things

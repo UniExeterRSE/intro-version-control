@@ -3,7 +3,7 @@ layout: page
 title: "Setting up Git and GitHub"
 order: 4
 session: 1
-length: 10
+length: 30
 toc: true
 adapted: true
 attrib_name: Version Control with Git - Setting Up Git
