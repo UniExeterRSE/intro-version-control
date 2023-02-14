@@ -20,10 +20,11 @@ links to further resources.
 ### Markdown
 
 We'll be writing the material for this example repository using
-[Markdown](https://en.wikipedia.org/wiki/Markdown). Markdown is a simple markup
+<a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external noreferrer">Markdown</a>.
+Markdown is a simple markup
 language that is well suited to writing documentation for software, or
 communicating about code. Many applications, such as the
-[VS Code text editor](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview),
+<a href="https://code.visualstudio.com/docs/languages/markdown#_markdown-preview" target="_blank" rel="external noreferrer">VS Code text editor</a>,
 can understand and render Markdown files in a visually appealing way.
 You write Markdown in files with a `.md` extension and the syntax is such that even
 if you just view a Markdown file as a text file, it looks neat and tidy.
@@ -34,7 +35,8 @@ file. It doesn't take long to get up to speed with Markdown and we feel it's
 worth the effort to learn.
 
 One slight complication is that there are different _flavours_ of Markdown i.e.
-variations on the syntax. The [basic syntax](https://www.markdownguide.org/basic-syntax/) is pretty much uniform across different
+variations on the syntax. The <a href="https://www.markdownguide.org/basic-syntax/" target="_blank" rel="external noreferrer">basic syntax</a>
+is pretty much uniform across different
 flavours, but different flavours provide different ways to extend the basic
 syntax to handle more complicated features (such as tables). We'll use the
 GitHub Flavoured Markdown, since (surprise!) this is what is used on GitHub. You
@@ -66,7 +68,7 @@ version.
 
 ### Exercise
 
-Using the instructions in the [_Making Repositories_ episode](./05_making_repos.md):
+Using the instructions in the [_Making Repositories_ episode]({{ site.url }}/05_making_repos/index.html):
 
 1. Create a new repository on GitHub called `git-good-practice`.
    When doing this, have GitHub generate a readme file for you as part of the

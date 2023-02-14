@@ -47,7 +47,7 @@ On completion of this series of workshops, participants will be able to:
 - Basic familiarity of working at a Unix command line (e.g. Apple Terminal, a terminal running Bash)
   is helpful but not essential. We have included a cheat sheet
   on basic commands that will be useful for this course on the
-  [resources page](./resources.html).
+  [resources page]({{ site.url }}/resources.html).
   A good introduction to this topic more generally can be found at the sister course
   <a href="https://uniexeterrse.github.io/intro-unix-shell/" target="_blank" rel="external noreferrer">Introduction to Unix Shell</a>.
 
@@ -59,7 +59,7 @@ On completion of this series of workshops, participants will be able to:
 ## Workshop format
 
 This is a hybrid workshop that runs over 3 sessions. The
-[schedule can be found here](./schedule.html). _Please note that you will be
+[schedule can be found here]({{ site.url }}/schedule.html). _Please note that you will be
 expected to attend all three sessions._
 
 
@@ -81,8 +81,8 @@ Registration for this course is handled by
 ## Set-up instructions for attendees
 
 If you have registered for this course you can find the
-[instructions for setting up your computer here](./setup.html). Also take a look
-at [additional resources and supplementary material](./resources.html) for the
+[instructions for setting up your computer here]({{ site.url }}/setup.html). Also take a look
+at [additional resources and supplementary material]({{ site.url }}/resources.html) for the
 course.
 
 
@@ -127,7 +127,7 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 ## Acknowledgements
 
 This course is currently under development. It is being developed by
-[members](./acknowledgements.html) of the
+[members]({{ site.url }}/acknowledgements.html) of the
 University of Exeter's Research Software Engineering Group
 who are enthusiastic about sharing their skills with the wider research
 community.

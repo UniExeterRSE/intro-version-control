@@ -138,7 +138,7 @@ in the remote repository on your personal GitHub account.
   may differ if you've diverged from our ongoing example, or if you've skipped
   some exercises):
   
-  ![Link to viewing commits on GitHub](../images/github-commits-link.png)
+  ![Link to viewing commits on GitHub]({{ site.url }}/images/github-commits-link.png)
 
 
 ## Pulling changes from a remote repository
