@@ -122,8 +122,7 @@ of the files in the repository.)
 By default, Git will create a branch called `master` whenever
 you start a new repository. However, there is a move in the
 <a href="https://github.com/github/renaming" target="_blank" rel="external noreferrer">software development community</a>
-to stop using this term in favour of more inclusive language, due to the overtones of
-the racist practice of human slavery evoked by the term 'master'. Most Git
+to stop using this term in favour of more inclusive language. Most Git
 code hosting services have transitioned to using `main` as the default 
 branch; for example, any new repository that is opened in GitHub defaults 
 to using `main` for the name of the branch.
