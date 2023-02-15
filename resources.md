@@ -3,8 +3,33 @@ layout: info_page
 title: Resources
 ---
 
-*Please note, this workshop is under development and the material on this page
-may change.*
+## Resources for learning Git
+
+There is a wealth of information online about using Git and many tutorials
+have been written before. Below are a selection of resources you may find
+helpful as you learn to use Git.
+
+* The Software Carpentry's
+  <a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
+  course, on which this course it based.
+
+* Atlassian's <a href="https://www.atlassian.com/git/tutorials" target="_blank" rel="external noreferrer">Git tutorial</a>
+  is readable and comprehensive.
+
+* The <a href="https://www.atlassian.com/git/tutorials" target="_blank" rel="external noreferrer">Pro Git</a>
+  book. More advanced, but an excellent reference.
+
+You can, of course, also refer to the manual pages to Git or Git commands, by
+running `man git` or `git <command> --help` (e.g. `git commit --help`) at the
+command line. These are an excellent reference, but they are technical in nature
+and can be challenging to newcomers. The second form is useful to see what optional
+arguments are available for commands.
+
+
+## GitHub help
+
+The best place to learn about how to use GitHub is to go to the documentation
+section of their website: <https://docs.github.com/en>.
 
 
 ## Command line navigation

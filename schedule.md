@@ -3,8 +3,9 @@ layout: info_page
 title: Workshop Schedule
 ---
 
-This course is under development. Check back here nearer the time of the
-workshops to view the schedule of material that will be covered.
+The schedule of material that will be covered in workshops is given below. Note
+that these are approximate timings that will adapt to participants'
+needs during the workshops.
 
 <ol>
 {% include schedule.html %}
