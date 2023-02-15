@@ -35,11 +35,17 @@
         {% include prev_next_navbar.html %}
         <p class="copyright">The material on this page is © University of Exeter.</p>
         {% if page.adapted %}
+        {% if page.attrib_custom %}
+        <p class="copyright">
+          {{ page.attrib_custom }}
+        </p>
+        {% else %}
         <p class="copyright">Material other than code snippets and example
           programs is licensed under <a href ="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0</a>. 
           It has been adapted from <a href="{{ page.attrib_link }}">{{ page.attrib_name }}</a>
           which is © {{ page.attrib_copywrite }} and licensed under <a href ={{ page.attrib_license_link }}>{{ page.attrib_license }}</a>.
         </p>
+        {% endif %}
         {% else %}
         <p class="copyright">Material other than code snippets and example
           programs is licensed under <a href ="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0</a>.
