@@ -21,6 +21,10 @@ When you are working on an enhancement to an existing piece of software, it's ra
 ** Github always works with branches - the first branch is named main and is made the default branch, but technically it is no different from any other kind of branch.
 ** All of the content from session 1 applies equally to working on a branch as it does to working on "main"
 
+## What's in a branch?
+
+Github tracks changes relative to a base
+A branch is a clean set of changes relative to a particular commit.
 
 ## Creating a branch
 
@@ -41,3 +45,13 @@ new_branch
 ```
 
 Lets create a new text file containing some new information. In order to add the new file we need to use ```git add``` (this was covered in episode 7) to stage the changes. Once the file has been staged, we can commit the file to the new branch.
+
+## Pushing the branch
+
+If we look at the GitHub repository using a browser, we can see that our new branch hasn't appeared. That is because we have only created a local branch, which is only tracking changes that we are making on our own machine. In order to make this branch a "remote branch" of the repository, we need to push the branch to our remote repository:
+
+```
+$   git push --set-upstream origin
+```
+
+By using the option ```--set-upstream origin``` we are telling git to push the branch to the same repository that its parent branch was cut from.
