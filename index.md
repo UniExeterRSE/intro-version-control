@@ -47,7 +47,7 @@ On completion of this series of workshops, participants will be able to:
 - Basic familiarity of working at a Unix command line (e.g. Apple Terminal, a terminal running Bash)
   is helpful but not essential. We have included a cheat sheet
   on basic commands that will be useful for this course on the
-  [resources page](./resources.html).
+  [resources page]({{ site.url }}/resources.html).
   A good introduction to this topic more generally can be found at the sister course
   <a href="https://uniexeterrse.github.io/intro-unix-shell/" target="_blank" rel="external noreferrer">Introduction to Unix Shell</a>.
 
@@ -59,7 +59,7 @@ On completion of this series of workshops, participants will be able to:
 ## Workshop format
 
 This is a hybrid workshop that runs over 3 sessions. The
-[schedule can be found here](./schedule.html). _Please note that you will be
+[schedule can be found here]({{ site.url }}/schedule.html). _Please note that you will be
 expected to attend all three sessions._
 
 
@@ -81,8 +81,8 @@ Registration for this course is handled by
 ## Set-up instructions for attendees
 
 If you have registered for this course you can find the
-[instructions for setting up your computer here](./setup.html). Also take a look
-at [additional resources and supplementary material](./resources.html) for the
+[instructions for setting up your computer here]({{ site.url }}/setup.html). Also take a look
+at [additional resources and supplementary material]({{ site.url }}/resources.html) for the
 course.
 
 
@@ -127,12 +127,12 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 ## Acknowledgements
 
 This course is currently under development. It is being developed by
-[members](./acknowledgements.html) of the
+[members]({{ site.url }}/acknowledgements.html) of the
 University of Exeter's Research Software Engineering Group
 who are enthusiastic about sharing their skills with the wider research
 community.
 
-If you have benefitted in any way from this course and want to support its long term
+If you have benefited in any way from this course and want to support its long term
 sustainability then please take the time to complete our feedback survey,
 recommend it to your colleagues, and enthuse about it to your senior leadership
 team.
@@ -143,3 +143,17 @@ This workshop is brought to you by:
 - The <a href="https://www.exeter.ac.uk/research/idsai/" target="_blank" rel="external noreferrer">Institute of Data Science and Artificial Intelligence</a>
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/early-career-researchers/traininganddevelopment/rdprogramme/" target="_blank" rel="external noreferrer">Researcher Development Programme</a>
 - The University of Exeter <a href="https://www.exeter.ac.uk/research/doctoralcollege/" target="_blank" rel="external noreferrer">Doctoral College</a>
+
+This course has been adapted from Software Carpentry's
+<a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
+course [[^1]], which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
+under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">Creative Commons BY 4.0</a>.
+Changes have been made from the original content.
+
+### References
+
+[^1]: Ivan Gonzalez; Daisie Huang;  Nima Hejazi;  Katherine Koziar; 
+      Madicken Munk (eds): "Software Carpentry: Version Control with Git."  
+      Version 2019.06.1, July 2019,
+      <a href="https://github.com/swcarpentry/git-novice">https://github.com/swcarpentry/git-novice</a>,
+      10.5281/zenodo.3264950
