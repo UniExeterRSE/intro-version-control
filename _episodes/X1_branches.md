@@ -8,7 +8,7 @@ toc: true
 adapted: false
 ---
 
-## Lesson objectives
+## Learning objectives
 
 Understand how to create branches within a GitHub repository
 Re contextualise our understanding from session 1 with knowledge of branches
@@ -80,3 +80,9 @@ main
 ```
 
 ## Branch of a branch
+
+* The above instructions assume we want to create a branch from ```main```. We can also create branches wth use other, different branches as a base...
+
+## Merging up to the head
+
+* In order to keep up to date with changes being made by collaborators to the main branch, we can use git merge main.
