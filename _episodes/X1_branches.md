@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "Creating and using branches for development"
-order: 11
+order: 99
 session: 2
 length: 15
-toc: true
+toc: false
 adapted: false
 ---
 
