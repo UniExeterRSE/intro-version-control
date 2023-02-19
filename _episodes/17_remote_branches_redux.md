@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Local and Remote Branches"
-order: 14
+title: "Remote Branches – Redux"
+order: 17
 session: 2
 length: 20
 toc: true
@@ -501,4 +501,4 @@ Deleted remote-tracking branch origin/remote-branches-material (was bac5ae2).
 Finally, we need to delete the remote branches from the remote repository in
 GitHub.
 
-TODO: instructions for deleting branches in GitHub.
+TODO: instructions for doing this from the command line.

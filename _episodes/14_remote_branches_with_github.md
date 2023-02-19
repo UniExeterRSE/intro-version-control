@@ -1,0 +1,461 @@
+---
+layout: page
+title: "Remote Branches with GitHub"
+order: 14
+session: 2
+length: 20
+toc: true
+adapted: false
+---
+
+
+## Local and remote branches
+
+TODO:
+* Explain the concept of both local branches and remote branches, just like
+  how we have commits in a local repository and/or in a remote repository.
+* Define what **upstream** means in this context.
+* Explain how our local repository keeps references to remote branches, giving
+  them names starting with `remotes/origin/` (or just `origin/`). But these
+  are not kept in sync with the remote branches automatically - we need to use
+  `git fetch` to update them.
+* Explain the concept of a local branch tracking a remote one
+
+
+### Viewing branches
+
+We can list _all_ the branches that our local repository is aware of (both
+local branches and remote branches) by using `git branch --all` (or
+just `git branch -a`):
+
+```
+$ git branch -a
+  branches-material
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+``` 
+
+TODO:
+* Add a note to ignore the `remotes/origin/HEAD -> origin/main` bit, we don't
+  need to know what it means.
+* Explain that so far we've only created `branches-material` as a branch in our
+  local repository — there is currently no remote counterpart.
+* Give instructions to view branches on GitHub and verify that there is no
+  branch on there called `branches-material`.
+
+
+## Working with remote branches
+
+So far, we've seen how to create a local branch, commit to it and merge it into
+another branch (e.g. into `main`). This branch didn't have any upstream branch
+in the remote repository. We're now going to look at the case where we
+use GitHub to create a branch in the _remote repository_, which we then
+bring into our local repository to work with. 
+
+TODO: say something about this being a way to work when collaborating
+with others on GitHub. We'll look at an alternative workflow that doesn't use
+the features of GitHub and works with an remote repository.
+
+We will add some material to the cheatsheet relating to working with remote
+branches, using GitHub to drive this development. The basic flow for doing this
+is the following:
+
+* Create a remote branch on GitHub that will receive our additions to the
+  cheatsheet
+
+* Work on the cheatsheet locally, then push the changes up to the remote branch
+
+* Use GitHub to merge the work into the `main` branch in the remote repository,
+  using a Pull Request.
+
+In order to do this, we need to do the following:
+
+* Create a remote branch on GitHub.
+
+* Update our local repository from the remote repository, so that we have a
+  reference to the newly created remote branch.
+
+* Create a local branch that is set up to track the remote one.
+
+* Add new commits to the local branch corresponding to our work on the
+  cheatsheet.
+
+* Push these commits to the upstream remote branch.
+
+* Merge the remote branch into the remote `main` branch, using
+  a Pull Request on GitHub.
+
+* Update our local repository to reflect this change to the remote repository.
+
+
+### Create a remote branch on GitHub
+
+In GitHub, the following steps allow you to create a new remote branch:
+
+TODO: steps for creating a branch on GitHub (note that we need to chose a
+base branch to start the new branch on).
+
+In our example `git-good-practice` repository, let's suppose we've created a
+new remote branch called `remote-branches-material`, which is based on top of our
+`branches-material` branch. Our local repository doesn't have any knowledge of
+this new branch, as can be seen by listing the branches:
+
+```
+$ git branch -a
+  branches-material
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+```
+
+
+### Fetch the remote branch
+
+In order to update our local repository so that it has knowledge of the new
+remote branch, we use the following command from within our local repository:
+
+```
+git fetch
+```
+
+(Like with `git push` and `git pull`, we can instead run `git fetch origin` to
+be explicit about the reference to the remote repository.)
+We won't go into too much detail about exactly what `git fetch origin` is doing. For
+our purposes, we use it to inspect the remote repository for information about
+any new branches, or commits that have been made in remote branches, that our
+local repository doesn't yet know about.
+
+In our example, after running `git fetch` in our `git-good-practice`
+repository, we see that information about the new remote `remote-branches-material`
+has been retrieved:
+
+```
+$ git fetch
+Username for 'https://github.com': jbloggs9999
+Password for 'https://jbloggs9999@github.com':
+From https://github.com/jbloggs9999/git-good-practice
+ * [new branch]      remote-branches-material -> origin/remote-branches-material
+
+$ git branch -a
+  branches-material
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/remote-branches-material
+```
+
+However, this has only created a reference to the remote branch, indicated
+by `remotes/origin/remote-branches-material` in the above output. We still need
+to create a _local_ branch that will track the remote branch. 
+
+
+### Create a new tracking local branch
+
+In order to create a local version of the
+`origin/remote-branches-material` branch where we can add commits, we can
+perform the following checkout:
+
+```
+$ git checkout remote-branches-material 
+Switched to a new branch 'remote-branches-material'
+branch 'remote-branches-material' set up to track 'origin/remote-branches-material'. 
+```
+
+You may be surprised by this: after all, we've asked Git to checkout a branch
+that doesn't actually exist! Fortunately, Git is smart enough to realise that
+what we want to do is set up a new local branch that tracks the `origin/remote-branches-material`
+remote branch. So it automatically creates a new local branch — called `remote-branches-material` — that
+will track `origin/remote-branches-material`, and checks out this new local branch for us. We
+can verify this by listing all the branches again:
+
+```
+$ git branch -a
+  branches-material
+  main
+* remote-branches-material
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+  remotes/origin/remote-branches-material
+```
+
+### Add content to the local branch and push
+
+We are now set to add our new material to `Git-cheatsheet.md` about remote
+branches. We modify the start of the subsection _Branches_ so that it now reads as
+follows:
+
+```
+## Branches
+
+`git branch <new-branch-name>` — Create a new branch called `<new-branch-name>`
+                                 based at the current commit (i.e. at `HEAD`).
+
+`git checkout <branch>` — Check out the branch `<branch>`, so that new commits
+                          are added to `<branch>`.
+
+- Can also be used to create and checkout a new local branch `<branch>` that
+  tracks an existing remote branch `origin/<branch>`.
+
+`git merge <branch-to-merge-in>` — Combine the commit history of `<branch-to-merge-in>`
+                                   with that of the branch currently checked out.
+```
+
+Having included this addition, we commit to our local `remote-branches-material` branch.
+
+
+> #### Markdown syntax
+>
+> Unordered lists are denoted by using a hyphen (`-`) or an asterisk (`*`),
+> followed by a space, with the text in the list item following. Example:
+> 
+> ```
+> - Foo
+> - Bar
+> - Baz
+> ```
+> renders as:
+> - Foo
+> - Bar
+> - Baz
+> 
+> Text that flows over multiple lines in the source file, yet belongs to a single
+> list item, should respect the indenting. For example:
+> 
+> ```
+> * list entry with
+>   
+>   new line
+> 
+> * the quick brown fox jumps over the
+>   lazy dog
+> ```
+> 
+> renders as:
+> 
+> * list entry with
+>   
+>   new line
+> 
+> * the quick brown fox jumps over the
+>   lazy dog
+
+We're now in the position where our local branch
+`remote-branches-material` is ahead of the remote branch
+`origin/remote-branches-material` that it tracks, as can be seen from
+the log on `remote-branches-material`:
+
+```
+$ git log --oneline -3
+5125372 (HEAD -> remote-branches-material) Add note about creating local tracking branches
+3b918f2 (origin/remote-branches-material, origin/main, origin/HEAD, main, branches-material) Add entry about merging branches
+51da8da Add entry about checking out a branch
+```
+
+In order to update an upstream remote branch with new commits in the local
+tracking branch, we can use `git push` (or `git push origin`), like we did when working with
+the `main` branch in the episode
+[Pushing to and Pulling From the Remote Repository]({{ site.url }}/10_pushing_and_pulling/index.html).
+Note however that this will push the commits _on the currently checked out branch_ to its upstream
+remote branch. So, in general, if you have a local branch `<foo>` that tracks a
+remote branch `origin/<foo>`, then in order to push `<foo>` to `origin/<foo>` we
+need to first checkout `<foo>`.
+
+
+> #### Alternative: specify the branch explicitly
+>
+> Alternatively, if you have a local branch `<foo>` that tracks a remote branch
+> `origin/<foo>`, then you can run `git push origin <foo>` from any local branch
+> to push commits from `<foo>` to `origin/<foo>`.
+
+
+In our example, we're already on the branch `remote-branches-material` that we want to push,
+so we can just go ahead and do `git push`:
+
+```
+$ git push
+Username for 'https://github.com': jbloggs9999
+Password for 'https://jbloggs9999@github.com':
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 438 bytes | 219.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/jbloggs9999/git-good-practice.git
+   3b918f2..5125372  remote-branches-material -> remote-branches-material
+```
+
+The last line of the `git push` message shows that we've successfully updated the remote
+branch with the new commit.
+
+
+## Merge remote branch into remote `main`
+
+TODO: instructions for creating and completing a Pull Request on GitHub
+
+
+## Pull changes into our local repository
+
+TODO: explain that we need to pull in `main` from the remote.
+
+To update `main`, we first check it out:
+
+```
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+```
+
+TODO: explain that the `Your branch is up to date with 'origin/main'.` reflects
+that we haven't fetched the new updates to the remote branch `origin/main`
+into our local repository.
+
+We fetch updates from the remote repository:
+
+```
+$ git fetch
+Username for 'https://github.com': jbloggs9999
+Password for 'https://jbloggs9999@github.com':
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 667 bytes | 83.00 KiB/s, done.
+From https://github.com/jbloggs/git-good-practice
+   3b918f2..86ebbee  main       -> origin/main
+```
+
+We can now see that our local repository is aware of the change to the remote
+`origin/main` branch by checking the status again:
+
+```
+$ git status
+On branch main
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+```
+
+TODO: explain how to use `git pull` and what it does.
+
+We pull the changes to `origin/main` into our local `main` branch:
+
+```
+$ git pull
+Username for 'https://github.com': jbloggs9999
+Password for 'https://jbloggs9999@github.com':
+Updating 3b918f2..86ebbee
+Fast-forward
+ Git-cheatsheet.md | 3 +++
+ 1 file changed, 3 insertions(+)
+```
+
+> #### `pull` automatically `fetch`es
+>
+> TODO: explain that `git pull` does a `fetch` as part of its process, so we
+> didn't have to separately do `git fetch` before `git pull`.
+
+
+We can now see from the log that our changes are fully reflected in `main`:
+
+```
+$ git log --oneline -5
+86ebbee (HEAD -> main, origin/main, origin/HEAD) Merge pull request #1 from jbloggs9999/remote-branches-material
+5125372 (origin/remote-branches-material, remote-branches-material) Add note about creating local tracking branches
+3b918f2 (branches-material) Add entry about merging branches
+51da8da Add entry about checking out a branch
+8124186 Add entry about creating branches
+```
+
+## Cleaning up
+
+All the work we've done in our branches has been incorporated into `main` (both
+locally and in the remote repository). So, to clean up the state of the repository,
+we going to delete the branches `branches-material` and `remote-branches-material`,
+including the remote version of `remote-branches-material`, since these
+no longer serve any purpose.
+
+
+> ### Good practice: deleting old branches
+>
+> It is good practice to delete branches that are no longer required. This makes
+> navigating a repository easier and makes it clear what work is still ongoing
+> compared to work that has been finished.
+
+
+### Deleting branches from a local repository
+
+The general commands for deleting branches are as follows:
+
+* For deleting _local_ branches: `git branch -d <local-branches>`
+
+* For deleting _remote_ branches: `git branch -d -r <remote-branches>`
+
+In both cases, note that you can specify more than one branch by separating the
+branch names by a space.
+
+There are a couple of important things to note about deleting branches:
+
+* You can't delete a branch you currently have checked out. So make sure you
+  checkout a different branch before deletion e.g. do deletions from `main`.
+
+* Deleting branches removes the commits contained in those branches which don't
+  feature in other branches. So, before deleting a branch, be sure that the
+  changes you want to keep have been merged into another branch e.g. `main`.
+
+We delete our local branches:
+
+```
+$ git branch -d branches-material remote-branches-material 
+Deleted branch branches-material (was 3b918f2).
+Deleted branch remote-branches-material (was 5125372).
+```
+
+Then we delete our remote branch reference `origin/remote-branches-material`:
+
+```
+$ git branch -r -d origin/remote-branches-material
+Deleted remote-tracking branch origin/remote-branches-material (was 5125372).
+```
+
+> ### Force deletion
+> 
+> Git may stop you from deleting a branch, because it can't verify that
+> all the commits in the branch have been merged into a corresponding remote
+> branch or another local branch. This is a protection
+> mechanism to stop you from potentially losing changes. If you encounter this but
+> are sure you want to proceed with the deletion, you can force the deletion
+> by using `-D` instead of `-d` in the commands above.
+
+
+Our local repository is now looking cleaner with regards to the branches we have:
+
+```
+$ git branch -a
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+```
+
+Note also that the references to the non-`main` branches have disappeared from
+the log (note that the _commits_ have _not_ disappeared, however, because these
+are part of `main`):
+
+```
+$ git log --oneline -5
+86ebbee (HEAD -> main, origin/main, origin/HEAD) Merge pull request #1 from jbloggs9999/remote-branches-material
+5125372 Add note about creating local tracking branches
+3b918f2 Add entry about merging branches
+51da8da Add entry about checking out a branch
+8124186 Add entry about creating branches
+```
+
+
+### Deleting branches from the remote repository via GitHub
+
+Finally, we need to delete the remote branch `remote-branches-material` from the
+remote repository in GitHub.
+
+TODO: instructions for deleting branches in GitHub.
