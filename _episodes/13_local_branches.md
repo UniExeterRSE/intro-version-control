@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Branches – The Basics"
+title: "Working with Local Branches"
 order: 13
 session: 2
 length: 20
