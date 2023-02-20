@@ -60,7 +60,7 @@ called `branches-material`. The necessary steps are as follows:
 ## Working with remote branches
 
 So far, we've seen how to create a local branch, commit to it and merge it into
-another branch (e.g. into `main`). This branch didn't have any upstream branch
+another branch (e.g. into `main`). This branch didn't have an upstream branch
 in the remote repository. We're now going to look at the case where we
 use GitHub to create a branch in the _remote repository_, which we then
 bring into our local repository to work with. 
