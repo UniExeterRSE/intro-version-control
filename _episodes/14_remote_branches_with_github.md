@@ -404,8 +404,8 @@ Fast-forward
 
 > #### `pull` automatically `fetch`es
 >
-> TODO: explain that `git pull` does a `fetch` as part of its process, so we
-> didn't have to separately do `git fetch` before `git pull`.
+> `git pull` not only merges the changes but also `fetch`es them, so we did not
+> need to use the `git fetch` command before using `git pull`.
 
 
 We can now see from the log that our changes are fully reflected in `main`:
