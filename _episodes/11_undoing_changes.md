@@ -152,7 +152,7 @@ because the revert will return the repository to the state before we'd added
 `TODO.txt`, which will involve deleting the file. Having done this, we now
 perform the reversion:
 
-```
+``` shell
 $ git revert cc01bda
 ```
 
@@ -218,7 +218,7 @@ more destructive way to undo commit history that will get rid of the commits.
 The `git reset` command is used to move back our `HEAD` to an earlier commit.
 The default form of the command is:
 
-```
+``` shell
 git reset <commit>
 ```
 
@@ -295,7 +295,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 We don't want to keep this `foo.txt` file, so let's just delete it with the
 usual Unix command `rm` to get a nice, clean working tree again.
 
-```
+``` shell
 $ rm foo.txt
 ```
 
@@ -303,7 +303,7 @@ After all that, we can move that TODO list back into the repository. We'll
 finish by removing the tasks we've completed and add some new tasks, leaving our
 list like so:
 
-```
+``` markdown
 TODO:
 
 Add cheatsheet entries for `git rm` and `git mv`
