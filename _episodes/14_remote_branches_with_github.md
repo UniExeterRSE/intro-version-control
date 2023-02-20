@@ -344,7 +344,9 @@ complete a Pull Request (PR) as follows:
 
 ## Pull changes into our local repository
 
-TODO: explain that we need to pull in `main` from the remote.
+We have just merged our branch into `main` in the remote repository. To see
+the changes made to `main` in our local repository, we need to pull them from
+the remote repository.
 
 To update `main`, we first check it out:
 
