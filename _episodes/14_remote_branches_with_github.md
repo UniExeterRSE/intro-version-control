@@ -15,15 +15,13 @@ TODO
 
 ## Local and remote branches
 
-TODO:
-* Explain the concept of both local branches and remote branches, just like
-  how we have commits in a local repository and/or in a remote repository.
-* Define what **upstream** means in this context.
-* Explain how our local repository keeps references to remote branches, giving
-  them names starting with `remotes/origin/` (or just `origin/`). But these
-  are not kept in sync with the remote branches automatically - we need to use
-  `git fetch` to update them.
-* Explain the concept of a local branch tracking a remote one
+Branches can reside in our local repository and/or remote repository, in the
+same way that commits can. An **upstream** branch is one which resides in the
+remote repository and is tracked locally, meaning the local branch is linked to
+the remote branch. Our local repository stores references to any remote branches,
+prepending their names with `remotes/origin/` (or simply `origin/`). It should
+be noted that these remote branches are not updated automatically - we need to
+use `git fetch` to update them.
 
 
 ### Viewing branches
