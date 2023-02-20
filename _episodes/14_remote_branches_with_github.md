@@ -356,9 +356,9 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
 
-TODO: explain that the `Your branch is up to date with 'origin/main'.` reflects
-that we haven't fetched the new updates to the remote branch `origin/main`
-into our local repository.
+It is stated that `Your branch is up to date with 'origin/main'.`, indicating
+we are yet to fetch the changes made to the remote branch `origin/main` into our
+local repository.
 
 We fetch updates from the remote repository:
 
