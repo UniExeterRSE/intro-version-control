@@ -10,7 +10,8 @@ adapted: false
 
 ## Learning objectives
 
-TODO
+At the end of this episode you will be able to explain what branches are and how you might use them. 
+You will also be able to demonstrate how to create an experimental branch and merge it back into the `main` branch. 
 
 
 ## Concept of branches
