@@ -99,7 +99,10 @@ $ git branch --list
 * main
 ```
 
-TODO: explain what `* main` means.
+The asterisk (*) preceding "main" is used to indicate the currently checked out branch in your local repository. 
+When you run certain Git commands, such as `git status` or `git branch`, Git will display information about the 
+current branch you are working on, and indicate which branch is currently checked out with an asterisk.
+
 
 > #### `main` is just a branch
 >
