@@ -74,9 +74,9 @@ branches, using GitHub to drive this development. The basic flow for doing this
 is the following:
 
 * Create a remote branch on GitHub that will receive our additions to the
-  cheatsheet
+  cheatsheet.
 
-* Work on the cheatsheet locally, then push the changes up to the remote branch
+* Work on the cheatsheet locally, then push the changes up to the remote branch.
 
 * Use GitHub to merge the work into the `main` branch in the remote repository,
   using a Pull Request.
