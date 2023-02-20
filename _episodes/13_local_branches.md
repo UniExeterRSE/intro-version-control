@@ -216,7 +216,17 @@ Let's now look at how we can incorporate the changes we've made in the
 to **merge** the commit history in `branches-material` into the history of
 the `main` branch.
 
-TODO: give a higher-level, intuitive explanation of what merging is doing.
+Merging in Git is the process of combining the changes made on one branch with the changes made on another branch, resulting in a new branch that contains the changes from both branches.
+
+To give a higher-level, intuitive explanation, imagine you are working on a team project with your colleagues. Each of you is assigned a different part of the project to work on, and you each have your own copy of the project code. As you work on your part of the project, you make changes to your code to add new features or fix bugs.
+
+At some point, you need to integrate your changes with your colleagues' changes to create a complete and functional project. This is where merging comes in.
+
+Merging in Git is like taking two different versions of a project and combining them into a new version that incorporates the changes made on both versions. Imagine you and your colleagues have each worked on your own version of the project code, and when it's time to merge, you bring both versions together, compare the differences, and decide how to integrate the changes so that they work together seamlessly.
+
+Once the merging process is complete, you have a new version of the project code that includes all the changes made by you and your colleagues. This new version can then be used to build and deploy the final product.
+
+In essence, merging in Git is a way to combine changes from different branches or different contributors into a single cohesive project, allowing for collaborative development and efficient management of code changes.
 
 
 We do this with the `merge` command:
