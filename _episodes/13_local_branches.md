@@ -16,15 +16,15 @@ You will also be able to demonstrate how to create an experimental branch and me
 
 ## Concept of branches
 
-TODO
-* Idea as (1) a linear collection of commits, and (2) a pointer to a particular
-  commit
-* Why we want to use branches:
-  - Organisational tool, to separate development of new features / bug fixes
-    from a canonical 'latest' version of software
-  - As an aid to collaboration (to be discussed later): different people work
-    with different branches at the same time, merging as a way to combine work
-    in a controlled way.
+Git branches are a core feature of the Git version control system. They allow you to create multiple lines of development within a single repository, allowing you to work on multiple features or fixes simultaneously, without affecting the main codebase.
+
+In simple terms, a branch is a separate version of the codebase that diverges from the main codebase. You can think of it as a separate timeline of changes that runs in parallel with the main timeline. Each branch contains a copy of the entire codebase, with its own set of changes.
+
+When you create a new branch, Git creates a pointer to the current commit in the codebase, which becomes the starting point for your new branch. You can then make changes to the code, commit those changes to the branch, and continue working on your changes without affecting the main codebase.
+
+Once you have finished making changes on your branch and are ready to merge those changes back into the main codebase, you can merge the branch into the main branch using a Git command. Git will then apply the changes you made on the branch to the main codebase, bringing the two timelines back together.
+
+Git branches are incredibly useful for collaborative development, as they allow multiple developers to work on different features or fixes simultaneously, without stepping on each other's toes. They also provide a way to experiment with new features or ideas without affecting the stability of the main codebase.
 
 
 ## Working with local branches
