@@ -104,8 +104,20 @@ In order to do this, we need to do the following:
 
 In GitHub, the following steps allow you to create a new remote branch:
 
-TODO: steps for creating a branch on GitHub (note that we need to chose a
-base branch to start the new branch on).
+- **Step 1** Navigate to your respository on GitHub.
+
+- **Step 2** Click on the dropdown, located to the left of _branches_, on the
+  left-hand side of the screen.
+
+- **Step 3** Select the branch you would like to create a branch from - this
+  would typically be `main`. If it is `main`, this step becomes redundant.
+
+- **Step 4** Click on the dropdown again and type in the name of your new branch
+  where it says _Find or create a branch..._.
+
+- **Step 5** Click on _Create branch: new-branch from 'base-branch'_, where
+  _new-branch_ is the name of your new branch and _base-branch_ is the name of
+  the branch you are branching off of (e.g. `main`).
 
 In our example `git-good-practice` repository, let's suppose we've created a
 new remote branch called `remote-branches-material`, which is based on top of our
