@@ -36,7 +36,7 @@ what we learn as we go.
 
 ### Creating branches
 
-The general way to create a new branch in our local repository is
+The general way to create a new branch in our local repository is:
 
 ```
 git branch <new-branch-name>
