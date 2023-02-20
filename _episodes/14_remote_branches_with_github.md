@@ -9,6 +9,10 @@ adapted: false
 ---
 
 
+## Learning objectives
+TODO
+
+
 ## Local and remote branches
 
 TODO:
