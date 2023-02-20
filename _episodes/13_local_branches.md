@@ -44,7 +44,15 @@ git branch <new-branch-name>
 
 where `<new-branch-name>` is the name of the branch we wish to work on.
 
-TODO: explain this creates branch at the current commit i.e. `HEAD`.
+When you create a new branch, you can specify the starting point for the branch. By default, if you do not specify a starting point, Git will create the new branch at the current commit, which is also referred to as the HEAD commit.
+
+The HEAD is a reference to the current commit in the branch you are currently working on. It is essentially a pointer to the tip of the branch you have checked out, and it can be moved to different commits in the branch using various Git commands.
+
+When you create a new branch at the current commit, Git creates a new branch pointer that points to the same commit as the HEAD. This means that the new branch initially has the same code as the current branch, but it is a separate branch that can be modified independently.
+
+For example, suppose you are working on a branch called feature-branch, and you want to create a new branch called bugfix-branch. If you do not specify a starting point for the new branch, Git will create it at the current commit on feature-branch, which is the HEAD commit.
+
+
 
 > #### Branching off a commit
 >
