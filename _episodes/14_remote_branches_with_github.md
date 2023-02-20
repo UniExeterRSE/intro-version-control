@@ -38,13 +38,23 @@ $ git branch -a
   remotes/origin/main
 ``` 
 
-TODO:
-* Add a note to ignore the `remotes/origin/HEAD -> origin/main` bit, we don't
-  need to know what it means.
-* Explain that so far we've only created `branches-material` as a branch in our
-  local repository — there is currently no remote counterpart.
-* Give instructions to view branches on GitHub and verify that there is no
-  branch on there called `branches-material`.
+There are three branches worth noting here, namely `main` (our local version of
+`main`), `remotes/origin/main` (our remote version of `main`) and `branches-material`
+(our newly created local branch). We can safely ignore
+`remotes/origin/HEAD -> origin/main` for the time being.
+
+As we have only created `branches-material` locally, it does not have a remote
+counterpart, unlike `main`. Using GitHub, we can verify there is no remote branch
+called `branches-material`. The necessary steps are as follows:
+
+- **Step 1** Navigate to your respository on GitHub.
+
+- **Step 2** Click on _branches_, above the list of files on the left-hand side.
+
+- **Step 3** Click on _All branches_, located to the left of the green _New branch_
+  button on the right-hand side of the screen - this will display a list of all
+  the branches in your remote repository. `branches-material` will be missing
+  from this list.
 
 
 ## Working with remote branches
