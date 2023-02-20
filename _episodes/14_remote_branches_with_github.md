@@ -120,9 +120,9 @@ In GitHub, the following steps allow you to create a new remote branch:
   the branch you are branching off of (e.g. `main`).
 
 In our example `git-good-practice` repository, let's suppose we've created a
-new remote branch called `remote-branches-material`, which is based on top of our
-`branches-material` branch. Our local repository doesn't have any knowledge of
-this new branch, as can be seen by listing the branches:
+new remote branch called `remote-branches-material`, which is based on top of
+`main`. Our local repository doesn't have any knowledge of this new branch, as
+can be seen by listing the branches:
 
 ```
 $ git branch -a
