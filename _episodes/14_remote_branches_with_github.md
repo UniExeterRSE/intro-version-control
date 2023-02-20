@@ -506,6 +506,16 @@ $ git log --oneline -5
 ### Deleting branches from the remote repository via GitHub
 
 Finally, we need to delete the remote branch `remote-branches-material` from the
-remote repository in GitHub.
+remote repository in GitHub. The necessary steps are as follows:
 
-TODO: instructions for deleting branches in GitHub.
+- **Step 1** Navigate to your respository on GitHub.
+
+- **Step 2** Click on _branches_, above the list of files on the left-hand side.
+
+- **Step 3** Click on _All branches_, located to the left of the green _New branch_
+  button on the right-hand side of the screen.
+
+- **Step 4** Identify the branch to be deleted and click on the appropriate
+  _bin icon_ on the right-hand side of the screen. If you hover over the icon,
+  it will show a message stating _Delete chosen-branch_, where _chosen-branch_
+  is the name of the branch to be deleted.
