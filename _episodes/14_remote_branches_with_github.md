@@ -63,13 +63,12 @@ So far, we've seen how to create a local branch, commit to it and merge it into
 another branch (e.g. into `main`). This branch didn't have an upstream branch
 in the remote repository. We're now going to look at the case where we
 use GitHub to create a branch in the _remote repository_, which we then
-bring into our local repository to work with. 
+bring into our local repository to work with. This approach takes advantage of
+useful functionality provided by GitHub, promoting collaborative working. We
+will look at an alternative workflow that doesn't rely on the features GitHub
+provides later.
 
-TODO: say something about this being a way to work when collaborating
-with others on GitHub. We'll look at an alternative workflow that doesn't use
-the features of GitHub and works with an remote repository.
-
-We will add some material to the cheatsheet relating to working with remote
+Now, let's add some material to the cheatsheet relating to working with remote
 branches, using GitHub to drive this development. The basic flow for doing this
 is the following:
 
