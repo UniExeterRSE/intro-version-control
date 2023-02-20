@@ -56,7 +56,19 @@ For example, suppose you are working on a branch called feature-branch, and you 
 
 > #### Branching off a commit
 >
-> TODO: explain how to start a branch at any commit.
+> You can create a new branch at any commit in the repository's history. This can be useful if you want to create a new branch based on a specific version of your code, or if you want to experiment with changes from a previous commit without affecting the current branch. Here's how you can create a new branch at any commit:
+>1. Identify the commit you want to create the branch at: Use the `git log` command to view the commit history of the repository and find the commit hash of the commit you want to create the new branch at.
+This will display a list of commits, each with a unique hash code.
+>2. Create a new branch: Use the git branch command with the commit hash to create a new branch at that commit:
+>```
+>git branch <new-branch-name> <commit-hash>
+>```
+>For example, to create a new branch called `experimental-branch` based on a commit with the hash `abc123`, you would run:
+>```
+> git branch experimental-branch abc123
+>```
+>This creates a new branch called experimental-branch at the specified commit.
+
 
 
 In our example, we create a new branch
