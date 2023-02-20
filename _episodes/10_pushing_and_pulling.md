@@ -154,13 +154,13 @@ this command more later in the course, when we talk about collaborating with
 others on code. You use `git pull` in the analogous way to `git push`: from
 within the root folder of the repository, just run
 
-```
+``` shell
 git pull
 ```
 
 or, to be more explicit about the remote repository, you can equivalently run
 
-```
+``` shell
 git pull origin
 ```
 

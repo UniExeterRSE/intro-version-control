@@ -25,7 +25,7 @@ to stage some changes to a file, then make further changes to the _same_ file.
 For example, suppose we want to start adding content to `Git-cheatsheet.md`
 about `git diff`:
 
-```
+``` markdown
 
 ## Viewing changes
 
@@ -38,14 +38,14 @@ about `git diff`:
 
 Let's stage these changes:
 
-```
+``` shell
 $ git add Git-cheatsheet.md
 ```
 
 Now let's add some content about the `--name-only` optional argument for
 `git diff` to the cheatsheet:
 
-```
+``` markdown
 `git diff --name-only ...` — Only show the names of files that have changed.
 
 ```
@@ -91,7 +91,8 @@ left in the working tree:
 $ git commit -m "Add entries about 'git diff' to cheatsheet"
 [main 9bb2714] Add entries about 'git diff' to cheatsheet
  1 file changed, 8 insertions(+)
-
+```
+``` diff
 $ git diff
 diff --git a/Git-cheatsheet.md b/Git-cheatsheet.md
 index 75e4430..acff2ee 100644
@@ -130,7 +131,7 @@ or who's diffs we want to examine. Git provides convenient shorthands to refer
 to multiple files at once. For example, if `path/to/directory` defines a
 directory within the root folder of our repository, the command
 
-```
+``` shell
 git add path/to/directory
 ```
 
@@ -142,7 +143,7 @@ be included by the above command.) A particular example is the case where
 current working directory is the root directory of the repository, then the
 command 
 
-```
+``` shell
 git add .
 ```
 
@@ -199,7 +200,7 @@ commands are:
 
 The general form for deleting files that is under version control is
 
-```
+``` shell
 git rm <files>
 ```
 
@@ -256,7 +257,7 @@ $ git commit -m "Remove rubbish.txt"
 
 The general form of the `git mv` command is:
 
-```
+``` shell
 git mv <source-file> <destination>
 ```
 Note that if `<destination>` is a directory, the file will be

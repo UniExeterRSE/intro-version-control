@@ -35,7 +35,7 @@ in the root folder of the repository. In the example below, this is contained
 within the parent folder `~/repositories`, so we first change directories with
 `cd` and remind ourselves of the contents:
 
-```
+``` shell
 $ cd ~/repositories/git-good-practice
 $ ls
 README.md
@@ -109,7 +109,7 @@ The 'Untracked files:' bit indicates that Git has spotted a new file which it
 has no record of. Before going further, let's add some content to the cheatsheet
 about `git status`:
 
-```
+``` markdown
 # Git Cheatsheet
 
 *Note: run commands from within a Git repository*
@@ -183,7 +183,7 @@ After adding the above text to `Git-cheatsheet.md` file and saving our changes,
 we now tell Git to start tracking changes to this file by using the `add`
 command:
 
-```
+``` shell
 $ git add Git-cheatsheet.md
 ```
 
@@ -206,7 +206,7 @@ it has a new file, called `Git-cheatsheet.md`, to keep track of. It Git parlance
 yet stored the new version of the file as part of its history. To do that, we
 need to run another Git command, called `commit`:
 
-```
+``` shell
 $ git commit
 ```
 
@@ -356,12 +356,12 @@ Note that, although we've only seen an example of adding changes to a single fil
 can actually add changes to multiple files by listing them out when running
 `git add`, like this:
 
-```
+``` shell
 git add path/to/file1 path/to/file2 path/to/file3 ...
 ```
 
 So we add the following lines to `Git-cheatsheet.md`:
-```
+``` markdown
 ## Adding / committing changes
 
 `git add <files>` — Stages changes in the `<files>`, ready for committing.
@@ -372,7 +372,7 @@ However, we've also seen some tips on good practice about commits and commit
 messages. So let's create a new file, called `Commit-good-practice.md` and record
 what we learnt about commit messages:
 
-```
+``` markdown
 # Best practice when committing
 
 ## Commit messages
@@ -495,7 +495,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 We now take the opportunity to add an cheatsheet entry about the `commit`
 command (under the 'Adding / committing changes' section):
 
-```
+``` markdown
 `git commit` — Commit changes to the repository that have been staged with
                `git add`.
 

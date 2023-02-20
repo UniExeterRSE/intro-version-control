@@ -153,7 +153,7 @@ Let's first look at how to examine file changes
 that have been made to go from one commit to another. The general form of
 the command to do this is:
 
-```
+``` shell
 git diff <commit1> <commit2> <files>
 ```
 
@@ -169,7 +169,7 @@ changes required to go from commit
 `34c19f2` (with message "Add material on committing"), for each of the files
 `Git-cheatsheet.md` and `Commit-good-practice.md`:
 
-```
+``` diff
 $ git diff ad56194 34c19f2 Git-cheatsheet.md Commit-good-practice.md
 diff --git a/Commit-good-practice.md b/Commit-good-practice.md
 new file mode 100644
@@ -232,7 +232,7 @@ versions in the specified commits.
 If we wanted to view just the diff for the file `Git-cheatsheet.md` we would
 supply that as the only file argument, like so:
 
-```
+``` shell
 $ git diff ad56194 34c19f2 Git-cheatsheet.md
 ```
 
@@ -240,7 +240,7 @@ If we leave out `<files>` altogether, then Git will show the diffs for all files
 that were changed in the given commits. With the commits `ad56194` and `34c19f2`
 above we only have the two files, so in this case
 
-```
+``` shell
 git diff ad56194 34c19f2
 ```
 
@@ -259,7 +259,7 @@ If we just want to compare the _latest_ commit — that is, the commit referred 
 by `HEAD` — with a previous commit, we just provide an identifier for the
 commit to compare to:
 
-```
+``` shell
 git diff <commit> <files>
 ```
 
@@ -267,7 +267,7 @@ The rules for `<files>` are the same as before. For example, to view the changes
 to the file `Commit-good-practice.md` from commit `34c19f2`
 ("Add material on committing") to the latest commit:
 
-```
+``` diff
 $ git diff 34c19f2 Commit-good-practice.md
 diff --git a/Commit-good-practice.md b/Commit-good-practice.md
 index 9610409..524d4ec 100644
@@ -333,7 +333,7 @@ or committed.
 
 Let's suppose we add some new content to our cheatsheet about `git log`:
 
-```
+``` markdown
 
 
 ## Viewing repository history
@@ -348,7 +348,7 @@ This will add changes to the working tree for our repository. We can view the
 diff for changes that are in the working tree, but have not yet been staged,
 by using `diff` without reference to any commits:
 
-```
+``` shell
 git diff <files>
 ```
 As usual, we can leave `<files>` empty and Git will return the diffs for all
@@ -356,7 +356,7 @@ files that have changed.
 
 Running this in our `git-good-practice` repository now yields
 
-```
+``` diff
 $ git diff
 diff --git a/Git-cheatsheet.md b/Git-cheatsheet.md
 index 135822a..86e679f 100644
@@ -384,7 +384,7 @@ as we would expect.
 Suppose we now stage the changes above made in the previous section and run
 `git diff` again:
 
-```
+``` shell
 $ git add Git-cheatsheet.md
 
 $ git diff
@@ -397,7 +397,7 @@ behaviour of `git diff` is to show changes that are _in the working tree_ but
 have not been staged. We can use the `--staged` option to view the changes that
 have been staged, but not yet committed:
 
-```
+``` diff
 $ git diff --staged
 diff --git a/Git-cheatsheet.md b/Git-cheatsheet.md
 index 135822a..86e679f 100644

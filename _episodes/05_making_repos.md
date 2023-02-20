@@ -241,7 +241,7 @@ then see the section on 'bare' repositories on
 > individually. After creating the repository with `git init`, run the following
 > command:
 > 
-> ```
+> ``` shell
 > $ git checkout -b main
 > ```
 
@@ -263,7 +263,7 @@ And here is the same repository displayed on a Linux operating system, using the
 command line; note we are displaying hidden files using the `-a` option
 in the `ls` command:
 
-```
+``` shell
 $ ls -a awesome-research-done-right/
 .  ..  .git  data  plot_results.py  process_geo_data.py  run-everything.py  simulate.py  simulation-engine
 ```
@@ -291,5 +291,3 @@ automatically when the repository is created.
 > Our advice: don't poke around the `.git` folder, unless you are a confident
 > Git user and need to customise Git (even then, follow a reputable tutorial or
 > guide the first time).
-
- 
