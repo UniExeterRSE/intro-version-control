@@ -10,7 +10,11 @@ adapted: false
 
 
 ## Learning objectives
-TODO
+
+By the end of this episode you will be able to create remote branches using
+GitHub and track these remote branches locally. You will also learn how to
+merge remote branches using a Pull Request, as well as how to delete branches
+in your local and remote repositories.
 
 
 ## Local and remote branches
