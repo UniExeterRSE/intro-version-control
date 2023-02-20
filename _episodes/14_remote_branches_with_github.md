@@ -386,7 +386,9 @@ Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
 nothing to commit, working tree clean
 ```
 
-TODO: explain how to use `git pull` and what it does.
+As explained in the
+[Pushing to and Pulling From the Remote Repository]({{ site.url }}/10_pushing_and_pulling/index.html)
+episode, `git pull` can be used to retrieve updates from the remote repository.
 
 We pull the changes to `origin/main` into our local `main` branch:
 
