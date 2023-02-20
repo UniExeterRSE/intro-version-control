@@ -316,7 +316,30 @@ branch with the new commit.
 
 ## Merge remote branch into remote `main`
 
-TODO: instructions for creating and completing a Pull Request on GitHub
+Once we have pushed our changes to the remote branch, we can merge said remote
+branch into remote `main` by means of a Pull Request on GitHub. We can create and
+complete a Pull Request (PR) as follows:
+
+- **Step 1** Navigate to your repository on GitHub.
+
+- **Step 2** Click on the _Pull requests_ tab (third tab from the left).
+
+- **Step 3** Click on the green _New pull request_ button on the right-hand side
+  of the screen.
+
+- **Step 4** Ensure `main` has been chosen as _base_ and choose your remote branch,
+  which in this case is `remote-branches-material`, as _compare_.
+
+- **Step 5** Click on the green _Create pull request_ button.
+
+- **Step 6** GitHub will generate a title based on the name of the branch you
+  are comparing, but this can be changed. You are also welcome to add a
+  description where it says _Leave a comment_.
+
+- **Step 7** Click on the green _Create pull request_ button.
+
+- **Step 8** Click on the green _Merge pull request_ button, located near the
+  bottom of the page.
 
 
 ## Pull changes into our local repository
