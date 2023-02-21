@@ -37,7 +37,10 @@ experiment with new features or ideas without affecting the stability of the mai
 
 We're going to add some new content to the cheatsheet, doing this in a new, dedicated
 branch. The content we'll add will be about using branches, so we'll be recording
-what we learn as we go.
+what we learn as we go. The material on branches in this episode concerns working
+with _local_ branches: branches that are created in our local repository, rather
+than remotely on GitHub. The next episode will look at remote branches in more
+detail.
 
 
 ### Creating branches
