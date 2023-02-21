@@ -10,23 +10,121 @@ adapted: false
 
 ## Learning objectives
 
-TODO
+By the end of this episode you will have learned about a simple strategy
+for using branches to collaborate with others on a shared codebase, called
+feature branching. You will also have worked through an example of how this
+strategy works in practice.
 
 
-## Collaborating with others and branch organisation
+## Collaborating with others
 
-TODO:
-* Contrast collaboration with working solo: there is one common repository, but
-  now multiple associated local repositories: one for each developer.
-* Stress the importance of needing to keep updated with each other's work, and
-  to push your own changes promptly.
+So far, we've only been using Git and GitHub as a solo developer. But the real
+power of version control systems is realised when collaborating with other
+developers on a shared project. Branching in Git provides the means for multiple
+people in a way that allows them to work concurrently and bring their work together
+in a controlled, transparent way. If you're using GitHub to host your remote
+repository, then Pull Requests provide a way to communicate to others about
+your changes.
 
-TODO:
-* High level overview of a basic branching strategy: feature branches off of
-  `main`.
-* Why this is helpful: controlled merging of work, allows multiple people to
-  work simultaneously without excessive communication.
-* Need for merging `main` into feature branches as it gets updated by others.
+The key thing to remember when collaborating with Git is that, while there may
+only be a single remote repository, _every developer has their own local repository_ that
+is linked to the remote repository. The corollary to this is:
+
+* each developer is responsible for pushing the work from their local repository
+  to the remote one; and
+
+* each developer needs to pull in work that others have contributed to the
+  remote repository into their local repository.
+
+It's important that this is done promptly and regularly so that any changes
+are not missed by you or others.
+
+There are different strategies and philosophies on how branches can be used
+for collaboration. For this course, we're going to discuss a simple strategy
+called _feature branching_.
+
+
+## Feature branching
+
+A **feature** in this context is any piece of work that adds to of the
+software's overall development, whether this be a new piece of functionality, a
+bug fix, some documentation, etc. In feature branching, new features are
+developed in their own, dedicated **feature branches** that branch off the
+`main` branch. When the feature is ready to be shared with others, the feature
+branch is merged back into `main`.
+
+The `main` branch and feature branches take on different roles:
+
+* **The `main` branch**: This includes code changes that you want to share with
+  each other, or that are ready for release into the world. You should consider
+  it the 'neat' version of your work. As a general rule, _code only makes it into
+  `main` through merging a feature branch. You don't commit directly to `main`._
+
+* **Feature branches**: These are branches where you work on code to develop
+  features, so will contain 'work in progress' until they're ready to merge
+  back into `main`. 
+
+A common scenario you will come across when working on a feature branch is
+where `main` gets updated through someone else merging a feature branch they're
+working on. When it comes to you merging your feature branch into `main`, the
+golden rule is to make sure you merge any changes to `main` _into_ your
+feature branch _before_ merging your feature branch into `main`. This ensures
+you are adding your work to the latest version of the 'common' codebase and
+resolve any issues in your feature branch:
+
+* It gives you a chance to check that the changes you are making are consistent
+  with other peoples' work, which may have passed under the radar when merging.
+
+* It also gives you a chance to resolve any _merge conflicts_ that may arise
+  when you try to merge your work into the common codebase (about which more in
+  a later episode).
+
+
+### Creating feature branches
+
+We will be creating feature branches using the workflow described in the previous
+episode, [Remote Branches with GitHub]({{ site.url }}/14_remote_branches_with_github/index.html):
+feature branches will be created remotely on GitHub and then fetched in for us
+to work on locally. 
+
+
+### Protocol for merging feature branches into `main`
+
+Below we give steps for merging a feature branch `foo-feature` into `main`. We
+assume `foo-feature` exists both as a remote branch in the remote repository and
+also a local tracking branch in our local repository.
+
+1. Create a Pull Request on GitHub corresponding to the merge of `foo-feature`
+   into `main`.
+
+2. Pull any changes to `main` on the remote repository into your local version
+   of `main` (using `git pull` on your local `main` branch). 
+
+   a) If `main` was unchanged by the pull then go to step 2,
+      otherwise go to step b) below.
+
+   b) If `main` got updated by the pull, then merge `main` into `foo-feature`
+      in your local repository before continuing, by using `git merge`.
+      If there are merge conflicts, these MUST be resolved and the merge into
+      `foo-feature` completed before continuing to step c) below. Take the
+      opportunity to make sure this merge hasn't introduced any problems into
+      the codebase (e.g. inconsistencies in naming, etc.)
+   
+   c) Pull the remote `main` into your local `main` again to be
+      sure no further changes were made while you were performing the merge in
+      step b). If the branch wasn't updated then proceed
+      to step 2 below, otherwise curse your luck and go back to step b).
+
+2. Push the commits in your local `foo-feature` branch to the corresponding
+   remote branch.
+
+3. Complete the Pull Request on GitHub to merge the `foo-feature` branch
+   into `main` on the remote.
+
+4. Pull the changes to `main` from the remote repository into your local repository.
+   Optional, but recommended: delete the feature branch `foo-feature` from GitHub
+   and from your remote repository (including the reference `origin/foo-feature`
+   to the remote branch).
 
 
 ## Example: Joe Bloggs and Jane Doe
@@ -37,16 +135,20 @@ remote repository, created under Joe's account, but will each have their own
 associated local repositories. They're going to use the _feature branch_
 strategy, discussed in the previous section, to add:
 
-* An entry to the cheatsheet about FOO.
+* Material to the cheatsheet about fetching remote branches from a remote
+  repository.
 
 * A new file documenting good practice when collaborating together.
 
 
 In order for two people to work on the same remote repository on GitHub, they
-each need to be listed as collaborators on the repository. If you are the
-repository's owner, you can invite collaborators as follows:
+each need to be listed as collaborators on the repository.
 
-TODO: instructions for inviting someone to collaborate on a repository on GitHub.
+> ### Collaborators on a GitHub repository
+> 
+> If you are the owner of a repository on GitHub, you can invite collaborators
+> to work on the repository using the
+> <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-access-to-your-personal-repositories/inviting-collaborators-to-a-personal-repository" target="_blank" rel="external noreferrer">instructions in the GitHub documentation</a>.
 
 
 ### Exercise
@@ -71,161 +173,148 @@ Joe Bloggs and the other of Jane Doe.
 > repository.
 
 
-## Creating a remote branch on GitHub
+## Creating the branches
 
-Joe and Jane will be creating remote branches on GitHub and then creating
-local versions to use for their work. Although not essential, this will allow
-them to be able to see each other's work.
+Joe and Jane begin by creating remote branches on GitHub for their work, creating
+these at the same time:
 
-TODO: instructions for creating a branch on GitHub
+* **Joe** creates a remote branch called `fetching-material`, which will contain
+  material about fetching from a remote repository.
 
-Joe creates a remote branch called `FOO-work`, which will contain work on FOO.
-Jane creates a remote branch called `collaboration-good-practice`, which will
-contain work on good practice while collaborating. They create these remote
-branches at the same time.
+* **Jane** creates a remote branch called `collaboration-good-practice`, which
+  will contain work on good practice while collaborating.
 
+Next, Joe and Jane need to each create a local branch
+that will track their remote branch.
 
-## Creating local branches that track remote ones
+### Joe's local branch
 
-Having created the remote branches, Joe and Jane need to each create a local branch
-that will track their remote branches. This can be done by running `git fetch`
-followed by checking out a new local branch with the same name as the remote
-branch. This is easiest seen by example. First, Joe runs the following command: in
-the his local `git-good-practice` repository:
+Joe fetches references to the new branches in the remote repository, then
+creates a new local branch to track his remote `fetching-material` branch (and
+also checks out this new local branch):
 
 ```
-$ git fetch origin
+$ git fetch
 Username for 'https://github.com': jbloggs9999
 Password for 'https://jbloggs9999@github.com':
 From https://github.com/jbloggs9999/git-good-practice
- * [new branch]      Foo-work   -> origin/Foo-work
  * [new branch]      collaboration-good-practice -> origin/collaboration-good-practice
+ * [new branch]      fetching-material -> origin/fetching-material
+
+$ git checkout fetching-material 
+Switched to a new branch 'fetching-material'
+branch 'fetching-material' set up to track 'origin/fetching-material'.
 ```
 
-We won't go into detail about exactly what `git fetch origin` is doing. For
-our purposes, we use it to inspect the remote repository for information about
-any new branches, or commits that have been made in remote branches, that our
-local repository doesn't yet know about. In Joe's case, the fetch reports
-that there is are two new remote branches called `Foo-work` and
-`collaboration-good-practice`, which are the branches Joe and Jane created on
-GitHub a moment ago. If Joe lists out all
-his branches, he'll find that he now has references to these new remote
-branches in his local repository:
+Notice that the fetch creates references to _both_ of the new remote branches,
+`fetching-material` and `collaboration-good-practice`, which Joe and Jane created on
+GitHub a moment ago. In contrast, Joe only has a local branch corresponding
+to his remote `fetching-material` branch, since this is the branch he performed
+the `git checkout` on:
 
 ```
-$ git branch --all
-  branches-material
-* main
-  remotes/origin/Foo-work
-  remotes/origin/HEAD -> origin/main
-  remotes/origin/collaboration-good-practice
-  remotes/origin/main
-```
-
-However, in order to work on FOO, Joe needs to create a local version of the remote
-`Foo-work` branch where he can add commits and that tracks the remote
-`origin/Foo-work` branch. This can be arranged by performing the following checkout:
-
-```
-$ git checkout FOO-work 
-Switched to a new branch 'FOO-work'
-branch 'FOO-work' set up to track 'origin/FOO-work'. 
-```
-
-You may be surprised by this: after all, we've asked Git to checkout a branch
-that doesn't actually exist! Fortunately, Git is smart enough to realise that
-what we want to do is set up a new local branch that tracks the `origin/Foo-work`
-remote branch. So it automatically creates a new local branch — called `Foo-work` — that
-will track `origin/Foo-work`, and checks out this new local branch for us. We
-can verify this by listing all the branches again:
-
-```
-$ git branch --all
-* Foo-work
-  branches-material
+$ git branch -a
+* fetching-material
   main
-  remotes/origin/Foo-work
   remotes/origin/HEAD -> origin/main
   remotes/origin/collaboration-good-practice
+  remotes/origin/fetching-material
   remotes/origin/main
 ```
 
-Jane runs the analogous commands in her local repository:
+### Jane's local branch
+
+Jane runs the analogous commands in her local repository, in this case creating
+a local tracking branch for her `collaboration-good-practice` remote branch
+instead:
 
 ```
-$ git fetch origin
+$ git fetch
 Username for 'https://github.com': janedoe9999
 Password for 'https://janedoe9999@github.com':
 From https://github.com/jbloggs9999/git-good-practice
- * [new branch]      Foo-work   -> origin/Foo-work
  * [new branch]      collaboration-good-practice -> origin/collaboration-good-practice
+ * [new branch]      fetching-material -> origin/fetching-material
 
 $ git checkout collaboration-good-practice 
 Switched to a new branch 'collaboration-good-practice'
 branch 'collaboration-good-practice' set up to track 'origin/collaboration-good-practice'.
+
+$ git branch -a
+* collaboration-good-practice
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/collaboration-good-practice
+  remotes/origin/fetching-material
+  remotes/origin/main
 ```
 
 ## Working on the feature branches
 
-### Joe Bloggs and his `Foo-work` feature branch
+### Joe's `fetching-material` feature branch
 
 Joe adds the following content to `Git-cheatsheet.md`:
 
 ```
-FOO
+
+## Syncing with a remote repository
+
+`git fetch origin` — Retrieve references to new remote branches, and/or commits
+                     that are contained in remote branches, from the remote
+                     repository (referred to as `origin`).
 
 ```
 
-He then commits it on his (local) `Foo-work` branch:
+He then commits it on his (local) `fetching-material` branch:
 
 ```
 $ git add Git-cheatsheet.md 
 
-$ git commit -m "Add FOO"
-[Foo-work 5d69bbb] Add FOO
- 1 file changed, 2 insertions(+)
+$ git commit -m "Add entry about fetching from a remote"
+[fetching-material 1d026a8] Add entry about fetching from a remote
+ 1 file changed, 7 insertions(+)
 ```
 
-Checking the status, Joe confirms that his local `Foo-work` branch is 1 commit
+Checking the status, Joe confirms that his local `fetching-material` branch is 1 commit
 ahead of the associated remote branch:
 
 ```
 $ git status
-On branch Foo-work
-Your branch is ahead of 'origin/Foo-work' by 1 commit.
+On branch fetching-material
+Your branch is ahead of 'origin/fetching-material' by 1 commit.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
 ```
 
 In order to back up his work and give Jane a preview of what he's been doing,
-Joe pushes the changes to his local `Foo-work` branch to the remote
-`origin/Foo-work`:
+Joe pushes the changes to his local `fetching-material` branch to the remote
+`origin/fetching-material`:
 
 ```
-$ git push origin
+$ git push
 Username for 'https://github.com': jbloggs9999
 Password for 'https://jbloggs9999@github.com':
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Writing objects: 100% (3/3), 494 bytes | 123.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/jbloggs9999/git-good-practice.git
-   42a9a32..5d69bbb  Foo-work -> Foo-work
+   86ebbee..1d026a8  fetching-material -> fetching-material
 ```
 
-The history on Joe's `Foo-work` branch now looks like this:
+The history on Joe's `fetching-material` branch now looks like this:
 
 ```
 $ git log --oneline -5
-5d69bbb (HEAD -> Foo-work, origin/Foo-work) Add FOO
-42a9a32 (origin/main, origin/collaboration-good-practice, origin/HEAD) Ignore TODO list file
-0984d2b Add material on basic pathspec usage (directories)
-92b2ac2 Create general good practice guides directory
-5cf8321 Remove rubbish.txt
+1d026a8 (HEAD -> fetching-material, origin/fetching-material) Add entry about fetching from a remote
+86ebbee (origin/main, origin/collaboration-good-practice, origin/HEAD, main) Merge pull request #1 from jbloggs9999/remote-branches-material        
+5125372 Add note about creating local tracking branches
+3b918f2 Add entry about merging branches
+51da8da Add entry about checking out a branch
 ```
 
 
@@ -241,9 +330,12 @@ and adds the following content about the above feature branch strategy:
 ## A basic feature branch strategy
 
 A basic way to collaborate on a common repository is to use *feature branching*.
-New software 'features' (which could consist of bug fixes), are worked on in
-their own dedicated branches that branch off the `main` branch and then are
-merged back into `main` when the new 'feature' is ready to be shared with others.
+A *feature* in this context is any piece of work that adds to of the
+software's overall development, whether this be a new piece of functionality, a
+bug fix, some documentation, etc. In feature branching, new features are
+developed in their own, dedicated *feature branches* that branch off the
+`main` branch. When the feature is ready to be shared with others, the feature
+branch is merged back into `main`.
 
 ```
 
@@ -259,29 +351,33 @@ Enumerating objects: 10, done.
 Counting objects: 100% (10/10), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (7/7), done.
-Writing objects: 100% (8/8), 990 bytes | 990.00 KiB/s, done.
-Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+Writing objects: 100% (8/8), 1.04 KiB | 353.00 KiB/s, done.
+Total 8 (delta 2), reused 1 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 1 local object.
 To https://github.com/jbloggs9999/git-good-practice.git
-   42a9a32..fb535ee  collaboration-good-practice -> collaboration-good-practice
+   86ebbee..b9df491  collaboration-good-practice -> collaboration-good-practice
 ```
 
 Having done this, her `collaboration-good-practice` history looks as follows:
 
 ```
 $ git log --oneline -5
-fb535ee (HEAD -> collaboration-good-practice, origin/collaboration-good-practice) Add material on feature branching
-8867731 Start good practice guide on collaboration
-42a9a32 (origin/main, origin/Foo-work, origin/HEAD) Ignore TODO list file
-0984d2b Add material on basic pathspec usage (directories)
-92b2ac2 Create general good practice guides directory
+b9df491 (HEAD -> collaboration-good-practice, origin/collaboration-good-practice) Add material on feature branching
+687cf02 Start good practice guide on collaboration
+86ebbee (origin/main, origin/fetching-material, origin/HEAD, main) Merge pull request #1 from jbloggs9999/remote-branches-material
+5125372 Add note about creating local tracking branches
+3b918f2 Add entry about merging branches
 ```
 
-TODO: point out that `origin/collaboration-good-practice` hasn't been updated
-in Joe's local repository and `origin/Foo-work` hasn't been updated in Jane's,
-because they haven't fetched from the remote repository. This underlines the
-fact that the information in local repositories about remote branches only
-gets updated when you tell Git to do it by `git fetch` or `git pull`.
+
+Let us take a moment to point out that, at this point, `origin/fetching-material`
+hasn't been updated in Jane's local repository, and neither has
+`origin/collaboration-good-practice` been updated in Joe's local repository.
+This is because they haven't yet fetched updates to the corresponding remote
+branches from the remote repository. This underlines the
+fact that the information about remote branches only
+gets updated in local repositories when you tell Git to retrieve updates from
+the remote, via `git fetch` or `git pull`.
 
 
 ## Merging 
@@ -289,8 +385,13 @@ gets updated when you tell Git to do it by `git fetch` or `git pull`.
 ## First to the pass: Joe
 
 Joe finishes his work before Jane does and so gets to work on merging his
-feature branch into the `main` branch. But first he checks that Jane hasn't
-merged any work into the remote `main` branch, by checking out `main` and
+feature branch into the `main` branch. Following the strategy that was discussed
+in the episode [Remote Branches with GitHub]({{ site.url }}/14_remote_branches_with_github/index.html),
+he creates a Pull Request associated to the merge.
+
+Having done this, he checks that Jane hasn't
+merged any work into the remote `main` branch. He could do this by examining
+the history of `main` on GitHub, or by checking out `main` and
 pulling in any changes from the remote:
 
 ```
@@ -298,45 +399,60 @@ $ git checkout main
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
-$ git pull origin
+$ git pull
+Username for 'https://github.com': jbloggs9999
+Password for 'https://jbloggs9999@github.com':
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 8 (delta 2), reused 8 (delta 2), pack-reused 0
+Unpacking objects: 100% (8/8), 1.02 KiB | 17.00 KiB/s, done.
+From https://github.com/jbloggs9999/git-good-practice
+   86ebbee..b9df491  collaboration-good-practice -> origin/collaboration-good-practice
 Already up to date.
 ```
 
-TODO: stress that just because we see `Your branch is up to date with 'origin/main'.`
-doesn't mean that there aren't changes on the remote to pull in.
 
-Since his `main` branch is fully up to date with the remote version, he can go
-ahead and perform the merge of his feature branch into `main`:
+> #### Note on `Your branch is up to date with 'origin/main'.`
+> 
+> Just because we see `Your branch is up to date with 'origin/main'.` after the
+> checkout in the above output doesn't mean there aren't changes on the remote to
+> pull in. Instead, it means that Git is not aware of any extra commits in
+> `origin/main` compared to `main` _based on the information gained from our last
+> `fetch` or `pull`. 
+
+
+The output of the `git pull` command shows that new commits in the
+`origin/collaboration-good-practice` that Jane's working on have been fetched,
+but that `main` is up to date. Since his `main` branch is fully up to date with
+the remote version, he goes ahead and performs the merge of his feature branch
+into `main` on GitHub, by completing the Pull Request. He then updates his local
+`main` branch with the merged changes:
 
 ```
-$ git merge Foo-work 
-TODO: fill in
-```
-
-In order to share his work with Jane, he immediately pushes the recent changes
-to `main` to the remote repository:
-
-```
-$ git push origin
+$ git pull
 Username for 'https://github.com': jbloggs9999
 Password for 'https://jbloggs9999@github.com':
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 349 bytes | 349.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To https://github.com/jbloggs9999/git-good-practice.git
-   d2b60ff..eb0e845  main -> main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 654 bytes | 93.00 KiB/s, done.
+From https://github.com/jbloggs9999/git-good-practice
+   86ebbee..4e209e9  main       -> origin/main
+Updating 86ebbee..4e209e9
+Fast-forward
+ Git-cheatsheet.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
 ```
 
 
 ### Jane: merging after changes to `main`
 
 Jane is ready to merge her `collaboration-good-practice` feature branch into
-`main`. However, she first checks that her local `main` branch is up-to-date
-with the remote repository:
+`main`, so she create a Pull Request linked to the remote feature branch.
+
+As the feature branch protocol recommends, she checks to see whether her local
+`main` branch is up-to-date with the remote repository:
 
 ```
 $ git checkout main
@@ -344,14 +460,33 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 $ git pull origin
-TODO: fill in
+Username for 'https://github.com': janedoe9999
+Password for 'https://janedoe9999@github.com':
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 3), reused 2 (delta 2), pack-reused 0
+Unpacking objects: 100% (4/4), 974 bytes | 27.00 KiB/s, done.
+From https://github.com/jbloggs9999/git-good-practice
+   86ebbee..4e209e9  main              -> origin/main
+   86ebbee..1d026a8  fetching-material -> origin/fetching-material
+Updating 86ebbee..4e209e9
+Fast-forward
+ Git-cheatsheet.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
 ```
 
-Jane finds that there have been changes made to the `main` branch while she
-was working on her feature branch. Therefore, she merges her now updated (local)
-`main` branch into her feature branch, to ensure her feature branch includes
-the latest changes. She also then pushes her updated feature branch to the
-remote repository, so that her local and remote branches are in-sync.
+(Again, she could also have done this by looking at the history of `main` on
+GitHub.) Jane finds that there have been changes made to the `main` branch while
+she was working on her feature branch, as indicated by the line
+
+```
+   86ebbee..4e209e9  main              -> origin/main
+```
+
+Therefore, she merges her now updated `main` branch into her feature branch, to
+ensure her feature branch includes the latest changes. (Note that she does
+this _locally_, rather than on GitHub.)
 
 ```
 $ git checkout collaboration-good-practice 
@@ -359,10 +494,27 @@ Switched to branch 'collaboration-good-practice'
 Your branch is up to date with 'origin/collaboration-good-practice'.
 
 $ git merge main
-TODO: fill in
+Merge made by the 'ort' strategy.
+ Git-cheatsheet.md | 7 +++++++
+ 1 file changed, 7 insertions(+)
+```
 
-$ git push origin
-TODO: fill in
+She also then pushes her updated feature branch to the
+remote repository, so that her local and remote branches are synchronised.
+
+```
+$ git push
+Username for 'https://github.com': janedoe9999
+Password for 'https://janedoe9999@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 325 bytes | 325.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/jbloggs9999/git-good-practice.git
+   b9df491..ee1617c  collaboration-good-practice -> collaboration-good-practice
 ```
 
 Having done this, she now effectively starts the protocol for merging a feature
@@ -374,27 +526,133 @@ $ git checkout main
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
-$ git pull origin
+$ git pull
+Username for 'https://github.com': janedoe9999
+Password for 'https://janedoe9999@github.com':
 Already up to date.
 ```
 
-Having seen there are no further updates, she goes ahead and merges her
-`collaboration-good-practice` feature branch into `main`. Then she pushes the
-new changes to `main` to the remote repository:
+Having seen there are no further updates, she goes to GitHub and completes
+the associated Pull Request, thus merging her remote
+`collaboration-good-practice` feature branch into `main` in the remote
+repository. Then she pulls down the new, merged changes from `origin/main` into
+her local `main` branch:
 
 ```
-$ git merge collaboration-good-practice 
-TODO: fill in
-
-$ git push origin
-TODO: fill in
+$ git pull
+Username for 'https://github.com': janedoe9999
+Password for 'https://janedoe9999@github.com':
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 648 bytes | 108.00 KiB/s, done.
+From https://github.com/jbloggs9999/git-good-practice
+   4e209e9..785f6f8  main       -> origin/main
+Updating 4e209e9..785f6f8
+Fast-forward
+ Good-practice-guides/Collaboration-good-practice.md | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Good-practice-guides/Collaboration-good-practice.md
 ```
 
-Jane now views the history of all the branches. She does this by using the
-`--all` option to show all branches, and then also the `--graph` option to
-pictorially represent the inter-relationships of the branches:
+## Finishing up
+
+The merged changes added to `main` by Jane won't feature in Joe's local
+repository until he pulls them into his local `main` branch. Having seen on
+GitHub that Jane has completed her Pull Request, he duly makes sure his local
+repository has these changes (making sure he's on `main` to begin with):
 
 ```
-$ git log --oneline --all --graph
-TODO: fill in
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+$ git pull
+Username for 'https://github.com': jbloggs9999
+Password for 'https://jbloggs9999@github.com':
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 2), reused 1 (delta 1), pack-reused 0
+Unpacking objects: 100% (3/3), 829 bytes | 48.00 KiB/s, done.
+From https://github.com/jbloggs9999/git-good-practice
+   4e209e9..785f6f8  main       -> origin/main
+   b9df491..ee1617c  collaboration-good-practice -> origin/collaboration-good-practice
+Updating 4e209e9..785f6f8
+Fast-forward
+ Good-practice-guides/Collaboration-good-practice.md | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Good-practice-guides/Collaboration-good-practice.md
 ```
+
+Both Joe and Jane now have completely up-to-date local repositories. At this point,
+they could delete their feature branches, both from the local repository and
+the remote repository.
+
+
+## Viewing a graph of history
+
+Feeling satisfied about a successful collaboration, Joe and Jane decide to take
+a look at what they've just accomplished. One nice way to view history in the
+repository when multiple branches are involved is to use the `--graph` option with `git log`.
+This will pictorially represent the inter-relationships of the branches that
+are involved in the commit history:
+
+```
+git log [options] --graph
+```
+
+Note: you may find it clearest to use this with the `--oneline` option.
+
+From within Joe's repository, the output of the graph looks like the following
+(viewing only the last 7 commits):
+
+<!-- 
+```
+$ git log --oneline -7 --graph
+*   785f6f8 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #3 from jbloggs9999/collaboration-good-practice
+|\
+| *   ee1617c (origin/collaboration-good-practice) Merge branch 'main' into collaboration-good-practice
+| |\
+| |/
+|/|
+* |   4e209e9 Merge pull request #2 from jbloggs9999/fetching-material
+|\ \
+| * | 1d026a8 (origin/fetching-material, fetching-material) Add entry about fetching from a remote
+|/ /  
+| * b9df491 Add material on feature branching
+| * 687cf02 Start good practice guide on collaboration
+|/  
+*   86ebbee Merge pull request #1 from jbloggs9999/remote-branches-material
+|\ 
+```
+-->
+
+![Git log as a graph]({{ site.url }}/images/git-log-as-graph.png)
+
+Let's go through this output in more detail:
+
+* The commit `86ebbee` ("Merge pull request #1 ...") is where Joe and Jane
+  started their work.
+
+* The vertical line represents the `main` branch, that we're currently on. After
+  the starting commit, there are two more commits, `4e209e9` and `785f6f8`, that
+  show where the feature branches where merged into `main` on the remote.
+
+* We can see the commit on Joe's feature branch by following the purple line:
+  the commit is `1d026a8`, where `origin/fetching-material` currently points. (It's
+  also where the local branch `fetching-material` points, which we see because we
+  are viewing Joe's local repository.) The feature branch got merged into main
+  at commit `4e209e9` ("Merge pull request #2 from jbloggs9999/fetching-material")
+
+* Jane's feature branch commits start at `687cf02` ("Start good practice guide on
+  collaboration") and continue along the yellow line. Note that commit
+  `ee1617c` (where `origin/collaboration-good-practice` currently points) is
+  where Jane merged her `main` branch into `collaboration-good-practice` locally,
+  after pulling in Joe's merged changes to `main`. Note also the red line connecting
+  `main` to this commit, indicating Jane's merge.
+
+* Finally, the latest commit `785f6f8` ("Merge pull request #3 from jbloggs9999/collaboration-good-practice")
+  is the commit where Jane's feature branch got merged into main on the remote.
