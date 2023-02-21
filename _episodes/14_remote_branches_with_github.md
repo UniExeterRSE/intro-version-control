@@ -70,11 +70,11 @@ use GitHub to create a branch in the _remote repository_, which we then
 bring into our local repository to work with. This approach takes advantage of
 useful functionality provided by GitHub, promoting collaborative working. We
 will look at an alternative workflow that doesn't rely on the features GitHub
-provides later.
+provides in a later episode.
 
 Now, let's add some material to the cheatsheet relating to working with remote
 branches, using GitHub to drive this development. The basic flow for doing this
-is the following:
+will be the following:
 
 * Create a remote branch on GitHub that will receive our additions to the
   cheatsheet.
@@ -108,13 +108,14 @@ In order to do this, we need to do the following:
 
 In GitHub, the following steps allow you to create a new remote branch:
 
-- **Step 1** Navigate to your respository on GitHub.
+- **Step 1** Navigate to your repository on GitHub.
 
 - **Step 2** Click on the dropdown, located to the left of _branches_, on the
   left-hand side of the screen.
 
-- **Step 3** Select the branch you would like to create a branch from - this
-  would typically be `main`. If it is `main`, this step becomes redundant.
+- **Step 3** Select the branch you would like to create a branch from. (For this
+  course, this will typically be `main`. If it is `main`, this step
+  becomes redundant.)
 
 - **Step 4** Click on the dropdown again and type in the name of your new branch
   where it says _Find or create a branch..._.
@@ -123,7 +124,7 @@ In GitHub, the following steps allow you to create a new remote branch:
   _new-branch_ is the name of your new branch and _base-branch_ is the name of
   the branch you are branching off of (e.g. `main`).
 
-In our example `git-good-practice` repository, let's suppose we've created a
+In our example `git-good-practice` repository, let's suppose we've just created a
 new remote branch called `remote-branches-material`, which is based on top of
 `main`. Our local repository doesn't have any knowledge of this new branch, as
 can be seen by listing the branches:
@@ -360,6 +361,8 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
 
+TODO: expand to following.
+
 It is stated that `Your branch is up to date with 'origin/main'.`, indicating
 we are yet to fetch the changes made to the remote branch `origin/main` into our
 local repository.
@@ -390,9 +393,29 @@ Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
 nothing to commit, working tree clean
 ```
 
-As explained in the
+In the
 [Pushing to and Pulling From the Remote Repository]({{ site.url }}/10_pushing_and_pulling/index.html)
-episode, `git pull` can be used to retrieve updates from the remote repository.
+episode, we mentioned that `git pull` can be used to retrieve updates from the
+remote repository. To be more precise, `git pull` is used to bring in commits
+_in a remote branch into a corresponding local branch_. In general, if you have
+a remote branch that has commits not yet in a local tracking
+branch `<branch>`, then run the following command _with `<branch>` checked out_
+to update `<branch>` with these new commits:
+
+```
+git pull
+```
+
+(or, to be explicit about the remote repository, `git pull origin`).
+
+> #### `pull` automatically `fetch`es
+>
+> `git pull` actually performs a two step process on a branch
+> `<branch>`. First, it runs a `git fetch` to retrieve all new commits,
+> branches, etc. from the remote repository. Then,
+> it merges the changes that have been fetched into the `origin/<branch>` into
+> `<branch>`. As a result, we did not in fact need to use the `git fetch` command
+> before using `git pull` above.
 
 We pull the changes to `origin/main` into our local `main` branch:
 
@@ -405,12 +428,6 @@ Fast-forward
  Git-cheatsheet.md | 3 +++
  1 file changed, 3 insertions(+)
 ```
-
-> #### `pull` automatically `fetch`es
->
-> `git pull` not only merges the changes but also `fetch`es them, so we did not
-> need to use the `git fetch` command before using `git pull`.
-
 
 We can now see from the log that our changes are fully reflected in `main`:
 
