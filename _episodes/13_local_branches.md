@@ -5,25 +5,32 @@ order: 13
 session: 2
 length: 20
 toc: true
-adapted: false
+adapted: true
+attrib_name: Version Control with Git - Branching
+attrib_link: http://erdavenport.github.io/git-lessons/10-branching.html
+attrib_copywrite: <a href="http://software-carpentry.org" target="_blank" rel="external noreferrer">Software Carpentry</a>
+attrib_license: CC-BY 4.0
+attrib_license_link: https://creativecommons.org/licenses/by/4.0/
 ---
 
 ## Learning objectives
 
-TODO
-
+At the end of this episode you will be able to explain what branches are and how you might use them.
+You will also be able to demonstrate how to create an experimental branch and merge it back into the `main` branch.
 
 ## Concept of branches
 
-TODO
-* Idea as (1) a linear collection of commits, and (2) a pointer to a particular
-  commit
-* Why we want to use branches:
-  - Organisational tool, to separate development of new features / bug fixes
-    from a canonical 'latest' version of software
-  - As an aid to collaboration (to be discussed later): different people work
-    with different branches at the same time, merging as a way to combine work
-    in a controlled way.
+Git branches are a core feature of the Git version control system. They allow you to create multiple lines of 
+development within a single repository, allowing you to work on multiple features or fixes simultaneously, without 
+affecting the main codebase.
+
+In simple terms, a branch is a separate series of commits of the codebase that diverges from the main codebase. You can think of 
+it as a separate timeline of changes that runs in parallel with the main timeline. Each branch contains a copy of the 
+entire codebase, with its own set of changes.
+
+Git branches are incredibly useful for collaborative development, as they allow multiple developers to work on 
+different features or fixes simultaneously, without stepping on each other's toes. They also provide a way to 
+experiment with new features or ideas without affecting the stability of the main codebase.
 
 
 ## Working with local branches
@@ -35,7 +42,7 @@ what we learn as we go.
 
 ### Creating branches
 
-The general way to create a new branch in our local repository is
+The general way to create a new branch in our local repository is:
 
 ```
 git branch <new-branch-name>
@@ -43,12 +50,43 @@ git branch <new-branch-name>
 
 where `<new-branch-name>` is the name of the branch we wish to work on.
 
-TODO: explain this creates branch at the current commit i.e. `HEAD`.
+When you create a new branch, you can specify the starting point. By default, if you do not specify a 
+starting point, Git will create the new branch at the `HEAD` commit.
+
+The `HEAD` is a reference to the current commit in the branch you are currently working on. It is essentially a pointer 
+to the tip of the branch you have checked out, which can be moved to any commits in the branch.
+
+When you create a new branch at the current commit, Git creates a new branch pointer that points to the same commit as 
+the `HEAD`. This means that the new branch initially has the same code as the current branch, but it is a separate branch 
+that can be modified independently.
+
+It can be helpful to have a dual picture in your mind when it comes to branches,
+thinking of them both as a series of commits and also a pointer to a particular
+commit.
+
 
 > #### Branching off a commit
 >
-> TODO: explain how to start a branch at any commit.
-
+> You can create a new branch at any commit in the repository's history. This can be useful if you want to create a new 
+> branch based on a specific version of your code, or if you want to experiment with changes from a previous commit 
+> without affecting the current branch. Here's how you can create a new branch at any commit:
+>
+> 1. Identify the commit you want to create the branch at: Use the `git log` command to view the commit history of the 
+>    repository and find the commit identifier of the commit you want to create the new branch at.
+> 2. Create a new branch: Use the `git branch` command with the commit identifier to create a new branch at that commit:
+>
+> ```
+> git branch <new-branch-name> <commit-identifier>
+> ```
+>
+> For example, to create a new branch called `experimental-branch` based on a commit with the identifier `abc1234`, you would 
+> run:
+>
+> ```
+> git branch experimental-branch abc1234
+> ```
+>
+> This creates a new branch called experimental-branch at the specified commit.
 
 In our example, we create a new branch
 off of our most recent commit, called `branches-material`:
@@ -78,12 +116,17 @@ $ git branch --list
 * main
 ```
 
-TODO: explain what `* main` means.
+The asterisk (\*) preceding "main" is used to indicate the currently checked out branch in your local repository.
+Another way to find out which branch you have checked out is to run `git status`.
 
 > #### `main` is just a branch
 >
-> TODO: explain that `main` is a branch, one that is created for us by default
-> to hold commits in a new repository.
+> The main branch in Git is simply a branch like any other branch in your repository, created automatically 
+> to hold the initial commit of the repository's history.
+>
+> Because the main branch is created automatically and is the default branch, it is often used as the primary branch 
+> for a project's development. However, you can choose to rename the main branch or use a different branch as the 
+> primary branch if you prefer.
 
 
 ### Adding commits to a branch
@@ -95,6 +138,15 @@ is:
 ```
 git checkout <branch>
 ```
+
+> #### Branching off a branch
+> 
+> There is nothing stopping us from creating a new branch that starts on a different
+> branch to `main`. For example, suppose you have checked out a branch called `feature-branch`,
+> and you want to create a new branch called `bugfix-branch` on top of `feature-branch`. If
+> you do not specify a starting point for the new branch, Git will create it at the current commit on 
+> `feature-branch`, i.e. the commit that `HEAD` is pointing to.
+
 
 We now switch to our new branch `branches-material` so that
 our new cheatsheet content will feature in this branch, rather than the branch
@@ -147,13 +199,10 @@ $ git log --oneline -5
 92b2ac2 Create general good practice guides directory
 ```
 
-We can see that the new commits have been added to the branch `branches-material`.
-
-TODO: explain log output:
-* Confirmation that we are working on `branches-material` as indicated by
-  `HEAD -> branches-material`.
-* New commits on `branches-material` branch, but not on `main` because `main`
-  stops at commit `42a9a32`.
+We can see that the new commits have been added to the branch `branches-material` 
+and that we are now working on `branches-material` as indicated by 
+`HEAD -> branches-material`. We can also see that commits to `main` stop at 
+commit `42a9a32` shown by `origin/main, origin/HEAD, main`.
 
 We can verify that these new commits are not on the `main` branch by examining
 the log of `main` directly. In general, we can run
@@ -177,7 +226,6 @@ d26a698 Add some rubbish to try out 'git rm'
 
 This confirms that the new commits are not on the `main` branch.
 
-
 ## Merging branches
 
 Let's now look at how we can incorporate the changes we've made in the
@@ -185,8 +233,10 @@ Let's now look at how we can incorporate the changes we've made in the
 to **merge** the commit history in `branches-material` into the history of
 the `main` branch.
 
-TODO: give a higher-level, intuitive explanation of what merging is doing.
-
+Merging is a way to bring together different streams of development and integrate 
+them into a cohesive whole. This is the key to using Git for collaboration, as
+it allows multiple developers to work on different 
+aspects of a project simultaneously _and then collate their changes_.
 
 We do this with the `merge` command:
 
@@ -254,10 +304,9 @@ To https://github.com/jbloggs9999/git-good-practice.git
    42a9a32..51da8da  main -> main
 ```
 
-
 ### Exercise
 
-Add another commit to the `branches-material` branch about merging branches. 
+Add another commit to the `branches-material` branch about merging branches.
 You may wish to use the following text:
 
 ```
