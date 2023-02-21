@@ -114,24 +114,12 @@ current branch you are working on, and indicate which branch is currently checke
 
 > #### `main` is just a branch
 >
-> In Git, the main branch is just like any other branch. It is created by default when you create a new repository and 
-> is used to hold the initial commit that is made when you create the repository.
->
-> When you create a new repository, Git automatically creates the main branch and sets it as the default branch. This 
-> means that any new commits you make will be added to the main branch by default, unless you create a new branch or 
-> switch to an existing branch.
->
-> Think of the main branch as a starting point for your repository's development history. You can make changes to the 
-> codebase on this branch and commit those changes to the repository's history. As you continue to work on the project, 
-> you may create new branches to experiment with new features or to fix bugs, and then merge those changes back into 
-> the main branch when they are ready.
+> The main branch in Git is simply a branch like any other branch in your repository, created automatically 
+> to hold the initial commit of the repository's history.
 >
 > Because the main branch is created automatically and is the default branch, it is often used as the primary branch 
 > for a project's development. However, you can choose to rename the main branch or use a different branch as the 
 > primary branch if you prefer.
->
-> In summary, the main branch in Git is simply a branch like any other branch in your repository, created automatically 
-> to hold the initial commit of the repository's history.
 
 ### Adding commits to a branch
 
