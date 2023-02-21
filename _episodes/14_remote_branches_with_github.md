@@ -361,13 +361,12 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
 
-TODO: expand to following.
+There's an important point to make about the output here. It is stated that
+`Your branch is up to date with 'origin/main'.`. This doesn't mean there aren't changes on the remote to
+pull in. Instead, it means that Git is not aware of any extra commits in
+`origin/main` compared to `main` _since last `fetch`ing from the remote repository_.
 
-It is stated that `Your branch is up to date with 'origin/main'.`, indicating
-we are yet to fetch the changes made to the remote branch `origin/main` into our
-local repository.
-
-We fetch updates from the remote repository:
+So, let us fetch updates from the remote repository:
 
 ```
 $ git fetch
@@ -381,7 +380,7 @@ From https://github.com/jbloggs/git-good-practice
    3b918f2..86ebbee  main       -> origin/main
 ```
 
-We can now see that our local repository is aware of the change to the remote
+We can see that our local repository is now aware of the change to the remote
 `origin/main` branch by checking the status again:
 
 ```
