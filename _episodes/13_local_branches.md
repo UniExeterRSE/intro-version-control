@@ -182,14 +182,10 @@ $ git log --oneline -5
 92b2ac2 Create general good practice guides directory
 ```
 
-We can see that the new commits have been added to the branch `branches-material`.
-
-TODO: explain log output:
-
-- Confirmation that we are working on `branches-material` as indicated by
-  `HEAD -> branches-material`.
-- New commits on `branches-material` branch, but not on `main` because `main`
-  stops at commit `42a9a32`.
+We can see that the new commits have been added to the branch `branches-material` 
+and that we are now working on `branches-material` as indicated by 
+`HEAD -> branches-material`. We can also see that commits to `main` stop at 
+commit `42a9a32` shown by `origin/main, origin/HEAD, main`.
 
 We can verify that these new commits are not on the `main` branch by examining
 the log of `main` directly. In general, we can run
