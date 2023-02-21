@@ -24,7 +24,7 @@ Git branches are a core feature of the Git version control system. They allow yo
 development within a single repository, allowing you to work on multiple features or fixes simultaneously, without 
 affecting the main codebase.
 
-In simple terms, a branch is a separate version of the codebase that diverges from the main codebase. You can think of 
+In simple terms, a branch is a separate series of commits of the codebase that diverges from the main codebase. You can think of 
 it as a separate timeline of changes that runs in parallel with the main timeline. Each branch contains a copy of the 
 entire codebase, with its own set of changes.
 
@@ -32,11 +32,13 @@ Git branches are incredibly useful for collaborative development, as they allow 
 different features or fixes simultaneously, without stepping on each other's toes. They also provide a way to 
 experiment with new features or ideas without affecting the stability of the main codebase.
 
+
 ## Working with local branches
 
 We're going to add some new content to the cheatsheet, doing this in a new, dedicated
 branch. The content we'll add will be about using branches, so we'll be recording
 what we learn as we go.
+
 
 ### Creating branches
 
@@ -49,18 +51,19 @@ git branch <new-branch-name>
 where `<new-branch-name>` is the name of the branch we wish to work on.
 
 When you create a new branch, you can specify the starting point. By default, if you do not specify a 
-starting point, Git will create the new branch at the HEAD commit.
+starting point, Git will create the new branch at the `HEAD` commit.
 
-The HEAD is a reference to the current commit in the branch you are currently working on. It is essentially a pointer 
+The `HEAD` is a reference to the current commit in the branch you are currently working on. It is essentially a pointer 
 to the tip of the branch you have checked out, which can be moved to any commits in the branch.
 
 When you create a new branch at the current commit, Git creates a new branch pointer that points to the same commit as 
-the HEAD. This means that the new branch initially has the same code as the current branch, but it is a separate branch 
+the `HEAD`. This means that the new branch initially has the same code as the current branch, but it is a separate branch 
 that can be modified independently.
 
-For example, suppose you are working on a branch called `feature-branch`, and you want to create a new branch called 
-`bugfix-branch`. If you do not specify a starting point for the new branch, Git will create it at the current commit on 
-`feature-branch`, which is the HEAD commit.
+It can be helpful to have a dual picture in your mind when it comes to branches,
+thinking of them both as a series of commits and also a pointer to a particular
+commit.
+
 
 > #### Branching off a commit
 >
@@ -69,19 +72,18 @@ For example, suppose you are working on a branch called `feature-branch`, and yo
 > without affecting the current branch. Here's how you can create a new branch at any commit:
 >
 > 1. Identify the commit you want to create the branch at: Use the `git log` command to view the commit history of the 
-> repository and find the commit hash of the commit you want to create the new branch at.
->    This will display a list of commits, each with a unique hash code.
-> 2. Create a new branch: Use the git branch command with the commit hash to create a new branch at that commit:
+>    repository and find the commit identifier of the commit you want to create the new branch at.
+> 2. Create a new branch: Use the `git branch` command with the commit identifier to create a new branch at that commit:
 >
 > ```
-> git branch <new-branch-name> <commit-hash>
+> git branch <new-branch-name> <commit-identifier>
 > ```
 >
-> For example, to create a new branch called `experimental-branch` based on a commit with the hash `abc123`, you would 
+> For example, to create a new branch called `experimental-branch` based on a commit with the identifier `abc1234`, you would 
 > run:
 >
 > ```
-> git branch experimental-branch abc123
+> git branch experimental-branch abc1234
 > ```
 >
 > This creates a new branch called experimental-branch at the specified commit.
@@ -94,6 +96,7 @@ $ git branch branches-material
 ```
 
 This will shortly be the branch in which we add new content to the cheatsheet.
+
 
 ### Viewing branches
 
@@ -114,8 +117,7 @@ $ git branch --list
 ```
 
 The asterisk (\*) preceding "main" is used to indicate the currently checked out branch in your local repository.
-When you run certain Git commands, such as `git status` or `git branch`, Git will display information about the
-current branch you are working on, and indicate which branch is currently checked out with an asterisk.
+Another way to find out which branch you have checked out is to run `git status`.
 
 > #### `main` is just a branch
 >
@@ -126,6 +128,7 @@ current branch you are working on, and indicate which branch is currently checke
 > for a project's development. However, you can choose to rename the main branch or use a different branch as the 
 > primary branch if you prefer.
 
+
 ### Adding commits to a branch
 
 In order to work on a branch, we need to **checkout** the branch so that any
@@ -135,6 +138,15 @@ is:
 ```
 git checkout <branch>
 ```
+
+> #### Branching off a branch
+> 
+> There is nothing stopping us from creating a new branch that starts on a different
+> branch to `main`. For example, suppose you have checked out a branch called `feature-branch`,
+> and you want to create a new branch called `bugfix-branch` on top of `feature-branch`. If
+> you do not specify a starting point for the new branch, Git will create it at the current commit on 
+> `feature-branch`, i.e. the commit that `HEAD` is pointing to.
+
 
 We now switch to our new branch `branches-material` so that
 our new cheatsheet content will feature in this branch, rather than the branch
@@ -222,8 +234,9 @@ to **merge** the commit history in `branches-material` into the history of
 the `main` branch.
 
 Merging is a way to bring together different streams of development and integrate 
-them into a cohesive whole, allowing multiple developers to work on different 
-aspects of a project simultaneously and collate their changes.
+them into a cohesive whole. This is the key to using Git for collaboration, as
+it allows multiple developers to work on different 
+aspects of a project simultaneously _and then collate their changes_.
 
 We do this with the `merge` command:
 
