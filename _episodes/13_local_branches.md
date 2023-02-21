@@ -5,7 +5,12 @@ order: 13
 session: 2
 length: 20
 toc: true
-adapted: false
+adapted: true
+attrib_name: Version Control with Git - Branching
+attrib_link: http://erdavenport.github.io/git-lessons/10-branching.html
+attrib_copywrite: <a href="http://software-carpentry.org" target="_blank" rel="external noreferrer">Software Carpentry</a>
+attrib_license: CC-BY 4.0
+attrib_license_link: https://creativecommons.org/licenses/by/4.0/
 ---
 
 ## Learning objectives
