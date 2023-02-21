@@ -411,21 +411,16 @@ From https://github.com/jbloggs9999/git-good-practice
    86ebbee..b9df491  collaboration-good-practice -> origin/collaboration-good-practice
 Already up to date.
 ```
+ 
+Recall that `Your branch is up to date with 'origin/main'.` after the
+checkout in the above output only means that Git is not aware of any extra commits in
+`origin/main` compared to `main` since the last `fetch` or `pull`. In this
+case, the `git pull` command confirms that the local `main` branch was already up to date with
+the remote repository's `main` branch. It also shows that then new commits in the
+`origin/collaboration-good-practice` that Jane's working on have been fetched.
 
-
-> #### Note on `Your branch is up to date with 'origin/main'.`
-> 
-> Just because we see `Your branch is up to date with 'origin/main'.` after the
-> checkout in the above output doesn't mean there aren't changes on the remote to
-> pull in. Instead, it means that Git is not aware of any extra commits in
-> `origin/main` compared to `main` _based on the information gained from our last
-> `fetch` or `pull`. 
-
-
-The output of the `git pull` command shows that new commits in the
-`origin/collaboration-good-practice` that Jane's working on have been fetched,
-but that `main` is up to date. Since his `main` branch is fully up to date with
-the remote version, he goes ahead and performs the merge of his feature branch
+Since his `main` branch is fully up to date with
+the remote version, Joe goes ahead and performs the merge of his feature branch
 into `main` on GitHub, by completing the Pull Request. He then updates his local
 `main` branch with the merged changes:
 
