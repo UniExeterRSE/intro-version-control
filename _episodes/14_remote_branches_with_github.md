@@ -9,17 +9,23 @@ adapted: false
 ---
 
 
+## Learning objectives
+
+By the end of this episode you will be able to create remote branches using
+GitHub and track these remote branches locally. You will also learn how to
+merge remote branches using a Pull Request, as well as how to delete branches
+in your local and remote repositories.
+
+
 ## Local and remote branches
 
-TODO:
-* Explain the concept of both local branches and remote branches, just like
-  how we have commits in a local repository and/or in a remote repository.
-* Define what **upstream** means in this context.
-* Explain how our local repository keeps references to remote branches, giving
-  them names starting with `remotes/origin/` (or just `origin/`). But these
-  are not kept in sync with the remote branches automatically - we need to use
-  `git fetch` to update them.
-* Explain the concept of a local branch tracking a remote one
+Branches can reside in our local repository and/or remote repository, in the
+same way that commits can. An **upstream** branch is one which resides in the
+remote repository and is tracked locally, meaning the local branch is linked to
+the remote branch. Our local repository stores references to any remote branches,
+prepending their names with `remotes/origin/` (or simply `origin/`). It should
+be noted that these remote branches are not updated automatically - we need to
+use `git fetch` to update them.
 
 
 ### Viewing branches
@@ -36,35 +42,47 @@ $ git branch -a
   remotes/origin/main
 ``` 
 
-TODO:
-* Add a note to ignore the `remotes/origin/HEAD -> origin/main` bit, we don't
-  need to know what it means.
-* Explain that so far we've only created `branches-material` as a branch in our
-  local repository — there is currently no remote counterpart.
-* Give instructions to view branches on GitHub and verify that there is no
-  branch on there called `branches-material`.
+There are three branches worth noting here, namely `main` (our local version of
+`main`), `remotes/origin/main` (our remote version of `main`) and `branches-material`
+(our newly created local branch). We can safely ignore
+`remotes/origin/HEAD -> origin/main` for the time being.
+
+As we have only created `branches-material` locally, it does not have a remote
+counterpart, unlike `main`. Using GitHub, we can verify there is no remote branch
+called `branches-material`. The necessary steps are as follows:
+
+- **Step 1** Navigate to your repository on GitHub.
+
+- **Step 2** Click on _branch(es)_, above the list of files on the left-hand side,
+  as indicated in the following screenshot:
+
+  ![Viewing branches on GitHub]({{ site.url }}/images/github-view-branches.png)
+
+- **Step 3** Click on _All branches_, located to the left of the green _New branch_
+  button on the right-hand side of the screen — this will display a list of all
+  the branches in your remote repository. `branches-material` will be missing
+  from this list.
 
 
 ## Working with remote branches
 
 So far, we've seen how to create a local branch, commit to it and merge it into
-another branch (e.g. into `main`). This branch didn't have any upstream branch
+another branch (e.g. into `main`). This branch didn't have an upstream branch
 in the remote repository. We're now going to look at the case where we
 use GitHub to create a branch in the _remote repository_, which we then
-bring into our local repository to work with. 
+bring into our local repository to work with. This approach takes advantage of
+useful functionality provided by GitHub, promoting collaborative working. We
+will look at an alternative workflow that doesn't rely on the features GitHub
+provides in a later episode.
 
-TODO: say something about this being a way to work when collaborating
-with others on GitHub. We'll look at an alternative workflow that doesn't use
-the features of GitHub and works with an remote repository.
-
-We will add some material to the cheatsheet relating to working with remote
+Now, let's add some material to the cheatsheet relating to working with remote
 branches, using GitHub to drive this development. The basic flow for doing this
-is the following:
+will be the following:
 
 * Create a remote branch on GitHub that will receive our additions to the
-  cheatsheet
+  cheatsheet.
 
-* Work on the cheatsheet locally, then push the changes up to the remote branch
+* Work on the cheatsheet locally, then push the changes up to the remote branch.
 
 * Use GitHub to merge the work into the `main` branch in the remote repository,
   using a Pull Request.
@@ -93,13 +111,26 @@ In order to do this, we need to do the following:
 
 In GitHub, the following steps allow you to create a new remote branch:
 
-TODO: steps for creating a branch on GitHub (note that we need to chose a
-base branch to start the new branch on).
+- **Step 1** Navigate to your repository on GitHub.
 
-In our example `git-good-practice` repository, let's suppose we've created a
-new remote branch called `remote-branches-material`, which is based on top of our
-`branches-material` branch. Our local repository doesn't have any knowledge of
-this new branch, as can be seen by listing the branches:
+- **Step 2** Click on the dropdown, located to the left of _branches_, on the
+  left-hand side of the screen.
+
+- **Step 3** Select the branch you would like to create a branch from. (For this
+  course, this will typically be `main`. If it is `main`, this step
+  becomes redundant.)
+
+- **Step 4** Click on the dropdown again and type in the name of your new branch
+  where it says _Find or create a branch..._.
+
+- **Step 5** Click on _Create branch: new-branch from 'base-branch'_, where
+  _new-branch_ is the name of your new branch and _base-branch_ is the name of
+  the branch you are branching off of (e.g. `main`).
+
+In our example `git-good-practice` repository, let's suppose we've just created a
+new remote branch called `remote-branches-material`, which is based on top of
+`main`. Our local repository doesn't have any knowledge of this new branch, as
+can be seen by listing the branches:
 
 ```
 $ git branch -a
@@ -293,12 +324,37 @@ branch with the new commit.
 
 ## Merge remote branch into remote `main`
 
-TODO: instructions for creating and completing a Pull Request on GitHub
+Once we have pushed our changes to the remote branch, we can merge said remote
+branch into remote `main` by means of a Pull Request on GitHub. We can create and
+complete a Pull Request (PR) as follows:
+
+- **Step 1** Navigate to your repository on GitHub.
+
+- **Step 2** Click on the _Pull requests_ tab (third tab from the left).
+
+- **Step 3** Click on the green _New pull request_ button on the right-hand side
+  of the screen.
+
+- **Step 4** Ensure `main` has been chosen as _base_ and choose your remote branch,
+  which in this case is `remote-branches-material`, as _compare_.
+
+- **Step 5** Click on the green _Create pull request_ button.
+
+- **Step 6** GitHub will generate a title based on the name of the branch you
+  are comparing, but this can be changed. You are also welcome to add a
+  description where it says _Leave a comment_.
+
+- **Step 7** Click on the green _Create pull request_ button.
+
+- **Step 8** Click on the green _Merge pull request_ button, located near the
+  bottom of the page.
 
 
 ## Pull changes into our local repository
 
-TODO: explain that we need to pull in `main` from the remote.
+We have just merged our branch into `main` in the remote repository. To see
+the changes made to `main` in our local repository, we need to pull them from
+the remote repository.
 
 To update `main`, we first check it out:
 
@@ -308,11 +364,12 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
 
-TODO: explain that the `Your branch is up to date with 'origin/main'.` reflects
-that we haven't fetched the new updates to the remote branch `origin/main`
-into our local repository.
+There's an important point to make about the output here. It is stated that
+`Your branch is up to date with 'origin/main'.`. This doesn't mean there aren't changes on the remote to
+pull in. Instead, it means that Git is not aware of any extra commits in
+`origin/main` compared to `main` _since last `fetch`ing from the remote repository_.
 
-We fetch updates from the remote repository:
+So, let us fetch updates from the remote repository:
 
 ```
 $ git fetch
@@ -326,7 +383,7 @@ From https://github.com/jbloggs/git-good-practice
    3b918f2..86ebbee  main       -> origin/main
 ```
 
-We can now see that our local repository is aware of the change to the remote
+We can see that our local repository is now aware of the change to the remote
 `origin/main` branch by checking the status again:
 
 ```
@@ -338,7 +395,29 @@ Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
 nothing to commit, working tree clean
 ```
 
-TODO: explain how to use `git pull` and what it does.
+In the
+[Pushing to and Pulling From the Remote Repository]({{ site.url }}/10_pushing_and_pulling/index.html)
+episode, we mentioned that `git pull` can be used to retrieve updates from the
+remote repository. To be more precise, `git pull` is used to bring in commits
+_in a remote branch into a corresponding local branch_. In general, if you have
+a remote branch that has commits not yet in a local tracking
+branch `<branch>`, then run the following command _with `<branch>` checked out_
+to update `<branch>` with these new commits:
+
+```
+git pull
+```
+
+(or, to be explicit about the remote repository, `git pull origin`).
+
+> #### `pull` automatically `fetch`es
+>
+> `git pull` actually performs a two step process on a branch
+> `<branch>`. First, it runs a `git fetch` to retrieve all new commits,
+> branches, etc. from the remote repository. Then,
+> it merges the changes that have been fetched into the `origin/<branch>` into
+> `<branch>`. As a result, we did not in fact need to use the `git fetch` command
+> before using `git pull` above.
 
 We pull the changes to `origin/main` into our local `main` branch:
 
@@ -351,12 +430,6 @@ Fast-forward
  Git-cheatsheet.md | 3 +++
  1 file changed, 3 insertions(+)
 ```
-
-> #### `pull` automatically `fetch`es
->
-> TODO: explain that `git pull` does a `fetch` as part of its process, so we
-> didn't have to separately do `git fetch` before `git pull`.
-
 
 We can now see from the log that our changes are fully reflected in `main`:
 
@@ -456,6 +529,16 @@ $ git log --oneline -5
 ### Deleting branches from the remote repository via GitHub
 
 Finally, we need to delete the remote branch `remote-branches-material` from the
-remote repository in GitHub.
+remote repository in GitHub. The necessary steps are as follows:
 
-TODO: instructions for deleting branches in GitHub.
+- **Step 1** Navigate to your respository on GitHub.
+
+- **Step 2** Click on _branches_, above the list of files on the left-hand side.
+
+- **Step 3** Click on _All branches_, located to the left of the green _New branch_
+  button on the right-hand side of the screen.
+
+- **Step 4** Identify the branch to be deleted and click on the appropriate
+  _bin icon_ on the right-hand side of the screen. If you hover over the icon,
+  it will show a message stating _Delete chosen-branch_, where _chosen-branch_
+  is the name of the branch to be deleted.
