@@ -10,29 +10,36 @@ adapted: false
 
 ## Learning objectives
 
-At the end of this episode you will be able to explain what branches are and how you might use them. 
-You will also be able to demonstrate how to create an experimental branch and merge it back into the `main` branch. 
-
+At the end of this episode you will be able to explain what branches are and how you might use them.
+You will also be able to demonstrate how to create an experimental branch and merge it back into the `main` branch.
 
 ## Concept of branches
 
-Git branches are a core feature of the Git version control system. They allow you to create multiple lines of development within a single repository, allowing you to work on multiple features or fixes simultaneously, without affecting the main codebase.
+Git branches are a core feature of the Git version control system. They allow you to create multiple lines of 
+development within a single repository, allowing you to work on multiple features or fixes simultaneously, without 
+affecting the main codebase.
 
-In simple terms, a branch is a separate version of the codebase that diverges from the main codebase. You can think of it as a separate timeline of changes that runs in parallel with the main timeline. Each branch contains a copy of the entire codebase, with its own set of changes.
+In simple terms, a branch is a separate version of the codebase that diverges from the main codebase. You can think of 
+it as a separate timeline of changes that runs in parallel with the main timeline. Each branch contains a copy of the 
+entire codebase, with its own set of changes.
 
-When you create a new branch, Git creates a pointer to the current commit in the codebase, which becomes the starting point for your new branch. You can then make changes to the code, commit those changes to the branch, and continue working on your changes without affecting the main codebase.
+When you create a new branch, Git creates a pointer to the current commit in the codebase, which becomes the starting 
+point for your new branch. You can then make changes to the code, commit those changes to the branch, and continue 
+working on your changes without affecting the main codebase.
 
-Once you have finished making changes on your branch and are ready to merge those changes back into the main codebase, you can merge the branch into the main branch using a Git command. Git will then apply the changes you made on the branch to the main codebase, bringing the two timelines back together.
+Once you have finished making changes on your branch and are ready to merge those changes back into the main codebase, 
+you can merge the branch into the main branch using a Git command. Git will then apply the changes you made on the 
+branch to the main codebase, bringing the two timelines back together.
 
-Git branches are incredibly useful for collaborative development, as they allow multiple developers to work on different features or fixes simultaneously, without stepping on each other's toes. They also provide a way to experiment with new features or ideas without affecting the stability of the main codebase.
-
+Git branches are incredibly useful for collaborative development, as they allow multiple developers to work on 
+different features or fixes simultaneously, without stepping on each other's toes. They also provide a way to 
+experiment with new features or ideas without affecting the stability of the main codebase.
 
 ## Working with local branches
 
 We're going to add some new content to the cheatsheet, doing this in a new, dedicated
 branch. The content we'll add will be about using branches, so we'll be recording
 what we learn as we go.
-
 
 ### Creating branches
 
@@ -44,32 +51,44 @@ git branch <new-branch-name>
 
 where `<new-branch-name>` is the name of the branch we wish to work on.
 
-When you create a new branch, you can specify the starting point for the branch. By default, if you do not specify a starting point, Git will create the new branch at the current commit, which is also referred to as the HEAD commit.
+When you create a new branch, you can specify the starting point for the branch. By default, if you do not specify a 
+starting point, Git will create the new branch at the current commit, which is also referred to as the HEAD commit.
 
-The HEAD is a reference to the current commit in the branch you are currently working on. It is essentially a pointer to the tip of the branch you have checked out, and it can be moved to different commits in the branch using various Git commands.
+The HEAD is a reference to the current commit in the branch you are currently working on. It is essentially a pointer 
+to the tip of the branch you have checked out, and it can be moved to different commits in the branch using various 
+Git commands.
 
-When you create a new branch at the current commit, Git creates a new branch pointer that points to the same commit as the HEAD. This means that the new branch initially has the same code as the current branch, but it is a separate branch that can be modified independently.
+When you create a new branch at the current commit, Git creates a new branch pointer that points to the same commit as 
+the HEAD. This means that the new branch initially has the same code as the current branch, but it is a separate branch 
+that can be modified independently.
 
-For example, suppose you are working on a branch called feature-branch, and you want to create a new branch called bugfix-branch. If you do not specify a starting point for the new branch, Git will create it at the current commit on feature-branch, which is the HEAD commit.
-
-
+For example, suppose you are working on a branch called feature-branch, and you want to create a new branch called 
+bugfix-branch. If you do not specify a starting point for the new branch, Git will create it at the current commit on 
+feature-branch, which is the HEAD commit.
 
 > #### Branching off a commit
 >
-> You can create a new branch at any commit in the repository's history. This can be useful if you want to create a new branch based on a specific version of your code, or if you want to experiment with changes from a previous commit without affecting the current branch. Here's how you can create a new branch at any commit:
->1. Identify the commit you want to create the branch at: Use the `git log` command to view the commit history of the repository and find the commit hash of the commit you want to create the new branch at.
-This will display a list of commits, each with a unique hash code.
->2. Create a new branch: Use the git branch command with the commit hash to create a new branch at that commit:
->```
->git branch <new-branch-name> <commit-hash>
->```
->For example, to create a new branch called `experimental-branch` based on a commit with the hash `abc123`, you would run:
->```
+> You can create a new branch at any commit in the repository's history. This can be useful if you want to create a new 
+> branch based on a specific version of your code, or if you want to experiment with changes from a previous commit 
+> without affecting the current branch. Here's how you can create a new branch at any commit:
+>
+> 1. Identify the commit you want to create the branch at: Use the `git log` command to view the commit history of the 
+> repository and find the commit hash of the commit you want to create the new branch at.
+>    This will display a list of commits, each with a unique hash code.
+> 2. Create a new branch: Use the git branch command with the commit hash to create a new branch at that commit:
+>
+> ```
+> git branch <new-branch-name> <commit-hash>
+> ```
+>
+> For example, to create a new branch called `experimental-branch` based on a commit with the hash `abc123`, you would 
+> run:
+>
+> ```
 > git branch experimental-branch abc123
->```
->This creates a new branch called experimental-branch at the specified commit.
-
-
+> ```
+>
+> This creates a new branch called experimental-branch at the specified commit.
 
 In our example, we create a new branch
 off of our most recent commit, called `branches-material`:
@@ -79,7 +98,6 @@ $ git branch branches-material
 ```
 
 This will shortly be the branch in which we add new content to the cheatsheet.
-
 
 ### Viewing branches
 
@@ -99,23 +117,30 @@ $ git branch --list
 * main
 ```
 
-The asterisk (*) preceding "main" is used to indicate the currently checked out branch in your local repository. 
-When you run certain Git commands, such as `git status` or `git branch`, Git will display information about the 
+The asterisk (\*) preceding "main" is used to indicate the currently checked out branch in your local repository.
+When you run certain Git commands, such as `git status` or `git branch`, Git will display information about the
 current branch you are working on, and indicate which branch is currently checked out with an asterisk.
-
 
 > #### `main` is just a branch
 >
-> In Git, the main branch is just like any other branch. It is created by default when you create a new repository and is used to hold the initial commit that is made when you create the repository.
-> 
->When you create a new repository, Git automatically creates the main branch and sets it as the default branch. This means that any new commits you make will be added to the main branch by default, unless you create a new branch or switch to an existing branch.
-> 
->Think of the main branch as a starting point for your repository's development history. You can make changes to the codebase on this branch and commit those changes to the repository's history. As you continue to work on the project, you may create new branches to experiment with new features or to fix bugs, and then merge those changes back into the main branch when they are ready.
-> 
->Because the main branch is created automatically and is the default branch, it is often used as the primary branch for a project's development. However, you can choose to rename the main branch or use a different branch as the primary branch if you prefer.
-> 
->In summary, the main branch in Git is simply a branch like any other branch in your repository, created automatically to hold the initial commit of the repository's history.
-
+> In Git, the main branch is just like any other branch. It is created by default when you create a new repository and 
+> is used to hold the initial commit that is made when you create the repository.
+>
+> When you create a new repository, Git automatically creates the main branch and sets it as the default branch. This 
+> means that any new commits you make will be added to the main branch by default, unless you create a new branch or 
+> switch to an existing branch.
+>
+> Think of the main branch as a starting point for your repository's development history. You can make changes to the 
+> codebase on this branch and commit those changes to the repository's history. As you continue to work on the project, 
+> you may create new branches to experiment with new features or to fix bugs, and then merge those changes back into 
+> the main branch when they are ready.
+>
+> Because the main branch is created automatically and is the default branch, it is often used as the primary branch 
+> for a project's development. However, you can choose to rename the main branch or use a different branch as the 
+> primary branch if you prefer.
+>
+> In summary, the main branch in Git is simply a branch like any other branch in your repository, created automatically 
+> to hold the initial commit of the repository's history.
 
 ### Adding commits to a branch
 
@@ -181,9 +206,10 @@ $ git log --oneline -5
 We can see that the new commits have been added to the branch `branches-material`.
 
 TODO: explain log output:
-* Confirmation that we are working on `branches-material` as indicated by
+
+- Confirmation that we are working on `branches-material` as indicated by
   `HEAD -> branches-material`.
-* New commits on `branches-material` branch, but not on `main` because `main`
+- New commits on `branches-material` branch, but not on `main` because `main`
   stops at commit `42a9a32`.
 
 We can verify that these new commits are not on the `main` branch by examining
@@ -208,7 +234,6 @@ d26a698 Add some rubbish to try out 'git rm'
 
 This confirms that the new commits are not on the `main` branch.
 
-
 ## Merging branches
 
 Let's now look at how we can incorporate the changes we've made in the
@@ -216,18 +241,26 @@ Let's now look at how we can incorporate the changes we've made in the
 to **merge** the commit history in `branches-material` into the history of
 the `main` branch.
 
-Merging in Git is the process of combining the changes made on one branch with the changes made on another branch, resulting in a new branch that contains the changes from both branches.
+Merging in Git is the process of combining the changes made on one branch with the changes made on another branch, 
+resulting in a new branch that contains the changes from both branches.
 
-To give a higher-level, intuitive explanation, imagine you are working on a team project with your colleagues. Each of you is assigned a different part of the project to work on, and you each have your own copy of the project code. As you work on your part of the project, you make changes to your code to add new features or fix bugs.
+To give a higher-level, intuitive explanation, imagine you are working on a team project with your colleagues. Each of 
+you is assigned a different part of the project to work on, and you each have your own copy of the project code. As you 
+work on your part of the project, you make changes to your code to add new features or fix bugs.
 
-At some point, you need to integrate your changes with your colleagues' changes to create a complete and functional project. This is where merging comes in.
+At some point, you need to integrate your changes with your colleagues' changes to create a complete and functional 
+project. This is where merging comes in.
 
-Merging in Git is like taking two different versions of a project and combining them into a new version that incorporates the changes made on both versions. Imagine you and your colleagues have each worked on your own version of the project code, and when it's time to merge, you bring both versions together, compare the differences, and decide how to integrate the changes so that they work together seamlessly.
+Merging in Git is like taking two different versions of a project and combining them into a new version that 
+incorporates the changes made on both versions. Imagine you and your colleagues have each worked on your own version of 
+the project code, and when it's time to merge, you bring both versions together, compare the differences, and decide 
+how to integrate the changes so that they work together seamlessly.
 
-Once the merging process is complete, you have a new version of the project code that includes all the changes made by you and your colleagues. This new version can then be used to build and deploy the final product.
+Once the merging process is complete, you have a new version of the project code that includes all the changes made by 
+you and your colleagues. This new version can then be used to build and deploy the final product.
 
-In essence, merging in Git is a way to combine changes from different branches or different contributors into a single cohesive project, allowing for collaborative development and efficient management of code changes.
-
+In essence, merging in Git is a way to combine changes from different branches or different contributors into a single 
+cohesive project, allowing for collaborative development and efficient management of code changes.
 
 We do this with the `merge` command:
 
@@ -295,10 +328,9 @@ To https://github.com/jbloggs9999/git-good-practice.git
    42a9a32..51da8da  main -> main
 ```
 
-
 ### Exercise
 
-Add another commit to the `branches-material` branch about merging branches. 
+Add another commit to the `branches-material` branch about merging branches.
 You may wish to use the following text:
 
 ```
