@@ -232,7 +232,6 @@ the `touch` command within the root folder of our repository:
 
 ```
 $ touch foo.txt
-
 ```
 
 We'll make a commit of this new file and remove it via a reset. First, we make
