@@ -48,6 +48,8 @@ In simple terms, a branch is a separate series of commits of the codebase that d
 it as a separate timeline of changes that runs in parallel with the main timeline. Each branch contains a copy of the 
 entire codebase, with its own set of changes.
 
+![A Git branch]({{ site.url }}/images/branch.svg)
+
 Git branches are incredibly useful for collaborative development, as they allow multiple developers to work on 
 different features or fixes simultaneously, without stepping on each other's toes. They also provide a way to 
 experiment with new features or ideas without affecting the stability of the main codebase.
@@ -269,6 +271,8 @@ git merge <branch-to-bring-in>
 
 Here, `<branch-to-merge-in>` is the name of the branch whose commits we want
 to bring _into_ the branch we're currently on.
+
+![Merging branches]({{ site.url }}/images/merge.svg)
 
 In our example, we need to merge the branch `branches-material` into `main`.
 To do this, we need to checkout the branch we want to merge _into_, i.e.
