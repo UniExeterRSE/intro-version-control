@@ -259,6 +259,33 @@ Your branch is ahead of 'origin/main' by 2 commits.
 nothing to commit, working tree clean
 ```
 
+Notice how we still have 2 some commits that have not been pushed to the remote
+repository. We'll tidy up by pushing these commits, so that our local repository
+and remote repository are up-to-date with each other:
+
+```
+$ git push origin
+Username for 'https://github.com': jbloggs9999
+Password for 'https://jbloggs9999@github.com':
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.11 KiB | 1.11 MiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/jbloggs9999/git-good-practice.git
+   92b2ac2..42a9a32  main -> main
+```
+
+Finally, let's add a note to include some material about ignoring files in our
+`TODO.txt` file:
+
+```
+Add some material about ignoring files
+
+```
+
 
 ## What kind of files should be ignored?
 
