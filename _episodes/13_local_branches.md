@@ -18,6 +18,26 @@ attrib_license_link: https://creativecommons.org/licenses/by/4.0/
 At the end of this episode you will be able to explain what branches are and how you might use them.
 You will also be able to demonstrate how to create an experimental branch and merge it back into the `main` branch.
 
+
+## Repository files
+
+We've had quite a lot of episodes working on our `git-good-practice` repository.
+We've included here copies of the files that we will build on from this episode
+onwards. If you haven't been following along with all the examples or exercises,
+we suggest updating the files in your repository with the contents of one of
+the following archives:
+
+* As a Zip archive: <a href="{{ site.url }}/downloads/episode-13-start/git-good-practice.zip" download="">git-good-practice.zip</a>.
+
+* As a Tar archive: <a href="{{ site.url }}/downloads/episode-13-start/git-good-practice.tar" download="">git-good-practice.tar</a>.
+
+You should place the archive contents in your own `git-good-practice` repository
+(note: make sure to preserve the directory structure: the file
+`Commit-good-practice.md` should be placed in the subdirectory
+`Good-practice-guides` of the repository root folder). Then commit the changes
+to `main` and use `git push` to update your remote repository. 
+
+
 ## Concept of branches
 
 Git branches are a core feature of the Git version control system. They allow you to create multiple lines of 
