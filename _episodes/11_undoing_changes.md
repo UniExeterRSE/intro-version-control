@@ -227,11 +227,11 @@ In effect, this will 'rewind' the commit history back to finish at the given
 put all changes since `<commit>` in the working tree, giving us a chance to
 work with the files as they currently are before the reset.
 
-For example, let's create a file `foo.txt` that contains some random
-text:
+For example, let's create an empty file `foo.txt`. We can do this using
+the `touch` command within the root folder of our repository:
 
 ```
-Some foo-ey random text
+$ touch foo.txt
 
 ```
 
