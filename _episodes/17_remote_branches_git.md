@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Remote Branches from the Command Line"
+title: "Managing Remote Branches from the Command Line"
 order: 17
 session: 3
 length: 10
