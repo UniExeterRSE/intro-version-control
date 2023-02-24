@@ -126,7 +126,7 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 
 ## Acknowledgements
 
-This course is currently under development. It is being developed by
+This course was developed by
 [members]({{ site.url }}/acknowledgements.html) of the
 University of Exeter's Research Software Engineering Group
 who are enthusiastic about sharing their skills with the wider research
