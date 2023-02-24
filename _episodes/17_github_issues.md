@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Merge Conflicts"
+title: "GitHub Issues"
 order: 17
 session: 3
 length: 5
