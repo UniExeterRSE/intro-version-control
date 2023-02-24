@@ -8,8 +8,6 @@ toc: true
 adapted: false
 ---
 
-## Acknowledgements
-
 <!-- 
 NOTE TO DEVELOPERS
 ------------------
