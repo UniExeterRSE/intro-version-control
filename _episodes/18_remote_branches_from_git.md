@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Managing Remote Branches from the Command Line"
-order: 17
+order: 18
 session: 3
 length: 10
 toc: true
