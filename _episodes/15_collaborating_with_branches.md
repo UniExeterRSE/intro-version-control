@@ -73,11 +73,13 @@ you are adding your work to the latest version of the 'common' codebase and
 resolve any issues in your feature branch:
 
 * It gives you a chance to check that the changes you are making are consistent
-  with other peoples' work, which may have passed under the radar when merging.
+  with other peoples' work. Some changes made by others may pass under the radar
+  when merging e.g. different naming of functions / variables to what your
+  code relies on, deletion or moving of code your work relies on, etc.
 
 * It also gives you a chance to resolve any _merge conflicts_ that may arise
   when you try to merge your work into the common codebase (about which more in
-  a later episode).
+  the [Merge Conflicts]({{ site.url }}/16_merge_conflicts/index.html) episode).
 
 
 ### Creating feature branches
@@ -106,7 +108,9 @@ also a local tracking branch in our local repository.
    b) If `main` got updated by the pull, then merge `main` into `foo-feature`
       in your local repository before continuing, by using `git merge`.
       If there are merge conflicts, these MUST be resolved and the merge into
-      `foo-feature` completed before continuing to step c) below. Take the
+      `foo-feature` completed before continuing to step c) below (see the later
+      episode on [merge conflicts]({{ site.url }}/16_merge_conflicts/index.html)
+      for details on how to do this). Also take the
       opportunity to make sure this merge hasn't introduced any problems into
       the codebase (e.g. inconsistencies in naming, etc.)
    
