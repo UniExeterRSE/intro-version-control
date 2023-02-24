@@ -10,12 +10,12 @@ adapted: false
 
 ## Learning objectives
 
-In this episode you will be introduced to GitHub Issues, a facility for tracking
+In this episode you will be introduced to GitHub issues, a facility for tracking
 tasks for code within a GitHub repository. You will also learn how issues can
 be used with the feature branching strategy.
 
 
-## GitHub Issues: tracking features
+## GitHub issues: tracking features
 
 It's been a while since we consulted our TODO list. We can now strike off the
 cheatsheet entry for pushing and pulling,
@@ -43,7 +43,7 @@ Each of these items could be considered a new 'feature' to add to the material
 in our repository. In some ways, it would be nice if there was a more integrated
 way to keep track of such 'features' in the context of our repository.
 
-Fortunately, GitHub provides the facility to create and manage _Issues_ in a
+Fortunately, GitHub provides the facility to create and manage _issues_ in a
 repository. In GitHub, an _issue_ is essentially the same thing as a _feature_,
 which we introduced in the episode
 [Collaborating with Branches]({{ site.url }}/15_collaborating_with_branches/index.html).
@@ -51,7 +51,7 @@ We can create an issue in GitHub for any piece of work that adds to the
 software's overall development, whether this be a new piece of functionality, a
 bug fix, some documentation, etc. The nice thing about GitHub issues is that
 they provide everyone working on the repository with a view of the features
-that need implementing. They can also be linked to branches and Pull Requests,
+that need implementing. They can also be linked to branches and pull requests,
 in such a way that when the PR gets closed, the issue is marked as completed.
 Issues are part of some of the more general project management features that
 GitHub offers. Have a read about
@@ -80,7 +80,7 @@ When you have a new _feature_ to implement in the code in your repository:
    This (remote) branch then becomes the feature branch upon which work is done
    to implement the issue / feature.
 
-3. Once you start work on the issue, create a Pull Request for the feature
+3. Once you start work on the issue, create a pull request for the feature
    branch and
    <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue" target="_blank" rel="external noreferrer">link the PR to it</a>.
 
@@ -104,6 +104,6 @@ on GitHub's online documentation.
 Practice the workflow above by completing one of the tasks in the
 `TODO.txt` file given at the beginning of this episode. (Even better: do this
 for something you've learnt that is _not_ recorded in the TODO
-list above.) Create an Issue on
+list above.) Create an issue on
 GitHub for the task, then implement it using the feature branching strategy, making sure
-to link your branch and associated Pull Request to the Issue.
+to link your branch and associated pull request to the issue.

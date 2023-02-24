@@ -23,7 +23,7 @@ power of version control systems is realised when collaborating with other
 developers on a shared project. Branching in Git provides the means for multiple
 people in a way that allows them to work concurrently and bring their work together
 in a controlled, transparent way. If you're using GitHub to host your remote
-repository, then Pull Requests provide a way to communicate to others about
+repository, then pull requests provide a way to communicate to others about
 your changes.
 
 The key thing to remember when collaborating with Git is that, while there may
@@ -94,7 +94,7 @@ Below we give steps for merging a feature branch `foo-feature` into `main`. We
 assume `foo-feature` exists both as a remote branch in the remote repository and
 also a local tracking branch in our local repository.
 
-1. Create a Pull Request on GitHub corresponding to the merge of `foo-feature`
+1. Create a pull request on GitHub corresponding to the merge of `foo-feature`
    into `main`.
 
 2. Pull any changes to `main` on the remote repository into your local version
@@ -118,7 +118,7 @@ also a local tracking branch in our local repository.
 2. Push the commits in your local `foo-feature` branch to the corresponding
    remote branch.
 
-3. Complete the Pull Request on GitHub to merge the `foo-feature` branch
+3. Complete the pull request on GitHub to merge the `foo-feature` branch
    into `main` on the remote.
 
 4. Pull the changes to `main` from the remote repository into your local repository.
@@ -387,7 +387,7 @@ the remote, via `git fetch` or `git pull`.
 Joe finishes his work before Jane does and so gets to work on merging his
 feature branch into the `main` branch. Following the strategy that was discussed
 in the episode [Remote Branches with GitHub]({{ site.url }}/14_remote_branches_with_github/index.html),
-he creates a Pull Request associated to the merge.
+he creates a pull request associated to the merge.
 
 Having done this, he checks that Jane hasn't
 merged any work into the remote `main` branch. He could do this by examining
@@ -421,7 +421,7 @@ the remote repository's `main` branch. It also shows that then new commits in th
 
 Since his `main` branch is fully up to date with
 the remote version, Joe goes ahead and performs the merge of his feature branch
-into `main` on GitHub, by completing the Pull Request. He then updates his local
+into `main` on GitHub, by completing the pull request. He then updates his local
 `main` branch with the merged changes:
 
 ```
@@ -444,7 +444,7 @@ Fast-forward
 ### Jane: merging after changes to `main`
 
 Jane is ready to merge her `collaboration-good-practice` feature branch into
-`main`, so she create a Pull Request linked to the remote feature branch.
+`main`, so she creates a pull request linked to the remote feature branch.
 
 As the feature branch protocol recommends, she checks to see whether her local
 `main` branch is up-to-date with the remote repository:
@@ -528,7 +528,7 @@ Already up to date.
 ```
 
 Having seen there are no further updates, she goes to GitHub and completes
-the associated Pull Request, thus merging her remote
+the associated pull request, thus merging her remote
 `collaboration-good-practice` feature branch into `main` in the remote
 repository. Then she pulls down the new, merged changes from `origin/main` into
 her local `main` branch:
@@ -554,7 +554,7 @@ Fast-forward
 
 The merged changes added to `main` by Jane won't feature in Joe's local
 repository until he pulls them into his local `main` branch. Having seen on
-GitHub that Jane has completed her Pull Request, he duly makes sure his local
+GitHub that Jane has completed her pull request, he duly makes sure his local
 repository has these changes (making sure he's on `main` to begin with):
 
 ```

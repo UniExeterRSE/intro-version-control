@@ -13,7 +13,7 @@ adapted: false
 
 By the end of this episode you will be able to create remote branches using
 GitHub and track these remote branches locally. You will also learn how to
-merge remote branches using a Pull Request, as well as how to delete branches
+merge remote branches using a pull request, as well as how to delete branches
 in your local and remote repositories.
 
 
@@ -85,7 +85,7 @@ will be the following:
 * Work on the cheatsheet locally, then push the changes up to the remote branch.
 
 * Use GitHub to merge the work into the `main` branch in the remote repository,
-  using a Pull Request.
+  using a pull request.
 
 In order to do this, we need to do the following:
 
@@ -102,7 +102,7 @@ In order to do this, we need to do the following:
 * Push these commits to the upstream remote branch.
 
 * Merge the remote branch into the remote `main` branch, using
-  a Pull Request on GitHub.
+  a pull request on GitHub.
 
 * Update our local repository to reflect this change to the remote repository.
 
@@ -325,8 +325,8 @@ branch with the new commit.
 ## Merge remote branch into remote `main`
 
 Once we have pushed our changes to the remote branch, we can merge said remote
-branch into remote `main` by means of a Pull Request on GitHub. We can create and
-complete a Pull Request (PR) as follows:
+branch into remote `main` by means of a pull request on GitHub. We can create and
+complete a pull request (PR) as follows:
 
 - **Step 1** Navigate to your repository on GitHub.
 

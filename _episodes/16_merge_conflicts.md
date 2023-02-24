@@ -447,7 +447,7 @@ It's also good practice to make sure everyone is aware when a feature branch
 has been merged into `main` on the remote repository. This ensures everyone can
 update their local repositories and make sure their work builds on top of the
 latest version of the common codebase. GitHub can be set up so that collaborators
-on a repository are notified when a new Pull Request is closed.
+on a repository are notified when a new pull request is closed.
 
 Finally, if you get a conflict when trying to merge `main` into a feature branch
 and the incoming changes affect the correctness of what you're doing, then
