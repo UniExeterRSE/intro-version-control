@@ -582,9 +582,7 @@ Fast-forward
  create mode 100644 Good-practice-guides/Collaboration-good-practice.md
 ```
 
-Both Joe and Jane now have completely up-to-date local repositories. At this point,
-they could delete their feature branches, both from the local repository and
-the remote repository.
+Both Joe and Jane now have completely up-to-date local repositories.
 
 
 ## Viewing a graph of history
@@ -651,3 +649,23 @@ Let's go through this output in more detail:
 
 * Finally, the latest commit `785f6f8` ("Merge pull request #3 from jbloggs9999/collaboration-good-practice")
   is the commit where Jane's feature branch got merged into main on the remote.
+
+
+## Cleaning up
+
+At this point, Joe and Jane can delete their feature branches, both from the
+local repository and the remote repository. There is no risk of losing work,
+because everything has been merged into `main`, both locally and on the
+remote repository. After doing this, the log of recent history looks
+like this:
+
+```
+$ git log --oneline -7
+785f6f8 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #3 from jbloggs9999/collaboration-good-practice
+ee1617c Merge branch 'main' into collaboration-good-practice
+4e209e9 Merge pull request #2 from jbloggs9999/fetching-material
+b9df491 Add material on feature branching
+687cf02 Start good practice guide on collaboration
+1d026a8 Add entry about fetching from a remote
+86ebbee Merge pull request #1 from jbloggs9999/remote-branches-material
+```
