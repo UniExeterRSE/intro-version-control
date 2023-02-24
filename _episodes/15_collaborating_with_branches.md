@@ -46,7 +46,7 @@ called _feature branching_.
 
 ## Feature branching
 
-A **feature** in this context is any piece of work that adds to of the
+A **feature** in this context is any piece of work that adds to the
 software's overall development, whether this be a new piece of functionality, a
 bug fix, some documentation, etc. In feature branching, new features are
 developed in their own, dedicated **feature branches** that branch off the
