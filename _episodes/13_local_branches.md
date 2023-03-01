@@ -2,7 +2,7 @@
 layout: page
 title: "Working with Local Branches"
 order: 13
-session: 2
+session: 3
 length: 25
 toc: true
 adapted: true

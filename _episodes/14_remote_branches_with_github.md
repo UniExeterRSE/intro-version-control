@@ -2,7 +2,7 @@
 layout: page
 title: "Remote Branches with GitHub"
 order: 14
-session: 2
+session: 3
 length: 30
 toc: true
 adapted: false

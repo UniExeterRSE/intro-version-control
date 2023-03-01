@@ -3,7 +3,7 @@ layout: page
 title: "Merge Conflicts"
 order: 16
 session: 3
-length: 20
+length: 25
 toc: true
 adapted: false
 ---

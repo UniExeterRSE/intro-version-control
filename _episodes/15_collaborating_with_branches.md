@@ -2,7 +2,7 @@
 layout: page
 title: "Collaborating with Branches"
 order: 15
-session: 2
+session: 3
 length: 45
 toc: true
 adapted: false
