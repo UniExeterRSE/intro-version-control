@@ -31,8 +31,12 @@ elements of their research projects in an efficient and reproducible way.
 
 We are grateful to the workshop leaders and helpers for supporting the delivery.
 
+
+## Feedback
+
 If you have benefited in any way from this course and want to support its long
-term sustainability then please take the time to complete our feedback survey,
+term sustainability then please take the time to
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=d10qkZj77k6vMhM02PBKU6c8tNVRoxhAjFFJWmm07JtUQkpUUlkxMkQwTjg0TjhZNU42OTRFNzFWNi4u" target="_blank" rel="external noreferrer">complete our feedback survey</a>,
 recommend it to your colleagues, and enthuse about it to your senior leadership
 team.The programme and workshops are under constant evolution, and we are
 grateful for your feedback which is a core component of this process.
