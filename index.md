@@ -126,7 +126,7 @@ leaders and developers please contact Eilis Hannon: <E.J.Hannon@exeter.ac.uk>.
 
 ## Acknowledgements
 
-This course is currently under development. It is being developed by
+This course was developed by
 [members]({{ site.url }}/acknowledgements.html) of the
 University of Exeter's Research Software Engineering Group
 who are enthusiastic about sharing their skills with the wider research
@@ -146,7 +146,8 @@ This workshop is brought to you by:
 
 This course has been adapted from Software Carpentry's
 <a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">Version Control with Git</a>
-course [[^1]], which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
+course [[^1]] (retrieved from <a href="https://swcarpentry.github.io/git-novice/" target="_blank" rel="external noreferrer">https://swcarpentry.github.io/git-novice/</a>
+and <a href="http://erdavenport.github.io/git-lessons/10-branching.html" target="_blank" rel="external noreferrer">http://erdavenport.github.io/git-lessons/10-branching.html</a>), which is &copy; <a href="https://software-carpentry.org/" target="_blank" rel="external noreferrer">Software Carpentry</a> and licensed
 under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">Creative Commons BY 4.0</a>.
 Changes have been made from the original content.
 

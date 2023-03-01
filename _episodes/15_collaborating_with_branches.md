@@ -2,7 +2,7 @@
 layout: page
 title: "Collaborating with Branches"
 order: 15
-session: 2
+session: 3
 length: 45
 toc: true
 adapted: false
@@ -23,7 +23,7 @@ power of version control systems is realised when collaborating with other
 developers on a shared project. Branching in Git provides the means for multiple
 people in a way that allows them to work concurrently and bring their work together
 in a controlled, transparent way. If you're using GitHub to host your remote
-repository, then Pull Requests provide a way to communicate to others about
+repository, then pull requests provide a way to communicate to others about
 your changes.
 
 The key thing to remember when collaborating with Git is that, while there may
@@ -46,7 +46,7 @@ called _feature branching_.
 
 ## Feature branching
 
-A **feature** in this context is any piece of work that adds to of the
+A **feature** in this context is any piece of work that adds to the
 software's overall development, whether this be a new piece of functionality, a
 bug fix, some documentation, etc. In feature branching, new features are
 developed in their own, dedicated **feature branches** that branch off the
@@ -73,11 +73,13 @@ you are adding your work to the latest version of the 'common' codebase and
 resolve any issues in your feature branch:
 
 * It gives you a chance to check that the changes you are making are consistent
-  with other peoples' work, which may have passed under the radar when merging.
+  with other peoples' work. Some changes made by others may pass under the radar
+  when merging e.g. different naming of functions / variables to what your
+  code relies on, deletion or moving of code your work relies on, etc.
 
 * It also gives you a chance to resolve any _merge conflicts_ that may arise
   when you try to merge your work into the common codebase (about which more in
-  a later episode).
+  the [Merge Conflicts]({{ site.url }}/16_merge_conflicts/index.html) episode).
 
 
 ### Creating feature branches
@@ -94,7 +96,7 @@ Below we give steps for merging a feature branch `foo-feature` into `main`. We
 assume `foo-feature` exists both as a remote branch in the remote repository and
 also a local tracking branch in our local repository.
 
-1. Create a Pull Request on GitHub corresponding to the merge of `foo-feature`
+1. Create a pull request on GitHub corresponding to the merge of `foo-feature`
    into `main`.
 
 2. Pull any changes to `main` on the remote repository into your local version
@@ -106,7 +108,9 @@ also a local tracking branch in our local repository.
    b) If `main` got updated by the pull, then merge `main` into `foo-feature`
       in your local repository before continuing, by using `git merge`.
       If there are merge conflicts, these MUST be resolved and the merge into
-      `foo-feature` completed before continuing to step c) below. Take the
+      `foo-feature` completed before continuing to step c) below (see the later
+      episode on [merge conflicts]({{ site.url }}/16_merge_conflicts/index.html)
+      for details on how to do this). Also take the
       opportunity to make sure this merge hasn't introduced any problems into
       the codebase (e.g. inconsistencies in naming, etc.)
    
@@ -118,7 +122,7 @@ also a local tracking branch in our local repository.
 2. Push the commits in your local `foo-feature` branch to the corresponding
    remote branch.
 
-3. Complete the Pull Request on GitHub to merge the `foo-feature` branch
+3. Complete the pull request on GitHub to merge the `foo-feature` branch
    into `main` on the remote.
 
 4. Pull the changes to `main` from the remote repository into your local repository.
@@ -387,7 +391,7 @@ the remote, via `git fetch` or `git pull`.
 Joe finishes his work before Jane does and so gets to work on merging his
 feature branch into the `main` branch. Following the strategy that was discussed
 in the episode [Remote Branches with GitHub]({{ site.url }}/14_remote_branches_with_github/index.html),
-he creates a Pull Request associated to the merge.
+he creates a pull request associated to the merge.
 
 Having done this, he checks that Jane hasn't
 merged any work into the remote `main` branch. He could do this by examining
@@ -421,7 +425,7 @@ the remote repository's `main` branch. It also shows that then new commits in th
 
 Since his `main` branch is fully up to date with
 the remote version, Joe goes ahead and performs the merge of his feature branch
-into `main` on GitHub, by completing the Pull Request. He then updates his local
+into `main` on GitHub, by completing the pull request. He then updates his local
 `main` branch with the merged changes:
 
 ```
@@ -444,7 +448,7 @@ Fast-forward
 ### Jane: merging after changes to `main`
 
 Jane is ready to merge her `collaboration-good-practice` feature branch into
-`main`, so she create a Pull Request linked to the remote feature branch.
+`main`, so she creates a pull request linked to the remote feature branch.
 
 As the feature branch protocol recommends, she checks to see whether her local
 `main` branch is up-to-date with the remote repository:
@@ -528,7 +532,7 @@ Already up to date.
 ```
 
 Having seen there are no further updates, she goes to GitHub and completes
-the associated Pull Request, thus merging her remote
+the associated pull request, thus merging her remote
 `collaboration-good-practice` feature branch into `main` in the remote
 repository. Then she pulls down the new, merged changes from `origin/main` into
 her local `main` branch:
@@ -554,7 +558,7 @@ Fast-forward
 
 The merged changes added to `main` by Jane won't feature in Joe's local
 repository until he pulls them into his local `main` branch. Having seen on
-GitHub that Jane has completed her Pull Request, he duly makes sure his local
+GitHub that Jane has completed her pull request, he duly makes sure his local
 repository has these changes (making sure he's on `main` to begin with):
 
 ```
@@ -582,9 +586,7 @@ Fast-forward
  create mode 100644 Good-practice-guides/Collaboration-good-practice.md
 ```
 
-Both Joe and Jane now have completely up-to-date local repositories. At this point,
-they could delete their feature branches, both from the local repository and
-the remote repository.
+Both Joe and Jane now have completely up-to-date local repositories.
 
 
 ## Viewing a graph of history
@@ -651,3 +653,23 @@ Let's go through this output in more detail:
 
 * Finally, the latest commit `785f6f8` ("Merge pull request #3 from jbloggs9999/collaboration-good-practice")
   is the commit where Jane's feature branch got merged into main on the remote.
+
+
+## Cleaning up
+
+At this point, Joe and Jane can delete their feature branches, both from the
+local repository and the remote repository. There is no risk of losing work,
+because everything has been merged into `main`, both locally and on the
+remote repository. After doing this, the log of recent history looks
+like this:
+
+```
+$ git log --oneline -7
+785f6f8 (HEAD -> main, origin/main, origin/HEAD) Merge pull request #3 from jbloggs9999/collaboration-good-practice
+ee1617c Merge branch 'main' into collaboration-good-practice
+4e209e9 Merge pull request #2 from jbloggs9999/fetching-material
+b9df491 Add material on feature branching
+687cf02 Start good practice guide on collaboration
+1d026a8 Add entry about fetching from a remote
+86ebbee Merge pull request #1 from jbloggs9999/remote-branches-material
+```
