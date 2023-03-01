@@ -59,7 +59,8 @@ assume `foo-feature` exists both as a remote branch in the remote repository and
 also a local tracking branch in our local repository.
 
 1. (Optional, but recommended): Push all changes from the local `foo-feature`
-   to the upstream branch.
+   to the upstream branch (use `git push` with the `foo-feature` branch checked
+   out).
 
 2. Pull any changes to `main` from the remote repository into your local version
    of `main` (using `git pull` on your local `main` branch). 
@@ -68,7 +69,8 @@ also a local tracking branch in our local repository.
       otherwise go to step b) below.
 
    b) If `main` got updated by the pull, then merge `main` into `foo-feature`
-      in your local repository before continuing, by using `git merge`.
+      in your local repository before continuing, by running `git merge main`
+      while on the `foo-feature` branch.
       If there are merge conflicts, these MUST be resolved and the merge into
       `foo-feature` completed before continuing to step c) below. Take the
       opportunity to make sure this merge hasn't introduced any problems into
@@ -76,18 +78,21 @@ also a local tracking branch in our local repository.
    
    c) Pull the remote `main` into your local `main` again to be
       sure no further changes were made while you were performing the merge in
-      step b). If the branch wasn't updated then proceed
-      to step 2 below, otherwise curse your luck and go back to step b).
+      step b) (use `git pull` on your local `main` branch). If the branch wasn't
+      updated then proceed to step 3 below, otherwise go back to step b).
 
-2. (Optional, but recommended): Push the commits in your local `foo-feature`
-   branch to the corresponding remote branch.
+3. (Optional, but recommended): Push the commits in your local `foo-feature`
+   branch to the corresponding remote branch (use `git push` with the local
+   `foo-feature` branch checked out).
 
-3. Merge the `foo-feature` branch into `main` locally.
+4. Merge the `foo-feature` branch into `main` locally (run `git merge foo-feature`
+   while on the `main` branch).
 
-4. Push the changes to `main` from your local repository to the remote repository.
+5. Push the changes to `main` from your local repository to the remote repository
+   (use `git push` with the `main` branch checked out).
 
 
-As an optional, but recommended clean up step: delete the remote branch
+As an optional, but recommended, clean-up step: delete the remote branch
 `foo-feature` from the remote repository (see below), delete the local
 `origin/foo-feature` reference and, finally, delete the local `foo-feature` branch.
 
