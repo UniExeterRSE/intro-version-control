@@ -81,6 +81,10 @@ resolve any issues in your feature branch:
   when you try to merge your work into the common codebase (about which more in
   the [Merge Conflicts]({{ site.url }}/16_merge_conflicts/index.html) episode).
 
+An example of feature branching is depicted below:
+
+![Feature branching]({{ site.url }}/images/feature-branching.svg)
+
 
 ### Creating feature branches
 
@@ -117,15 +121,15 @@ also a local tracking branch in our local repository.
    c) Pull the remote `main` into your local `main` again to be
       sure no further changes were made while you were performing the merge in
       step b). If the branch wasn't updated then proceed
-      to step 2 below, otherwise curse your luck and go back to step b).
+      to step 3 below, otherwise curse your luck and go back to step b).
 
-2. Push the commits in your local `foo-feature` branch to the corresponding
+3. Push the commits in your local `foo-feature` branch to the corresponding
    remote branch.
 
-3. Complete the pull request on GitHub to merge the `foo-feature` branch
+4. Complete the pull request on GitHub to merge the `foo-feature` branch
    into `main` on the remote.
 
-4. Pull the changes to `main` from the remote repository into your local repository.
+5. Pull the changes to `main` from the remote repository into your local repository.
    Optional, but recommended: delete the feature branch `foo-feature` from GitHub
    and from your remote repository (including the reference `origin/foo-feature`
    to the remote branch).

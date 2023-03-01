@@ -237,10 +237,10 @@ In our example, we only want to keep one set of changes, although it's simply
 a matter of taste which we go for. Let's go for the second option, i.e. the
 version as it is on `main`. All we therefore need to do is:
 
-* delete all the content corresponding to the `HEAD` change, i.e. delete the
+* Delete all the content corresponding to the `HEAD` change, i.e. delete the
   content between the `<<<<<<< HEAD` and `=======` markers.
 
-* delete the lines corresponding to the merge conflict markers: `<<<<<<< HEAD`, `=======` and
+* Delete the lines corresponding to the merge conflict markers: `<<<<<<< HEAD`, `=======` and
   `>>>>>>> main`.
 
 Having done that, and having saved our changes to `Git-cheatsheet.md`, the
