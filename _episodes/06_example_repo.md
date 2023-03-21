@@ -50,10 +50,10 @@ point out bits of Markdown syntax as we go.
 > #### Previewing in VS Code
 > 
 > If you're using VS Code as your text editor, you can preview a rendered Markdown
-> document by opening the Command Palette (_View_ > _Command Palette..._),
-> searching for _Markdown: Open Preview_ and selecting this command. There's also
-> and option to open the preview side-by-side with the Markdown source document,
-> which is useful when editing.
+> document by right-clicking on the file name in the Explorer pane and selecting
+> _Open Preview_. See the
+> <a href="https://code.visualstudio.com/Docs/languages/markdown#_markdown-preview" target="_blank" rel="external noreferrer">VS Code documentation on viewing Markdown files</a>
+> for more information.
 >
 > If you're using VS Code to view Markdown documents, note that not all aspects
 > of GitHub Flavoured Markdown will render correctly in VS Code. For example, task lists are not
