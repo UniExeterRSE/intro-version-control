@@ -3,7 +3,7 @@ layout: page
 title: "Working with Local Branches"
 order: 13
 session: 3
-length: 25
+length: 40
 toc: true
 adapted: true
 attrib_name: Version Control with Git - Branching
