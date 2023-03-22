@@ -3,7 +3,7 @@ layout: page
 title: "Recording Changes"
 order: 7
 session: 1
-length: 40
+length: 60
 toc: true
 adapted: true
 attrib_name: Version Control with Git - Tracking Changes

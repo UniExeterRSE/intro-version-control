@@ -3,7 +3,7 @@ layout: page
 title: "GitHub Issues"
 order: 17
 session: 3
-length: 5
+length: 15
 toc: true
 adapted: false
 ---
