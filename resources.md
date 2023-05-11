@@ -116,7 +116,7 @@ a section on
 > #### Licence
 >
 > <p class="copyright">
-> This cheat sheet is © University of Exeter. The material in it other than code snippets and example
+> This cheat sheet is © 2023 University of Exeter. The material in it other than code snippets and example
 > programs is licensed under <a href ="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0</a>. It has been adapted from
 > <a href="https://swcarpentry.github.io/shell-novice/02-filedir/index.html" target="_blank" rel="external noreferrer">The Unix Shell - Navigating Files and Directories</a>
 > which is © Software Carpentry and licensed under <a href ="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external noreferrer">CC-BY 4.0</a>.
