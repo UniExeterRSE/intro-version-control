@@ -26,17 +26,14 @@ comfortable using Git and GitHub for their day-to-day work.
 On completion of this series of workshops, participants will be able to:
 
 - Use Git to manage their software development.
-- Explain what repositories, commits, branches and merges are in Git.
+- Explain what repositories and commits are in Git.
 - Apply standard Git commands as part of their development workflow: cloning,
-  pulling from and pushing to repositories; adding and committing file changes;
-  creating and working with branches; merging branches and resolving
-  merge conflicts. 
+  pulling from and pushing to repositories; adding and committing file changes.
 - Give examples of what should and should not be included in Git repositories.
 - Describe how Git and platforms like GitHub and GitLab relate to each other and
   their differences.
-- Use pull requests and issues to collaborate effectively with others on GitHub.
-- Have the confidence to learn more advanced applications of Git and GitHub as
-  required for their work.
+- Have the confidence to learn more applications of Git and GitHub as required
+  for their work, e.g. pull requests, merging branches.
 
 
 ## Pre-requisite knowledge
