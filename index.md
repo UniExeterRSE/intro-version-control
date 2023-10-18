@@ -15,9 +15,7 @@ introduction to internet platforms such as GitHub and GitLab, which are built on
 top of Git and designed to facilitate collaboration between software developers.
 A key component of the course will be hands-on practice using Git and GitHub,
 working through theoretical concepts that will be explained with the aid of live
-demonstrations. This will culminate in a workshop session where participants
-will work in groups on a small project designed to consolidate their
-understanding. By the end of the course, it is intended participants will be
+demonstrations. By the end of the course, it is intended participants will be
 comfortable using Git and GitHub for their day-to-day work.
 
 
