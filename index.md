@@ -9,14 +9,15 @@ title: Course Information
 Version control systems are an incredibly valuable tool for organising software
 development. They are essential for producing reproducible and transparent
 research software, coming into their own for facilitating collaborative work.
-This course will give a thorough introduction to Git, one of the most widely
-used version control systems in academia and industry. It will also give an
+This course will give an introduction to Git, one of the most widely used
+version control systems in academia and industry. It will also give an
 introduction to internet platforms such as GitHub and GitLab, which are built on
-top of Git and designed to facilitate collaboration between software developers.
-A key component of the course will be hands-on practice using Git and GitHub,
-working through theoretical concepts that will be explained with the aid of live
-demonstrations. By the end of the course, it is intended participants will be
-comfortable using Git and GitHub for their day-to-day work.
+top of Git and designed to facilitate collaboration between software developers
+and the sharing of code. A key component of the course will be hands-on practice
+using Git and GitHub, working through theoretical concepts that will be explained
+with the aid of live demonstrations. By the end of the course, it is intended
+participants will be comfortable using the basic features of Git and GitHub to
+keep a record of their day-to-day code development and share their work with others.
 
 
 ## Course objectives
@@ -30,8 +31,10 @@ On completion of this series of workshops, participants will be able to:
 - Give examples of what should and should not be included in Git repositories.
 - Describe how Git and platforms like GitHub and GitLab relate to each other and
   their differences.
-- Have the confidence to learn more applications of Git and GitHub as required
-  for their work, e.g. pull requests, merging branches.
+- Understand how to share their work with others and/or make it publicly available
+  through GitHub.
+- Have the confidence to learn more advanced features of Git and GitHub as required
+  for their work, such as working with branches and pull requests.
 
 
 ## Pre-requisite knowledge
