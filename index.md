@@ -56,9 +56,9 @@ On completion of this series of workshops, participants will be able to:
 
 ## Workshop format
 
-This is a hybrid workshop that runs over 3 sessions. The
+This is a hybrid workshop that runs over 2 sessions. The
 [schedule can be found here]({{ site.url }}/schedule.html). _Please note that you will be
-expected to attend all three sessions._
+expected to attend both sessions._
 
 
 ## Upcoming course dates
