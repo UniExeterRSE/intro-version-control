@@ -67,9 +67,8 @@ The sessions will be delivered according to the following timetable.
 
 | Session | Dates | Time  | Venue |
 | --- |--- |--- |--- | --- |
-| Session 1 | 15 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
-| Session 2 | 22 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
-| Session 3 | 1 March 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 1 | 12 December 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 2 | 19 December 2023 | 1pm – 4pm | Old Library Training Room 4 |
 
 
 Registration for this course is handled by
