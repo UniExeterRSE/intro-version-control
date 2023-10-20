@@ -4,7 +4,7 @@ title: "GitHub Issues"
 order: 17
 session: 3
 length: 15
-toc: true
+toc: false
 adapted: false
 ---
 

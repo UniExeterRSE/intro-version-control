@@ -4,7 +4,7 @@ title: "Remote Branches with GitHub"
 order: 14
 session: 3
 length: 45
-toc: true
+toc: false
 adapted: false
 ---
 

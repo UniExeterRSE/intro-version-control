@@ -4,7 +4,7 @@ title: "Managing Remote Branches from the Command Line"
 order: 18
 session: 3
 length: 10
-toc: true
+toc: false
 adapted: false
 ---
 

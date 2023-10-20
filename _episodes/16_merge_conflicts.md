@@ -4,7 +4,7 @@ title: "Merge Conflicts"
 order: 16
 session: 3
 length: 30
-toc: true
+toc: false
 adapted: false
 ---
 

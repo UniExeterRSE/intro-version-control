@@ -4,7 +4,7 @@ title: "Undoing Changes"
 order: 12
 session: 2
 length: 40
-toc: true
+toc: false
 adapted: false
 ---
 

@@ -4,7 +4,7 @@ title: "Working with Local Branches"
 order: 13
 session: 3
 length: 40
-toc: true
+toc: false
 adapted: true
 attrib_name: Version Control with Git - Branching
 attrib_link: http://erdavenport.github.io/git-lessons/10-branching.html
