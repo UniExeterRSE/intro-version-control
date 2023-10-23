@@ -9,16 +9,15 @@ title: Course Information
 Version control systems are an incredibly valuable tool for organising software
 development. They are essential for producing reproducible and transparent
 research software, coming into their own for facilitating collaborative work.
-This course will give a thorough introduction to Git, one of the most widely
-used version control systems in academia and industry. It will also give an
+This course will give an introduction to Git, one of the most widely used
+version control systems in academia and industry. It will also give an
 introduction to internet platforms such as GitHub and GitLab, which are built on
-top of Git and designed to facilitate collaboration between software developers.
-A key component of the course will be hands-on practice using Git and GitHub,
-working through theoretical concepts that will be explained with the aid of live
-demonstrations. This will culminate in a workshop session where participants
-will work in groups on a small project designed to consolidate their
-understanding. By the end of the course, it is intended participants will be
-comfortable using Git and GitHub for their day-to-day work.
+top of Git and designed to facilitate collaboration between software developers
+and the sharing of code. A key component of the course will be hands-on practice
+using Git and GitHub, working through theoretical concepts that will be explained
+with the aid of live demonstrations. By the end of the course, it is intended
+participants will be comfortable using the basic features of Git and GitHub to
+keep a record of their day-to-day code development and share their work with others.
 
 
 ## Course objectives
@@ -26,17 +25,16 @@ comfortable using Git and GitHub for their day-to-day work.
 On completion of this series of workshops, participants will be able to:
 
 - Use Git to manage their software development.
-- Explain what repositories, commits, branches and merges are in Git.
+- Explain what repositories and commits are in Git.
 - Apply standard Git commands as part of their development workflow: cloning,
-  pulling from and pushing to repositories; adding and committing file changes;
-  creating and working with branches; merging branches and resolving
-  merge conflicts. 
+  pulling from and pushing to repositories; adding and committing file changes.
 - Give examples of what should and should not be included in Git repositories.
 - Describe how Git and platforms like GitHub and GitLab relate to each other and
   their differences.
-- Use pull requests and issues to collaborate effectively with others on GitHub.
-- Have the confidence to learn more advanced applications of Git and GitHub as
-  required for their work.
+- Understand how to share their work with others and/or make it publicly available
+  through GitHub.
+- Have the confidence to learn more advanced features of Git and GitHub as required
+  for their work, such as working with branches and pull requests.
 
 
 ## Pre-requisite knowledge
@@ -58,9 +56,9 @@ On completion of this series of workshops, participants will be able to:
 
 ## Workshop format
 
-This is a hybrid workshop that runs over 3 sessions. The
+This is a hybrid workshop that runs over 2 sessions. The
 [schedule can be found here]({{ site.url }}/schedule.html). _Please note that you will be
-expected to attend all three sessions._
+expected to attend both sessions._
 
 
 ## Upcoming course dates
@@ -69,9 +67,8 @@ The sessions will be delivered according to the following timetable.
 
 | Session | Dates | Time  | Venue |
 | --- |--- |--- |--- | --- |
-| Session 1 | 15 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
-| Session 2 | 22 February 2023 | 1pm – 4pm | Old Library Training Room 4 |
-| Session 3 | 1 March 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 1 | 12 December 2023 | 1pm – 4pm | Old Library Training Room 4 |
+| Session 2 | 19 December 2023 | 1pm – 4pm | Old Library Training Room 4 |
 
 
 Registration for this course is handled by
