@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Ignoring Files"
-order: 12
+order: 11
 session: 2
 length: 15
 toc: true
