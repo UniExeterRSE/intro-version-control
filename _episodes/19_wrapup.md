@@ -2,7 +2,7 @@
 layout: page
 title: Wrap up
 order: 19
-session: 3
+session: 2
 length: 5
 toc: true
 adapted: false
