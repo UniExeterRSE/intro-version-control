@@ -202,7 +202,7 @@ recommended:
   ```
 - **Windows:**
   ``` bash
-  $ git config --global core.autocrlf false
+  $ git config --global core.autocrlf true
   ```
 You can read more about this issue 
 <a href="https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_core_autocrlf" target="_blank" rel="external noreferrer">in the Pro Git book</a>.
