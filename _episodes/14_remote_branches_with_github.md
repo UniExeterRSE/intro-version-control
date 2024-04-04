@@ -446,7 +446,7 @@ $ git log --oneline -5
 
 All the work we've done in our branches has been incorporated into `main` (both
 locally and in the remote repository). So, to clean up the state of the repository,
-we going to delete the branches `branches-material` and `remote-branches-material`,
+we're going to delete the branches `branches-material` and `remote-branches-material`,
 including the remote version of `remote-branches-material`, since these
 no longer serve any purpose.
 

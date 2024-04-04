@@ -47,7 +47,7 @@ command:
 git --version
 ```
 
-If you have Git installed, your output should looking something like this (your
+If you have Git installed, your output should look something like this (your
 version number may differ):
 
 ``` output
