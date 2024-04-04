@@ -74,7 +74,7 @@ $ git config --global --list
 ### Setting a text editor
 
 Git will use a text editor installed on your computer when you need to write
-'commit messages' (about which more later in the course). The default editor on
+'commit messages' (more about these later in the course). The default editor on
 most operating systems is set to Vim which, while powerful, is difficult to
 use if you're not used to it. You can configure Git to instead use something
 you're more familiar with. We recommend trying *Nano* for Git usage: it works
@@ -193,7 +193,7 @@ Different operating systems use different character(s) to represent the end of a
 Because Git uses these characters to compare files,
 it may cause unexpected issues when editing a file on different machines. 
 You can change the way Git recognizes and encodes line endings
-using the `core.autocrlf` setting to `git config`. The following settings are
+using the `core.autocrlf` setting. The following settings are
 recommended:
 
 - **MacOS and Linux:**

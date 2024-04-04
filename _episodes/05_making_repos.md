@@ -34,11 +34,11 @@ It is perfectly possible to create a Git repository on your own computer and hav
 it exist in isolation. This allows you to keep a version history of files
 that you develop within the repository, but doesn't provide a way to easily
 share this developmental history with others, or collaborate with them on code.
-By contrast, the most common way that a person uses Git is to have a local repository
-that is linked to a remote repository. A typical example here is
+The most common way that a person uses Git is instead to have a local repository
+that is linked to a remote repository. A typical example is
 where there is a remote repository on GitHub and you have a local version of the
 repository on your own computer. You keep the remote repository up-to-date by
-'pushing' updates you make to your local repository to it (we will look more at
+'pushing' updates made on your local repository (we will look more at
 this later in the course). Someone else can then obtain a copy of your work
 by getting it from the remote repository. 
 
@@ -81,7 +81,7 @@ otherwise.
 
 - **Step 1:** Log into your GitHub account.
 
-- **Step 2:** Click on the '+' drop-down menu in the top right-hand corner and
+- **Step 2:** Click on the '+' drop-down menu in the top-right corner and
   select _New repository_.
 
 - **Step 3:** Enter the name for your repository.
@@ -105,10 +105,10 @@ otherwise.
 
 Immediately after creating the repository you'll be taken to the repository's
 main page on GitHub. For now, the main thing to look at is the content under the
-_Code_ tab in the top left hand corner, which gives you a view of the contents
+_Code_ tab in the top-left corner, which gives you a view of the contents
 of the repository. (There won't be much in there to begin with, of course.)
 
-In the future, you can return to the repo by going to your main
+In the future, you can return to the repository by going to your main
 GitHub account page and finding it under the _Repositories_ tab. Notice that
 the URL for the repository has the format `https://github.com/user-name/repo-name`
 where `user-name` is your GitHub username and `repo-name` is the name you gave
