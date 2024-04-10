@@ -259,9 +259,9 @@ Your branch is ahead of 'origin/main' by 2 commits.
 nothing to commit, working tree clean
 ```
 
-Notice how we still have 2 some commits that have not been pushed to the remote
-repository. We'll tidy up by pushing these commits, so that our local repository
-and remote repository are up-to-date with each other:
+Notice how we still have some commits that have not been pushed to the remote
+repository. We'll push these commits now, so that our local repository and remote
+repository are up-to-date with each other:
 
 ```
 $ git push origin

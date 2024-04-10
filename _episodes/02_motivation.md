@@ -30,7 +30,7 @@ version you like. It also takes care of storing away this history out of your
 day-to-day sight.
 
 So a version control system acts as a record-keeping device. This is useful, but
-the real power of a version control system is that that they
+the real power of a version control system is that they
 _facilitate collaboration_ when multiple
 people work on a set of files, such as when a team of people are developing
 code. In particular, they provide a set of
