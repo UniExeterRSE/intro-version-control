@@ -38,9 +38,9 @@ The most common way that a person uses Git is instead to have a local repository
 that is linked to a remote repository. A typical example is
 where there is a remote repository on GitHub and you have a local version of the
 repository on your own computer. You keep the remote repository up-to-date by
-'pushing' updates made on your local repository (we will look more at
-this later in the course). Someone else can then obtain a copy of your work
-by getting it from the remote repository. 
+'pushing' updates made on your local repository to the remote repository (we will
+look more at this later in the course). Someone else can then obtain a copy of your
+work by getting it from the remote repository. 
 
 We'll see later in this course that a whole team of developers can contribute
 to a shared codebase by working with a common remote repository. In this set up,

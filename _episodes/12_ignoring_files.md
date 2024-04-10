@@ -260,8 +260,8 @@ nothing to commit, working tree clean
 ```
 
 Notice how we still have some commits that have not been pushed to the remote
-repository. We'll tidy up by pushing these commits, so that our local repository
-and remote repository are up-to-date with each other:
+repository. We'll push these commits now, so that our local repository and remote
+repository are up-to-date with each other:
 
 ```
 $ git push origin
