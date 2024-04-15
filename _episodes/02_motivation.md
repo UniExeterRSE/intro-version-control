@@ -3,7 +3,7 @@ layout: page
 title: "Motivation: Why use Version Control Systems?"
 order: 2
 session: 1
-length: 10
+length: 5
 toc: true
 adapted: false
 ---

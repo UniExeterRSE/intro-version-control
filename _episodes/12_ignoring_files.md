@@ -3,7 +3,7 @@ layout: page
 title: "Ignoring Files"
 order: 12
 session: 2
-length: 15
+length: 10
 toc: true
 adapted: true
 attrib_name: Version Control with Git - Ignoring Things

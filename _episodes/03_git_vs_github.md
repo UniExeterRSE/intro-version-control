@@ -3,7 +3,7 @@ layout: page
 title: "Git vs GitHub"
 order: 3
 session: 1
-length: 10
+length: 5
 toc: true
 adapted: false
 ---
