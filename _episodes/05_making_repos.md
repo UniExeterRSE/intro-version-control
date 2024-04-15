@@ -3,7 +3,7 @@ layout: page
 title: "Making Repositories"
 order: 5
 session: 1
-length: 15
+length: 10
 toc: true
 adapted: true
 attrib_name: Version Control with Git - Creating a Repository

@@ -3,7 +3,7 @@ layout: page
 title: "Recording Changes – Revisited"
 order: 9
 session: 2
-length: 30
+length: 20
 toc: true
 adapted: false
 ---

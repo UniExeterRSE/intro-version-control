@@ -3,7 +3,7 @@ layout: page
 title: "Undoing Changes"
 order: 11
 session: 2
-length: 40
+length: 25
 toc: true
 adapted: false
 ---
