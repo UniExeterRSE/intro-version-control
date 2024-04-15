@@ -4,7 +4,7 @@ title: "Collaborating with Branches"
 order: 15
 session: 2
 length: 60
-toc: true
+toc: false
 adapted: false
 ---
 
