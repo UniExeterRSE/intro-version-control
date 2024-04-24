@@ -2,7 +2,7 @@
 layout: page
 title: "Viewing History and Changes"
 order: 8
-session: 2
+session: 1
 length: 15
 toc: true
 adapted: true
